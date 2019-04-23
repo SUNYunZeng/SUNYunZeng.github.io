@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>孙云增的博客</title>
   
   
   <link href="/SUNYunZeng.github.io/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="/SUNYunZeng.github.io/"/>
   <updated>2019-04-23T15:57:20.943Z</updated>
-  <id>http://yoursite.com/</id>
-  
-  <author>
-    <name>John Doe</name>
-    
-  </author>
+  <id>/SUNYunZeng.github.io/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>第一篇博客</title>
-    <link href="http://yoursite.com/2019/04/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2019/04/23/第一篇博客/</id>
+    <link href="/SUNYunZeng.github.io/2019/04/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>/SUNYunZeng.github.io/2019/04/23/第一篇博客/</id>
     <published>2019-04-23T06:49:36.000Z</published>
     <updated>2019-04-23T15:57:20.943Z</updated>
     
@@ -40,8 +35,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/04/23/hello-world/"/>
-    <id>http://yoursite.com/2019/04/23/hello-world/</id>
+    <link href="/SUNYunZeng.github.io/2019/04/23/hello-world/"/>
+    <id>/SUNYunZeng.github.io/2019/04/23/hello-world/</id>
     <published>2019-04-23T03:18:20.431Z</published>
     <updated>2019-04-23T13:49:24.410Z</updated>
     
@@ -56,10 +51,10 @@
     
     </summary>
     
-      <category term="first" scheme="http://yoursite.com/categories/first/"/>
+      <category term="first" scheme="/SUNYunZeng.github.io/categories/first/"/>
     
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+      <category term="test" scheme="/SUNYunZeng.github.io/tags/test/"/>
     
   </entry>
   
