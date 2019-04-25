@@ -26,18 +26,18 @@
 <meta property="og:site_name" content="孙云增的博客">
 <meta property="og:description" content="前言你是否也想拥有属于自己的博客？是否也想拥有跟我一样的博客空间？如果心动了，就赶紧往下看吧！  教程炒鸡简单，炒鸡详细，而且博客搭建完全是Free of Charge!  原理Github PagesGithub不仅可以让我们把代码托管在平台上，而且允许我们利用Github的服务器部署自定义网页对我们的项目作简介。这个网页就被称为** Github Pages**。这是我们可以利用Github搭">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/new_repository.png">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/name_repository.png">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/setting_repository.png">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/pages_repository.png">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/ssh.png">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/tree.png">
-<meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/home_page.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/new_repository.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/name_repository.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/setting_repository.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/pages_repository.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/ssh.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/tree.png">
+<meta property="og:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/home_page.png">
 <meta property="og:updated_time" content="2019-04-25T13:59:54.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows环境下Hexo+Github搭建个人博客教程">
 <meta name="twitter:description" content="前言你是否也想拥有属于自己的博客？是否也想拥有跟我一样的博客空间？如果心动了，就赶紧往下看吧！  教程炒鸡简单，炒鸡详细，而且博客搭建完全是Free of Charge!  原理Github PagesGithub不仅可以让我们把代码托管在平台上，而且允许我们利用Github的服务器部署自定义网页对我们的项目作简介。这个网页就被称为** Github Pages**。这是我们可以利用Github搭">
-<meta name="twitter:image" content="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/new_repository.png">
+<meta name="twitter:image" content="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/new_repository.png">
   <!-- Canonical links -->
   <link rel="canonical" href="/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/index.html">
   
@@ -369,13 +369,13 @@
 <h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p><strong><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a></strong>是一款轻量但高逼格的搭建博客快速工具，它是基于<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>开发的。而Node.js…好了，扯远了…有兴趣的童鞋可以出门左转自己百度…</p>
 <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>知道了大致的原理，我们首先需要准备搭建博客的材料。如下：</p>
 <p><strong><em>1. 一台windows系统的电脑</em><br><em>2. 一个Github账号</em><br><em>3. 安装Node.js</em><br><em>4. 安装Git</em><br><em>5. 安装Hexo</em></strong></p>
-<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="申请Github账号，建立一个仓库，并为此创建一个说明网页-Github-Pages"><a href="#申请Github账号，建立一个仓库，并为此创建一个说明网页-Github-Pages" class="headerlink" title="申请Github账号，建立一个仓库，并为此创建一个说明网页(Github Pages)"></a>申请Github账号，建立一个仓库，并为此创建一个说明网页(Github Pages)</h2><p>假设我们都有了Github账号，这是首先在右上角点击“+”号，选择<strong>New repository</strong><br><img src="new_repository.png" alt="添加新仓库"></p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="申请Github账号，建立一个仓库，并为此创建一个说明网页-Github-Pages"><a href="#申请Github账号，建立一个仓库，并为此创建一个说明网页-Github-Pages" class="headerlink" title="申请Github账号，建立一个仓库，并为此创建一个说明网页(Github Pages)"></a>申请Github账号，建立一个仓库，并为此创建一个说明网页(Github Pages)</h2><p>假设我们都有了Github账号，这是首先在右上角点击“+”号，选择<strong>New repository</strong><br><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/new_repository.png" alt="添加新仓库"></p>
 <p><strong>注意  仓库名一定是”你的Github用户名”+github.io !!!</strong></p>
-<p><img src="name_repository.png" alt="添加新仓库"></p>
+<p><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/name_repository.png" alt="添加新仓库"></p>
 <p>之后为我们的项目添加一个<strong>说明Pages</strong>！</p>
 <p>建好的项目顶部最右边有个<strong>Setting</strong>按钮，点击进入配置界面，下滑界面，直到看到<strong>Github Pages</strong>，这时你发现竟然自动生成了一个说明网页！</p>
-<p>因为Github说明网页的默认地址就是“你的Github用户名”+github.io，其它说明网页都是基于该地址的。<br><img src="setting_repository.png" alt="添加新仓库"></p>
-<p><img src="pages_repository.png" alt="添加新仓库"></p>
+<p>因为Github说明网页的默认地址就是“你的Github用户名”+github.io，其它说明网页都是基于该地址的。<br><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/setting_repository.png" alt="添加新仓库"></p>
+<p><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/pages_repository.png" alt="添加新仓库"></p>
 <p><strong>Ok!</strong> 到此为止，Gihub Pages的部分就结束了。</p>
 <h2 id="搭建Hexo，把Github-Pages修改为自己的博客界面！"><a href="#搭建Hexo，把Github-Pages修改为自己的博客界面！" class="headerlink" title="搭建Hexo，把Github Pages修改为自己的博客界面！"></a>搭建Hexo，把Github Pages修改为自己的博客界面！</h2><h3 id="安装Git以及Node-js！"><a href="#安装Git以及Node-js！" class="headerlink" title="安装Git以及Node.js！"></a>安装Git以及Node.js！</h3><p>因为我们需要通过Git把我们的Hexo生成的网页提交到Github pages上，而Node.js是我们Hexo插件运行的基础！</p>
 <ol>
@@ -394,7 +394,7 @@
 <p>在我们创建博客文件夹里右击，选择 Git Base Here，然后在窗口中依次输入<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code></p>
 <p><strong>2. SSH 授权</strong><br>打开git bash，输入<code>ssh-keygen -t rsa</code>, 接着回车三下。</p>
 <p>最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh）</p>
-<p>登录Github，点击头像下的settings，添加ssh。新建一个new ssh key，将<strong>id_rsa.pub</strong>文件里的内容复制上去<br><img src="ssh.png" alt="添加SSH"><br><strong>3. 上传项目</strong></p>
+<p>登录Github，点击头像下的settings，添加ssh。新建一个new ssh key，将<strong>id_rsa.pub</strong>文件里的内容复制上去<br><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/ssh.png" alt="添加SSH"><br><strong>3. 上传项目</strong></p>
 <p>首先用IDE(我用的是WebStorm)打开我们的Hexo文件夹，发现它的文档目录是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|-- _config.yml</span><br><span class="line">|-- package.json</span><br><span class="line">|-- scaffolds</span><br><span class="line">|-- source</span><br><span class="line">   |-- _posts</span><br><span class="line">|-- public</span><br><span class="line">|-- themes</span><br><span class="line">|-- .gitignore</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>_config.yml：网站的全局配置文件，设置包括网站标题、副标题、作者、关键字和描述信息等。</p>
@@ -428,12 +428,12 @@
 <p>首先到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网</a>中选择一款喜欢的主题</p>
 <p>这里我以我博客采用的主题为例，我采用的<a href="https://github.com/cofess/hexo-theme-pure" target="_blank" rel="noopener">pure主题</a></p>
 <p>首先在Hexo系统文件夹中打开终端，然后输入<code>git clone https://github.com/cofess/hexo-theme-pure.git themes/pure</code></p>
-<p>之后在系统目录theme文件夹下你会发现多出了pure命名的一个文件夹，这就是我们主题保存的位置,其中pure文件夹下的config.yml文件就是我<br>们博客的配置文件，在里面可以自己对博客界面进行个性化配置，详情请参看<a href="https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html" target="_blank" rel="noopener">网址</a><br><img src="tree.png" alt="项目目录"></p>
+<p>之后在系统目录theme文件夹下你会发现多出了pure命名的一个文件夹，这就是我们主题保存的位置,其中pure文件夹下的config.yml文件就是我<br>们博客的配置文件，在里面可以自己对博客界面进行个性化配置，详情请参看<a href="https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html" target="_blank" rel="noopener">网址</a><br><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/tree.png" alt="项目目录"></p>
 <p>在我们的Hexo系统配置文件<strong>config.yml</strong>中，修改theme为我们的pure主题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: pure</span><br></pre></td></tr></table></figure>
 <p>然后进入文件夹 <code>cd themes/pure</code></p>
 <p>把主题提交<code>git pull</code></p>
-<p>当当~我们的个性化博客就搭建完毕啦！<br><img src="home_page.png" alt="home_page"></p>
+<p>当当~我们的个性化博客就搭建完毕啦！<br><img src="/SUNYunZeng.github.io/SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/home_page.png" alt="home_page"></p>
 
       
     </div>
