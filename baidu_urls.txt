@@ -1,1 +1,2 @@
+/SUNYunZeng.github.io/2019/04/25/test/
 /SUNYunZeng.github.io/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/
