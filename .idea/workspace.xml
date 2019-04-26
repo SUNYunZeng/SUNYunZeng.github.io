@@ -5,7 +5,6 @@
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/my.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/markdown简单教程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/markdown简单教程.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" afterDir="false" />
@@ -81,6 +80,7 @@
     <session id="-231848372">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -128,8 +128,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/markdown简单教程.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="152">
-                <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <first_editor relative-caret-position="171">
+                <caret line="9" selection-start-line="9" selection-end-line="9" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,7 +145,6 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -189,7 +188,7 @@
       <path value="$PROJECT_DIR$/themes/yilia/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="335" />
     <option name="y" value="71" />
     <option name="width" value="1195" />
@@ -272,12 +271,12 @@
       <workItem from="1556002044967" duration="21046000" />
       <workItem from="1556069691506" duration="11858000" />
       <workItem from="1556179525915" duration="16626000" />
-      <workItem from="1556247624349" duration="948000" />
+      <workItem from="1556247624349" duration="1316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51256000" />
+    <option name="totallyTimeSpent" value="51624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,7 +290,7 @@
   <component name="ToolWindowManager">
     <frame x="268" y="57" width="956" height="712" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34021738" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27173913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -577,8 +576,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/markdown简单教程.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="152">
-            <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <first_editor relative-caret-position="171">
+            <caret line="9" selection-start-line="9" selection-end-line="9" />
           </first_editor>
           <second_editor />
         </state>
