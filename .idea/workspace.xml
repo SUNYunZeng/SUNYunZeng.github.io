@@ -2,33 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93daccd3-7c08-4897-8fa6-d2af41e6816e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/404/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_data/gallery.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_data/links.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/home_page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/name_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/new_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/pages_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/setting_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/ssh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客/tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/about/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/baidu_verify_PIw89sWpcq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/books/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/home_page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/name_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/new_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/pages_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/setting_repository.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/ssh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/img/tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/links/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/repository/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/tags/index.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/my.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/markdown简单教程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/markdown简单教程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" beforeDir="false" />
@@ -100,6 +78,34 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-231848372">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="md" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Hexo" />
@@ -107,29 +113,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <entry file="file://$PROJECT_DIR$/source/_posts/博客搭建教程.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="341">
+                <caret line="177" selection-start-line="177" selection-end-line="177" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/博客搭建教程.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/markdown简单教程.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="121">
-                <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+              <first_editor relative-caret-position="152">
+                <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,8 +145,9 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/pure" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -167,6 +168,7 @@
         <option value="$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客.md" />
         <option value="$PROJECT_DIR$/source/_posts/博客搭建教程.md" />
         <option value="$PROJECT_DIR$/themes/pure/_config.yml" />
+        <option value="$PROJECT_DIR$/source/_posts/markdown简单教程.md" />
       </list>
     </option>
   </component>
@@ -187,9 +189,9 @@
       <path value="$PROJECT_DIR$/themes/yilia/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="238" />
-    <option name="y" value="116" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="335" />
+    <option name="y" value="71" />
     <option name="width" value="1195" />
     <option name="height" value="890" />
   </component>
@@ -199,41 +201,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Hexo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hexo" type="462c0819:PsiDirectoryNode" />
+              <item name="SUNYunZeng.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUNYunZeng.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Hexo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hexo" type="462c0819:PsiDirectoryNode" />
+              <item name="SUNYunZeng.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUNYunZeng.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Hexo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hexo" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hexo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hexo" type="462c0819:PsiDirectoryNode" />
+              <item name="SUNYunZeng.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUNYunZeng.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="博客搭建教程" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hexo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hexo" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,11 +272,12 @@
       <workItem from="1556002044967" duration="21046000" />
       <workItem from="1556069691506" duration="11858000" />
       <workItem from="1556179525915" duration="16626000" />
+      <workItem from="1556247624349" duration="948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50308000" />
+    <option name="totallyTimeSpent" value="51256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,9 +289,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="355" y="81" width="956" height="712" extended-state="0" />
+    <frame x="268" y="57" width="956" height="712" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.34021738" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34021738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -312,7 +303,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931036" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49401525" visible="true" weight="0.37931034" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49401525" weight="0.37931034" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5059848" side_tool="true" weight="0.3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -326,11 +317,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/pure/languages/default.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1126" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/pure/_source/tags/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -539,16 +525,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/markdown使用方法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/markdown使用方法.md" />
     <entry file="file://$PROJECT_DIR$/scaffolds/post.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -569,55 +546,10 @@
         <state relative-caret-position="-3933" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/My first blog.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="27">
-            <caret line="164" column="15" lean-forward="true" selection-end-line="174" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/2019/04/23/My first blog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1396">
-          <caret line="499" column="37" lean-forward="true" selection-start-line="499" selection-start-column="37" selection-end-line="499" selection-end-column="37" />
-          <folding>
-            <element signature="e#4238#4243#0" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#3;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#19368#19374#0" expanded="true" />
-            <element signature="e#19382#19388#0" expanded="true" />
-            <element signature="e#19436#19442#0" expanded="true" />
-            <element signature="e#19451#19457#0" expanded="true" />
-            <element signature="e#20868#20872#0" expanded="true" />
-            <element signature="e#20882#20886#0" expanded="true" />
-            <element signature="e#22141#22147#0" expanded="true" />
-            <element signature="e#22150#22156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="435" column="45" selection-start-line="435" selection-start-column="45" selection-end-line="435" selection-end-column="45" />
-          <folding>
-            <element signature="e#26032#26038#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="399">
-            <caret line="164" column="15" selection-end-line="174" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/My first blog.md" />
+    <entry file="file://$PROJECT_DIR$/public/2019/04/23/My first blog/index.html" />
+    <entry file="file://$PROJECT_DIR$/public/2019/04/23/windows环境下利用Hexo-Github搭建个人博客/index.html" />
+    <entry file="file://$PROJECT_DIR$/source/_posts/windows环境下利用Hexo-Github搭建个人博客.md" />
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
@@ -625,20 +557,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/博客搭建教程.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="121">
-            <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+          <first_editor relative-caret-position="341">
+            <caret line="177" selection-start-line="177" selection-end-line="177" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+    <entry file="file://$PROJECT_DIR$/source/_posts/markdown简单教程.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="152">
+            <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
