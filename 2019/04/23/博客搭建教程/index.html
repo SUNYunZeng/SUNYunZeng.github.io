@@ -33,7 +33,7 @@
 <meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/博客搭建教程/ssh.png">
 <meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/博客搭建教程/tree.png">
 <meta property="og:image" content="/SUNYunZeng.github.io/2019/04/23/博客搭建教程/home_page.png">
-<meta property="og:updated_time" content="2019-04-26T01:52:12.681Z">
+<meta property="og:updated_time" content="2019-04-26T02:24:44.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows环境下Hexo+Github搭建个人博客教程">
 <meta name="twitter:description" content="前言你是否也想拥有属于自己的博客？是否也想拥有跟我一样的博客空间？如果心动了，就赶紧往下看吧！  教程炒鸡简单，炒鸡详细，而且博客搭建完全是Free of Charge!  原理Github PagesGithub不仅可以让我们把代码托管在平台上，而且允许我们利用Github的服务器部署自定义网页对我们的项目作简介。这个网页就被称为** Github Pages**。这是我们可以利用Github搭">
@@ -50,8 +50,6 @@
   
   
   
-  
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   
 </head>
 
@@ -242,7 +240,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SUNYunZeng.github.io/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SUNYunZeng.github.io/archives/2019/04/">四月 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -254,6 +252,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/SUNYunZeng.github.io/2019/04/26/markdown简单教程/" class="title">markdown简单教程</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-04-26T02:08:24.000Z" itemprop="datePublished">2019-04-26</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -419,6 +432,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: pure</span><br></pre></td></tr></table></figure>
 <p>然后进入文件夹 <code>cd themes/pure</code></p>
 <p>把主题提交<code>git pull</code></p>
+<p>重新生成博客静态文件，然后部署到Github Pages<br><code>hexo g</code><br><code>hexo d</code></p>
 <p>当当~我们的个性化博客就搭建完毕啦！<br><img src="/SUNYunZeng.github.io/2019/04/23/博客搭建教程/home_page.png"></p>
 
       
@@ -462,7 +476,9 @@
     
   <section id="comments">
   	
-           
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzkzNS8yMDQ3MQ==">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
     
   </section>
 
@@ -472,6 +488,25 @@
 
   <nav class="bar bar-footer clearfix" data-stick-bottom>
   <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/SUNYunZeng.github.io/2019/04/26/markdown简单教程/" title="markdown简单教程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
   
   
   <!-- Button trigger modal -->
@@ -593,23 +628,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
     
-  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
-  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-  var gitalk = new Gitalk({
-    clientID: 'e5bf4e3eb22e24c3a3aa',
-    clientSecret: 'd2f1d81701c6f02138f34f43db1399da5d86fc42',
-    repo: 'SUNYunZeng.github.io',
-    owner: 'SUNYunZeng',
-    admin: ['SUNYunZeng'],
-    id: md5(location.pathname),
-    distractionFreeMode: true
-  })
-  gitalk.render('comments')
-  </script>
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
 
-      
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
 
 
 
