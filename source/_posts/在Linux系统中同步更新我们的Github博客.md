@@ -86,6 +86,6 @@ git push
 
 >**1. 每当撰写博客前，先 `git pull`，获取最新的博客备份。**
 
->**2. 写完博客后，先依次执行`hexo clean  、 hexo g 、 git add.  、 git commit -m 'some info  、 git push'`进行博客备份部署文件更新。**
+>**2. 写完博客后，先依次执行`hexo clean  、 hexo g 、 git add .  、 git commit -m 'some info  、 git push'`进行博客备份部署文件更新。**
 
 >**3. 最后执行 `hexo  d`部署博客界面，实现博客更新。** 
