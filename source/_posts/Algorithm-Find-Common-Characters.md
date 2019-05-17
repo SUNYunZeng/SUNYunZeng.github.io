@@ -13,17 +13,17 @@ tags: String Relative
 >You may return the answer in any order.
 
 >**Example 1**
-```
+```Java
 Input: ["bella","label","roller"]
 Output: ["e","l","l"]
 ```
 >**Example 2**
-```
+```Java
 Input: ["cool","lock","cook"]
 Output: ["c","o"]
 ```
 >**Note:**
-```
+```Java
 1.  1 <= A.length <= 100
 2.  1 <= A[i].length <= 100
 3.  A[i][j] is a lowercase letter
@@ -35,7 +35,7 @@ Output: ["c","o"]
 
 ## Algorithm
 
-```
+```Java
 class Solution {
     public List<String> commonChars(String[] A) {
         List<String> list = new ArrayList();
