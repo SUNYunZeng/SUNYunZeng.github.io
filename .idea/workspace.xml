@@ -5,6 +5,7 @@
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/my.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" afterDir="false" />
@@ -80,19 +81,20 @@
     <session id="-231848372">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -116,8 +118,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/博客搭建教程.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="341">
-                <caret line="177" selection-start-line="177" selection-end-line="177" />
+              <first_editor relative-caret-position="268">
+                <caret line="174" selection-start-line="174" selection-end-line="174" />
               </first_editor>
               <second_editor />
             </state>
@@ -125,12 +127,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/markdown简单教程.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/在Linux系统中同步更新我们的Github博客.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="171">
-                <caret line="9" selection-start-line="9" selection-end-line="9" />
-              </first_editor>
+              <first_editor relative-caret-position="-1532" />
               <second_editor />
             </state>
           </provider>
@@ -190,7 +190,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="335" />
-    <option name="y" value="71" />
+    <option name="y" value="70" />
     <option name="width" value="1195" />
     <option name="height" value="890" />
   </component>
@@ -228,7 +228,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Hexo/node_modules/hexo-baidu-url-submit/lib/generator.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/workspaces/DataHubClient" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -272,11 +272,12 @@
       <workItem from="1556069691506" duration="11858000" />
       <workItem from="1556179525915" duration="16626000" />
       <workItem from="1556247624349" duration="1316000" />
+      <workItem from="1556456234053" duration="678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51624000" />
+    <option name="totallyTimeSpent" value="52302000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -288,9 +289,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="268" y="57" width="956" height="712" extended-state="0" />
+    <frame x="268" y="56" width="956" height="712" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27173913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27173913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,7 +303,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931036" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49401525" weight="0.37931034" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49401525" visible="true" weight="0.37931034" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5059848" side_tool="true" weight="0.3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -316,14 +317,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/pure/_source/tags/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/pure/_source/links/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -563,22 +556,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/博客搭建教程.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="341">
-            <caret line="177" selection-start-line="177" selection-end-line="177" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/markdown简单教程.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="171">
             <caret line="9" selection-start-line="9" selection-end-line="9" />
           </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/博客搭建教程.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="268">
+            <caret line="174" selection-start-line="174" selection-end-line="174" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/在Linux系统中同步更新我们的Github博客.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1532" />
           <second_editor />
         </state>
       </provider>
