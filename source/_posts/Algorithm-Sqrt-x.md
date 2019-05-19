@@ -9,7 +9,7 @@ tags: Algorithm
 
 # Some Algorithm using Math Algorithm
 
-## **Algorithm 1 Sqrt(x)**
+## **Algorithm-1 Sqrt(x)**
 
 **Title detail**
 
