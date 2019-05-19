@@ -1,5 +1,5 @@
 ---
-title: Algorithm--Fase and Slow Pointer
+title: Algorithm--Fast and Slow Pointer
 toc: true
 date: 2019-05-17 22:00:47
 categories: Algorithm
