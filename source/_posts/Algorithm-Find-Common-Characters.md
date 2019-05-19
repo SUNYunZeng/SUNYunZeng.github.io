@@ -24,9 +24,9 @@ Output: ["c","o"]
 ```
 >**Note:**
 ```Java
-1.  1 <= A.length <= 100
-2.  1 <= A[i].length <= 100
-3.  A[i][j] is a lowercase letter
+  1 <= A.length <= 100
+  1 <= A[i].length <= 100
+  A[i][j] is a lowercase letter
 ```
 ## 思路
 统计每个字符串中26个字母的出现次数。每个字符串都出现的字母且统计次数最少的即为结果输出的字符。
@@ -63,3 +63,5 @@ class Solution {
     }
 }
 ```
+
+[题目链接](https://leetcode-cn.com/problems/find-common-characters/)

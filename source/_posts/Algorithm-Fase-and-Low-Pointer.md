@@ -7,9 +7,9 @@ tags: Fast and Slow Pointer
 ---
 # **快慢指针的应用**
 
-## **1. 判断链表是否存在环**
+## **判断链表是否存在环**
 
-**Title Detil**
+**Title Detail**
 
 Given a linked list, determine if it has a cycle in it.
 
@@ -25,11 +25,11 @@ Explanation: There is a cycle in the linked list, where tail connects to the sec
 
 {% asset_img  circularlinkedlist.png %}
 
-**思路**
+### **思路**
 
 利用快慢指针，快指针每次走两步，慢指针每次走一步。如果快指针能够追上慢指针，则链表存在环。
 
-**Code**
+### **Algorithm**
 ```Java
 /**
  * Definition for singly-linked list.
@@ -60,9 +60,9 @@ public class Solution {
 ```
 [题目链接](https://leetcode-cn.com/problems/linked-list-cycle/)
 
-## **2. 有序数组移除重复数字**
+## **有序数组移除重复数字**
 
-**Title Detile**
+**Title Detail**
 
 Given a sorted array nums, remove the duplicates **in-place** such that each element appear only once and return the new length.
 
@@ -103,7 +103,7 @@ for (int i = 0; i < len; i++) {
 }
 ```
 
-**思路**
+### **思路**
 
 前提是有序数组，可见排序是很基础且重要的算法！
 
@@ -115,7 +115,7 @@ for (int i = 0; i < len; i++) {
 
 {% asset_img  remove-duplicates-from-sorted-array.gif %}
 
-**Code**
+### **Algorithm**
 ```Java
 class Solution {
     public int removeDuplicates(int[] nums) {
