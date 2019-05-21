@@ -11,36 +11,36 @@ tags: List
 ## **常用类型**
 
 
-类型 |特征 |
-:-: | :-: | 
-**ArrayList** | 随机访问元素快；中间插入与删除元素较慢；操作不是线程安全的 | 
-**LinkedList** | 中间插入与删除操作代价较低，提供优化的顺序访问；随机访问元素慢 |
+类型 |特征 
+:-: | :-: 
+**ArrayList** | 随机访问元素快；中间插入与删除元素较慢；操作不是线程安全的 
+**LinkedList** | 中间插入与删除操作代价较低，提供优化的顺序访问；随机访问元素慢 
 
 
 ## **ArrayList 常用 API**
 
-方法 | 描述 |
-:-: | :-: | 
-**boolean add(E object)** | 再 ArrayList 尾存入对象 | 
-**void add(int location, E object)** | 在 location 添加对象 |
-**boolean addAll(Collection<? extends E> collection)** | 将一个 Collection 对象中存储全部的对象复制并存入 |
-**boolean addAll(int location, Collection<? extends E> collection)** | 将一个 Collection 对象中存储全部的对象复制并存入location |
-**boolean contains(Object object)** | 是否包对象 object |
-**boolean containsAll(Collection<?> collection)** | 是否包含一个 Collection 对象 |
-**boolean isEmpty()** | ArrayList 是否为空 |
-**E get(int location)** | 获取 location 的对象 |
-**E set(int location, E object)** | 将某个位置的元素替换成 object |
-**int indexOf(Object object)** | 获取某个对象的位置（顺序遍历第一个） |
-**int lastIndexOf(Object object)** | 获取某个对象的位置（逆序遍历第一个） |
-**int size()** | 返回 ArrayList 存储的对象数量 |
-**boolean remove(Object object)** | 删除存储的某个对象 |
-**E remove(int lcoation)** | 删除位于 location 的对象 |
-**boolean removeAll(Collection<?> collection)** | 删除存储的某个 Collection 对象 |
-**Object [] toArray()** | ArrayList 转数组 |
-**List<'E'> subList(int start, int end)** | 获取位于 start 与 end 之间的 List |
-**void clone()** | 克隆ArrayList |
-**void clear()** | 移除ArrayList中所有对象 |
-**Iterator<'E'> iterator()** | 获取该 ArrayList 对应的迭代器对象 |
+方法 | 描述 
+:-: | :-: 
+**boolean add(E object)** | 再 ArrayList 尾存入对象 
+**void add(int location, E object)** | 在 location 添加对象 
+**boolean addAll(Collection<? extends E> collection)** | 将一个 Collection 对象中存储全部的对象复制并存入 
+**boolean addAll(int location, Collection<? extends E> collection)** | 将一个 Collection 对象中存储全部的对象复制并存入location 
+**boolean contains(Object object)** | 是否包对象 object 
+**boolean containsAll(Collection<?> collection)** | 是否包含一个 Collection 对象 
+**boolean isEmpty()** | ArrayList 是否为空 
+**E get(int location)** | 获取 location 的对象 
+**E set(int location, E object)** | 将某个位置的元素替换成 object
+**int indexOf(Object object)** | 获取某个对象的位置（顺序遍历第一个） 
+**int lastIndexOf(Object object)** | 获取某个对象的位置（逆序遍历第一个） 
+**int size()** | 返回 ArrayList 存储的对象数量 
+**boolean remove(Object object)** | 删除存储的某个对象 
+**E remove(int lcoation)** | 删除位于 location 的对象 
+**boolean removeAll(Collection<?> collection)** | 删除存储的某个 Collection 对象 
+**Object [] toArray()** | ArrayList 转数组 
+**List<'E'> subList(int start, int end)** | 获取位于 start 与 end 之间的 List 
+**void clone()** | 克隆ArrayList 
+**void clear()** | 移除ArrayList中所有对象 
+**Iterator<'E'> iterator()** | 获取该 ArrayList 对应的迭代器对象 
 
 ## ArrayList 应用示例
 
