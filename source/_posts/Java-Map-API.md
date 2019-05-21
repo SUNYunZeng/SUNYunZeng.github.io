@@ -20,7 +20,7 @@ tags:
 **LinkedHashMap** | 保留记录的插入顺序，生成Iterator遍历顺序与插入顺序一致。遍历比HashMap慢，键值都允许为 null；线程非同步 |
 
 
-## **API**
+## **常用 API**
 
 方法 | 描述 |
 :-: | :-: | 
@@ -30,7 +30,7 @@ tags:
 **boolean containsKey(Object v)** | 是否包含值 v |
 **boolean isEmpty()** | Map 是否为空 |
 **int size()** | 返回 Map 的键值对数 |
-**Object remove(Object k)** | 如果存在一个键映射关系，则删除此关系(映射关系不存在不会报错) |
+**boolean remove(Object k)** | 如果存在一个键映射关系，则删除此关系(映射关系不存在不会报错) |
 **void clear()** | 移除Map中所有映射关系 |
 **boolean equals(Object obj)** | 比较指定对象于此 Map 是否相等 |
 **void putAll(Map m)** | 将指定 Map 的映射关系复制到此 Map 中 |
