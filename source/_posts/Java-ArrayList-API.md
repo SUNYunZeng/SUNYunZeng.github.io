@@ -61,7 +61,7 @@ tags: List
         // 可用 set() 方法修改元素，但是原始List数据会随之改变
 
         String[] s = {"abc", "def", "ghi"};
-        List list = java.util.Arrays.asList(s);
+        List<String> list = java.util.Arrays.asList(s);
 
         //法 2 慢，但是新生成一个ArrayList，可对List进行操作不会对原对象产生影响
 
