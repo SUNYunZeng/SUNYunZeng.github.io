@@ -1,5 +1,5 @@
 ---
-title: Java-ArrayList-API
+title: Java ArrayList Handbook
 toc: true
 date: 2019-05-21 21:54:33
 categories: Java
@@ -56,7 +56,7 @@ tags: List
         // 或者
         String[] strings = (String[])list.toArray(new String[list.size()]);
 
-        // 数组转LIst
+        // 数组转List
         // 法1 快速，但是以视图形式返回，无法对数据进行删除及添加操作；
         // 可用 set() 方法修改元素，但是原始List数据会随之改变
 
@@ -90,4 +90,56 @@ tags: List
     for (Integer integer: list) {
         value = integer;
     }
+    ```
+
+3. 初始化
+
+    ```Java
+    // 第一种方式 Arrays.asList()方法
+    ArrayList<Integer> list = new Arraylist<>(Arrays.asList(1, 2, 3));
+
+    // 第二种方法 常规方式
+    ArrayList<Integer> list = new ArrayList<>();
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+    //或者
+    List innerList = Arrays.asList(1, 2, 3);
+    list.addAll(innerList);
+
+    // 第三种方法 使用生成匿名内部类
+    ArrayList<Integer> list = new ArrayList<>(){
+        {
+            add(1);
+            add(2);
+            add(3);
+        }
+    }；
+
+    // 第四种方式 使用Collection.nCopies
+    int element = 1;
+    ArrayList<Integer> list = new ArrayList<>(Collections.nCopies(2, element)); //复制伍分到list中。
+    ```
+4. 打印信息
+
+    由于ArrayList内部实现了toString()方法，所以可以直接打印
+
+    ```Java
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
+        System.out.println(list);
+    ```
+
+    对于数组信息的打印
+
+    ```Java
+        int[] A = {1, 2, 3};
+
+        // 方法一
+        for(Integer i: A){
+            System.out.println(i);
+        }
+
+        //方法二
+        System.out.println(Arrays.toString(A));
     ```
