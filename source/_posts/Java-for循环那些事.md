@@ -1,5 +1,5 @@
 ---
-title: Java： for循环的那些事
+title: Java-for循环那些事
 toc: true
 date: 2019-05-21 10:28:44
 categories: Java
@@ -7,8 +7,7 @@ tags:
     - Tips
 ---
 
-# Java - **For循环**那些事
-## Java **for**循环里面的 **i++** 与 **++i** 
+# Java **for**循环里面的 **i++** 与 **++i** 
 
 **在for循环里两者的作用是一样的**
 
@@ -51,7 +50,7 @@ i++
 **区别**
 > 在Java里面，i++ 需要开辟新的存储空间用于存储结果，++i 直接在原存储空间中存储结果。**故 **++i** 在 for 循环里面执行效率要高。** 可以作为代码优化的一部分。
 
-## foreach 与 for循环的效率
+# foreach 与 for循环的效率
 
 1. **首先测试数组**
 
@@ -122,9 +121,9 @@ i++
 
     可见对于ArrayList仍然是采用**for循环效率**更高！
 
-## for循环小技巧
+# for循环小技巧
 
-### 关于数组
+## 关于数组
 
 循环嵌套采用**小套大**。原理跟复制几个大文件跟复制一堆小文件耗时一样。
 
@@ -160,7 +159,7 @@ System.out.println("小套大: "+(endTime- startTime));
 小套大: 4918044
 ```
 
-### 关于ArrayList
+## 关于ArrayList
 
 在循环时，首**先把ArrayList长度size记录下来**。
 
@@ -194,6 +193,7 @@ System.out.println("没有保存size(): "+(endTime- startTime));
 保存size(): 38973440
 没有保存size(): 39486862
 ```
+
 
 
 
