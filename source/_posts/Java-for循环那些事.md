@@ -125,39 +125,50 @@ i++
 
 ## 关于数组
 
-循环嵌套采用**小套大**。原理跟复制几个大文件跟复制一堆小文件耗时一样。
+1. 循环嵌套采用**小套大**。原理跟复制几个大文件跟复制一堆小文件耗时一样。
 
-**测试**
+    **测试**
 
-```Java
-long startTime = System.nanoTime();
-int res = 0;
-// 大套小
-for(int i=0; i<10000000; i++){
-    for(int j=0; j<100; j++){
-        res += i;
+    ```Java
+    long startTime = System.nanoTime();
+    int res = 0;
+    // 大套小
+    for(int i=0; i<10000000; i++){
+        for(int j=0; j<100; j++){
+            res += i;
+        }
     }
-}
-long endTime = System.nanoTime();
-System.out.println("大套小: "+(endTime- startTime));
-```
+    long endTime = System.nanoTime();
+    System.out.println("大套小: "+(endTime- startTime));
+    ```
 
-```Java
-// 小套大
-for(int i=0; i<100; i++){
-    for(int j=0; j<10000000; j++){
-        res += i;
+    ```Java
+    // 小套大
+    for(int i=0; i<100; i++){
+        for(int j=0; j<10000000; j++){
+            res += i;
+        }
     }
-}
-long endTime = System.nanoTime();
-System.out.println("小套大: "+(endTime- startTime));
-```
+    long endTime = System.nanoTime();
+    System.out.println("小套大: "+(endTime- startTime));
+    ```
 
-**结果**
-```Java
-大套小: 57934223
-小套大: 4918044
-```
+    **结果**
+    ```Java
+    大套小: 57934223
+    小套大: 4918044
+    ```
+2. 数组复制时采用**System.arraycopy()**方法比**for循环复制**效率高。
+
+**System.arraycopy()**
+
+    public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+    代码解释:
+        Object src : 原数组
+        int srcPos : 从元数据的起始位置开始
+        Object dest : 目标数组
+        int destPos : 目标数组的开始起始位置
+        int length  : 要copy的数组的长度
 
 ## 关于ArrayList
 
