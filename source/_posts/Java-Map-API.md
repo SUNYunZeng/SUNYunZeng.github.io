@@ -19,6 +19,8 @@ tags:
 **Hashtable** | 用 HashMap 类似,不同的是键值都不允许为 null。 支持线程同步，但写入较慢 
 **LinkedHashMap** | 保留记录的插入顺序，生成Iterator遍历顺序与插入顺序一致。遍历比HashMap慢，键值都允许为 null；线程非同步 
 
+> --> [**HashMap剖析**](https://zhuanlan.zhihu.com/p/21673805)
+
 
 ## **常用 API**
 
