@@ -13,8 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /SUNYunZeng.github.io
-root: /SUNYunZeng.github.io
+url: sunyunzeng.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -78,14 +78,49 @@ theme: pure
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: 
     github: git@github.com:SUNYunZeng/SUNYunZeng.github.io.git
     coding: git@git.dev.tencent.com:SUNYunZeng/SUNYunZeng.git
   branch: master
+- type: baidu_url_submitter
 
 baidu_url_submit:
   count: 3 ## 比如3，代表提交最新的三个链接
-  host: SUNYunZeng.github.io ## 在百度站长平台中注册的域名
-  token: your_token ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
+  host: sunyunzeng.com ## 在百度站长平台中注册的域名
+  token: QVaeidVy7RwSqiqP ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+
+# 抓取设置
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+  # hexo-neat
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+neat_css:
+  enable: true
+  exclude:
+  - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+  - '*.min.js'
+
+  jsonContent:
+  ignore:
+  - path/to/a/page
+  - url/to/one/post
+  - an-entire-category
+  - specific.file
+  - .ext # a file extension
+
