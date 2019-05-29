@@ -158,7 +158,7 @@ douban:
   builtin: true
   book:
     title: '我的书单'
-    quote: '<font color="#C1FFC1">书籍是人类进步的阶梯！</font>'
+    quote: '<b>书籍是人类进步的阶梯！</b>'
   # movie:
   #   title: 'This is my movie title'
   #   quote: 'This is my movie quote'
