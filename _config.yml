@@ -13,9 +13,9 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /SUNYunZeng.github.io
-root: /SUNYunZeng.github.io
-permalink: :year/:month/:day/:title/
+url: http://sunyunzeng.com
+root: /
+permalink: :title/  # :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -78,12 +78,92 @@ theme: pure
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@github.com:SUNYunZeng/SUNYunZeng.github.io.git
+- type: git
+  repo: 
+    github: git@github.com:SUNYunZeng/SUNYunZeng.github.io.git
+    coding: git@git.dev.tencent.com:SUNYunZeng/SUNYunZeng.git
   branch: master
+- type: baidu_url_submitter
 
 baidu_url_submit:
-  count: 3 ## 比如3，代表提交最新的三个链接
-  host: SUNYunZeng.github.io ## 在百度站长平台中注册的域名
-  token: your_token ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
+  count: 10 ## 比如3，代表提交最新的三个链接
+  host: sunyunzeng.com ## 在百度站长平台中注册的域名
+  token: QVaeidVy7RwSqiqP ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+
+# 抓取设置
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+  # hexo-neat
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+neat_css:
+  enable: true
+  exclude:
+  - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+  - '*.min.js'
+
+ 
+# 站内搜索
+jsonContent:
+  ignore:
+    - path/to/a/page
+    - url/to/one/post
+    - an-entire-category
+    - specific.file
+    - .ext # a file extension
+  meta: true
+  dafts: false
+  file: content.json
+  dateFormat: YYYY-MM-DD
+  posts:
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    link: true
+    permalink: true
+    excerpt: true
+    text: true
+    categories: true
+    tags: true
+  # pages:
+  #   title: true
+  #   date: false
+  #   updated: false
+  #   comments: false
+  #   path: false
+  #   permalink: true
+  #   excerpt: false
+  #   text: false
+
+# douban 豆瓣书单
+douban:
+  user: 178089077
+  builtin: true
+  book:
+    title: '我的书单'
+    quote: '<font color="#C1FFC1">书籍是人类进步的阶梯！</font>'
+  # movie:
+  #   title: 'This is my movie title'
+  #   quote: 'This is my movie quote'
+  # game:
+  #   title: 'This is my game title'
+  #   quote: 'This is my game quote'
+  timeout: 10000 
+  
