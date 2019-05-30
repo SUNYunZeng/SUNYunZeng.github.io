@@ -2,9 +2,7 @@
 title: 在Linux系统中同步更新我们的Github博客
 toc: true
 date: 2019-04-28 16:45:48
-categories: 
-    - 教程
-    - Linux 
+categories: 教程
 tags: System
 ---
 # 原理介绍
