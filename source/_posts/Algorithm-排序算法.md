@@ -1,5 +1,5 @@
 ---
-title: Algorithm-排序算法
+title: Algorithm-排序算法 1
 toc: true
 date: 2019-05-27 21:38:08
 categories: Algorithm

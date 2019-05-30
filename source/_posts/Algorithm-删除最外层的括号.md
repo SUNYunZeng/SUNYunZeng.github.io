@@ -3,7 +3,7 @@ title: Algorithm--删除最外层的括号
 toc: true
 date: 2019-05-21 21:42:55
 categories: Algorithm
-tags: Stack
+tags: Other Algorithm
 ---
 
 # 删除最外层括号

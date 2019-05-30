@@ -3,7 +3,7 @@ title: Algorithm--Find Common Characters
 toc: true
 date: 2019-05-17 12:29:20
 categories: Algorithm
-tags: String Relative
+tags: Other Algorithm
 ---
 # Find Common Characters
 ## **Title detail**

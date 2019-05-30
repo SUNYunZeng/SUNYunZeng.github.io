@@ -4,7 +4,7 @@ toc: true
 mathjax: true
 date: 2019-05-19 13:11:49
 categories: Algorithm
-tags: Algorithm
+tags: Other Algorithm
 ---
 
 # Some Algorithm using Math Algorithm
@@ -34,7 +34,7 @@ Explanation: The square root of 8 is 2.82842..., and since
 
 [牛顿迭代法](https://en.wikipedia.org/wiki/Integer_square_root#Using_only_integer_division)
 
->公式： $x_{k+1} = \lfloor {x_k + \frac n{x_k}} \rfloor / 2$
+>公式： $x_{k+1} = \lfloor {x_k +  n / {x_k}} \rfloor / 2$
 
 >当$k \rightarrow \infty$ 时，${x_{k+1}}^2 \rightarrow  n$
 

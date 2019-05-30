@@ -3,9 +3,7 @@ title: Algortthm--Jewels and Stones
 toc: true
 date: 2019-05-19 10:57:16
 categories: Algorithm
-tags: 
-    - Map  
-    - String Relative
+tags: Other Algorithm
 ---
 
 # **Map的应用**

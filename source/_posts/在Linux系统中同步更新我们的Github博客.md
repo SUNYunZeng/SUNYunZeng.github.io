@@ -2,8 +2,10 @@
 title: 在Linux系统中同步更新我们的Github博客
 toc: true
 date: 2019-04-28 16:45:48
-categories: 教程
-tags: linux
+categories: 
+    - 教程
+    - Linux 
+tags: System
 ---
 # 原理介绍
 类似于**版本管理**，我们把hexo博客文件系统在Github上建立一个分支，通过管理分支提交最新的博客文件系统，保证我们博客框架的更新。然后我们基于最新的**博客框架**，撰写文章，进行Github Pages网页的更新，即我们博客内容的更新。

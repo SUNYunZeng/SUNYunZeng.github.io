@@ -3,7 +3,7 @@ title: Algorithm--Fast and Slow Pointer
 toc: true
 date: 2019-05-17 22:00:47
 categories: Algorithm
-tags: Fast and Slow Pointer
+tags: Other Algorithm
 ---
 # **快慢指针的应用**
 

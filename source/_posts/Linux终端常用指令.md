@@ -3,7 +3,8 @@ title: Linux终端常用指令
 toc: true
 date: 2019-05-27 21:30:57
 categories: Linux
-tags: Tips
+tags: 
+    - Tips
 ---
 
 # 常用指令集

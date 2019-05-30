@@ -3,7 +3,8 @@ title: Java ArrayList Handbook
 toc: true
 date: 2019-05-21 21:54:33
 categories: Java
-tags: List
+tags: 
+    - Tips
 ---
 
 # **Java List**
