@@ -3,7 +3,7 @@ title: Algorithm--Third Maximum Number
 toc: true
 date: 2019-05-23 13:37:55
 categories: Algorithm
-tags: Algorithm
+tags: Other Algorithm
 ---
 
 # 1. Third Maximum Number
