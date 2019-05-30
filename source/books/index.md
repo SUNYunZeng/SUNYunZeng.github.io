@@ -1,6 +1,6 @@
 ---
 title: 书单
 layout: books
-comments: false
+comments: true
 sidebar: none
 ---
