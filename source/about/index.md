@@ -1,12 +1,19 @@
 ---
 title: 关于
-description: 个人简介
+description: 我这个人
 layout: about
 comments: false
 sidebar: custom
 ---
-我
-就是
-爱运动
-更爱学习
-好奇心满满
+
+###  年龄: **保密...**
+
+###  身高: **保密...**
+
+###  状态: **武汉读研ing...**
+
+###  兴趣: **篮球; 读书; Coding ...**
+
+###  座右铭: **生活极致简单，内涵极致丰富 ...**
+
+
