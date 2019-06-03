@@ -5,10 +5,14 @@
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/images/my.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/source/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Algorithm-Fase-and-Low-Pointer.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Algorithm-Fase-and-Low-Pointer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure/_source/404/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/404/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure/_source/books/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure/layout/_search/insight.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/_search/insight.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure/layout/books.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/books.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/source/images/donate/alipayimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/images/donate/alipayimg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/source/images/donate/wechatpayimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/images/donate/wechatpayimg.png" afterDir="false" />
@@ -81,10 +85,11 @@
     <session id="-231848372">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -130,7 +135,9 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/在Linux系统中同步更新我们的Github博客.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="304">
+                <caret line="16" selection-start-line="16" selection-end-line="17" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -189,8 +196,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
-    <option name="y" value="37" />
+    <option name="x" value="47" />
+    <option name="y" value="36" />
     <option name="width" value="1195" />
     <option name="height" value="890" />
   </component>
@@ -228,9 +235,10 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Hexo/node_modules/hexo-baidu-url-submit/lib/generator.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/workspaces/DataHubClient" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/webpower" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -274,11 +282,12 @@
       <workItem from="1556247624349" duration="1316000" />
       <workItem from="1556456234053" duration="678000" />
       <workItem from="1558243214491" duration="1227000" />
+      <workItem from="1559374844982" duration="281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53529000" />
+    <option name="totallyTimeSpent" value="53810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -290,9 +299,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="30" width="956" height="712" extended-state="0" />
+    <frame x="38" y="29" width="956" height="712" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27173913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27173913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -571,7 +580,9 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/在Linux系统中同步更新我们的Github博客.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="304">
+            <caret line="16" selection-start-line="16" selection-end-line="17" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
