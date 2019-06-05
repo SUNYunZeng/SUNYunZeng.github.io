@@ -29,7 +29,7 @@ tags:
 **Object put(Object k, Object v)** | 存入键值对 
 **Object get(Object k)** | 返回键所映射的值；如果不存在该映射则返回 null 
 **boolean containsKey(Object k)** | 是否包含键 k 
-**boolean containsKey(Object v)** | 是否包含值 v 
+**boolean containsValue(Object v)** | 是否包含值 v 
 **boolean isEmpty()** | Map 是否为空 
 **int size()** | 返回 Map 的键值对数 
 **boolean remove(Object k)** | 如果存在一个键映射关系，则删除此关系(映射关系不存在不会报错) 
@@ -40,7 +40,7 @@ tags:
 **Set keySet()** | 以 Set 形式返回 Map 包含的键 
 **Set entrySet()** | 以 Set 形式返回 Map 的映射关系
 
-## **List 应用示例**
+**List 应用示例**
 
 ```Java
 Map<Integer, Character> map = new HashMap<>();
@@ -53,3 +53,80 @@ if(map.containsKey(1)){
     map.remove(1);
 }
 ```
+## **常用遍历方法**
+
+**1. 只获取键或值**
+
+```java
+// 获取键
+for(Integer key: map.keyset()){
+    System.out.println(key);
+}
+
+// 获取值
+for(Integer value: map.value()){
+    System.out.println(value);
+}
+
+```
+
+**2. 同时获取键和值**
+
+```java
+// 2.1 先取key再取value。不推荐
+
+for(Integer key:map.keySet()){
+    System.out.println(map.get(key));
+}
+
+// 2.2 通过map entrySet遍历。性能优于上一种。
+
+for(Map.Entry<Integer, Integer> entry: map.entrySet()){
+    System.out.println(entry.getKey() + ":" + entry.getValue());
+}
+```
+**3. Iterator**
+
+上面的foreach都可以用Interator代替。
+
+foreach是对Set遍历,大小不能改变。如果改变map的大小，会报错。如果想要删除元素，还是要用Interator的方式删除。
+
+```java
+Interator<Map.Entry<Integer, Integer>> it = map.enteySet().iterator();
+while(it.hasNext()){
+    Map.Entry<Integer, Integer> entry = it.next();
+    System.out.println(entry.getKey() + ":" + entry.getValue());
+    // it.remove()  删除元素
+}
+```
+
+**4. Lambda**
+
+代码简洁，但是性能低于entrySet。
+
+```java
+map.forEach((key, value)->{
+    System.out.println(key + ":" + value);
+})
+```
+
+**5. 性能测试**
+
+用10万条数据，做了一个简单性能测试，数据类型为Integer，map实现选取HashMap
+```java
+static{
+     for (int i = 0; i < 100000; i++) {
+      map.put(i, 1);
+    }
+}
+```
+
+> **测试结果如下：**
+    KeySet：           392
+    Values：           320
+    keySet get(key)：  552
+    entrySet：         465
+    entrySet Iterator：508
+    Lambda：           536
+
+[Map的遍历方法参考](https://www.cnblogs.com/zhaoguhong/p/7074597.html?utm_source=itdadao&utm_medium=referral)(侵删)

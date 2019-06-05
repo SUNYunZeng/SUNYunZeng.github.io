@@ -1,5 +1,5 @@
 ---
-title: Algorithm-排序算法 1
+title: Algorithm-排序算法
 toc: true
 date: 2019-05-27 21:38:08
 categories: Algorithm
@@ -57,13 +57,15 @@ public class BubbleSort {
 }
 ```
 
-转自[知乎](https://zhuanlan.zhihu.com/p/52884590)
+转自[知乎](https://zhuanlan.zhihu.com/p/52884590)(插入、冒泡图片来源，侵删)
 
 # 快速排序
 
 每次找出一个基准，作为划分标准。方法**类似于二分法，每次都把小于基准的数放于基准数组的左边，把大于基准的数放于数组的右边**。
 
 算法不稳定，**时间复杂度**最好$O(nlog(n))$，最差$O(n^2)$
+
+{% asset_img qucikSort.gif %}
 
 当数组本来是排序好的，例如是顺序排列，此时要计算逆序排列，如果利用快排方法，则时间复杂度为$O(n^2)$，当然，此时的基准选取是头部或者尾部。
 
@@ -213,3 +215,5 @@ public class QuickSort {
 ```
 
 [1.参考资料](https://zhuanlan.zhihu.com/p/52884590)      [2.参考资料](https://blog.csdn.net/shujuelin/article/details/82423852)
+
+[十大排序算法讲解推荐](https://mp.weixin.qq.com/s/IAZnN00i65Ad3BicZy5kzQ)(快排图片来源，侵删)
