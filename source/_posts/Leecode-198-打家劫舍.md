@@ -36,6 +36,7 @@ tags: Dynamic Programming
 用一个数组维护截止到当前偷窃的最大值。更新条件：dp[i]=max(nums[i]+dp[i-1], dp[i-1])。
 
 # 代码
+
 ```java
 class Solution {
     public int rob(int[] nums) {
