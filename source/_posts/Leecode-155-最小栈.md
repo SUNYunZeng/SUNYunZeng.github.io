@@ -1,5 +1,5 @@
 ---
-title: Leecode 155.最小栈
+title: Leetcode 155.最小栈
 comments: true
 toc: true
 date: 2019-06-22 14:07:29

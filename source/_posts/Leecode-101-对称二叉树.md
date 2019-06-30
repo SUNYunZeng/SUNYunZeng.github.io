@@ -1,5 +1,5 @@
 ---
-title: Leecode 101.对称二叉树
+title: Leetcode 101.对称二叉树
 comments: true
 toc: true
 date: 2019-06-25 21:52:19

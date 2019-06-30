@@ -1,5 +1,5 @@
 ---
-title: Leecode 234.回文链表
+title: Leetcode 234.回文链表
 comments: true
 toc: true
 date: 2019-06-20 12:24:26

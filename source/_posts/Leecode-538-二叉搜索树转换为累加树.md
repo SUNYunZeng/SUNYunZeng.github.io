@@ -1,5 +1,5 @@
 ---
-title: Leecode 538.二叉搜索树转换为累加树
+title: Leetcode 538.二叉搜索树转换为累加树
 comments: true
 toc: true
 date: 2019-06-17 11:55:59
