@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-07-03 17:11:32
 categories: Algorithm
-tags: Other Algorithm
+tags: Binary Tree
 ---
 
 # 题目描述
