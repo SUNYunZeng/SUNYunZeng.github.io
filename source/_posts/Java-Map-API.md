@@ -40,7 +40,7 @@ tags:
 **Set keySet()** | 以 Set 形式返回 Map 包含的键 
 **Set entrySet()** | 以 Set 形式返回 Map 的映射关系
 
-**List 应用示例**
+**Map 应用示例**
 
 ```Java
 Map<Integer, Character> map = new HashMap<>();
