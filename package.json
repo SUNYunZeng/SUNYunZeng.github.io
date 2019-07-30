@@ -6,6 +6,8 @@
     "version": "3.8.0"
   },
   "dependencies": {
+    "lodash": ">=4.17.13",
+    "lodash.merge": ">=4.6.2",
     "hexo": "^3.8.0",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
     "hexo-autonofollow": "^1.0.1",
