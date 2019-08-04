@@ -3,7 +3,7 @@ title: Leetcode 739.每日温度
 comments: true
 toc: true
 date: 2019-07-12 20:46:54
-categories: Algortihm
+categories: Algorithm
 tags: Other Algorithm
 ---
 
