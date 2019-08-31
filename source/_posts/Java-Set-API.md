@@ -45,7 +45,7 @@ tags: Tips
 
 HashSet的方法基本与Set一致，只不过多了一个**Object clone()**方法（浅复制，只复制地址）。
 
-主要方法包括：
+**主要方法包括：**
 + add()
 + clear()
 + clone()
