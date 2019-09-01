@@ -1,5 +1,5 @@
 ---
-title: Leetcode 最长公共前缀 (字节跳动 offer直达系列 02)
+title: Leetcode 最长公共前缀 (String 练习 01)
 comments: true
 toc: true
 date: 2019-08-31 17:03:25
