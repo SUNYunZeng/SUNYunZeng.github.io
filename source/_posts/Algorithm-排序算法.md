@@ -3,7 +3,7 @@ title: Algorithm-排序算法
 toc: true
 date: 2019-05-27 21:38:08
 categories: Algorithm
-tags: Sort
+tags: Algorithm
 ---
 # 插入排序
 每次遍历都将对应位置的数字插入到合适的位置，当前位置之前的数据保持排序。
