@@ -11,14 +11,28 @@ tags:
 
 ## **常用类型**
 
-
 类型 |特征 
 :-: | :-: 
 **ArrayList** | 随机访问元素快；中间插入与删除元素较慢；操作不是线程安全的 
 **LinkedList** | 中间插入与删除操作代价较低，提供优化的顺序访问；随机访问元素慢 
 
+## **ArrayList**
 
-## **ArrayList 常用 API**
+**ArrayList的UML类图如下所示：**
+
+![avatar](http://www.plantuml.com/plantuml/png/TKynQiGm4Epr2k7UVa4AcrI1L4a-i9Ot85XB8AsBXFmahqWTo6_2VUDiOT_D2QuHgvcTsPa-AoLTPZ5lNeLjCwH47yy-w-ddz__xhp4-AATtScoVre56OO0UemWxzJ40kAaDZLaJERLEA6Sxx5yGtDdOr63sGc6Ay-0Svuo79GQkmhnoyYJ-iy2xwT76c2EzVVXgMmn-7LUgwwgezKfH5qVSG_AcoFQWxGvZgq93qakrca27SWeux8uwp81Ops5QPZa3)
+
+ArrayList 继承了<font color=#f07c82> AbstractList</font>, 直接实现了<font color=#f07c82> Cloneable, Serializable，RandomAccess </font>类型标志接口。
+
++ AbstractList 作为列表的抽象实现，将元素的增删改查都交给了具体的子类去实现，在元素的迭代遍历的操作上提供了默认实现。
+
++ RandomAccess 接口实现，表示 ArrayList 里的元素可以被高效效率的随机访问，以下标数字的方式获取元素。实现 RandomAccess 接口的列表上在遍历时可直接使用普通的<font color=#f07c82> for </font>循环方式，并且执行效率上给迭代器方式更高。
+
++ Cloneable 接口的实现，表示了 ArrayList 支持调用 Object 的 <font color=#f07c82> clone </font>方法，实现 ArrayList 的拷贝。
+
++ Serializable 接口实现，说明了 ArrayList 还支持序列化和反序列操作，具有固定的 <font color=#f07c82> serialVersionUID </font> 属性值。
+
+### **ArrayList 常用 API**
 
 方法 | 描述 
 :-: | :-: 
@@ -43,7 +57,7 @@ tags:
 **void clear()** | 移除ArrayList中所有对象 
 **Iterator<'E'> iterator()** | 获取该 ArrayList 对应的迭代器对象 
 
-## ArrayList 应用示例
+### ArrayList 应用示例
 
 1. ArrayList与数组之间的转换
 
@@ -144,3 +158,7 @@ tags:
         //方法二
         System.out.println(Arrays.toString(A));
     ```
+
+# 参考资料
+
+>1. <font color=#2b1216> ArrayList源码剖析:</font> <u>http://www.spring4all.com/article/16262</u>
