@@ -11,9 +11,9 @@ tags: 网页
 
 UML(Unified Modeling Language)是统一建模语言的简写。
 
-它可分为用例视图、设计视图、进程视图、实现视图和拓扑视图，又可以静动分为静态视图和动态视图。静态图分为：用例图，类图，对象图，包图，构件图，部署图。动态图分为：状态图，活动图，协作图，序列图。
+它可分为<font color=#f07c82>用例视图、设计视图、进程视图、实现视图和拓扑视图</font>，又可以静动分为静态视图和动态视图。静态图分为：<font color=#f07c82>用例图，类图，对象图，包图，构件图，部署图</font>。动态图分为：<font color=#f07c82>状态图，活动图，协作图，序列图</font>。
 
-其中类图(Class Diagrams)是用来表示类的内部结构和类与类之间的关系的一种UML。常见的关系有：泛化(Generalization)，实现(Realization)，组合(Composition)，聚合(Aggregation)，关联(Association)，依赖(Dependency)。
+其中<font color=#f07c82>**类图**</font> (Class Diagrams)是用来表示类的内部结构和类与类之间的关系的一种UML。常见的关系有：泛化 (Generalization)，实现 (Realization)，组合 (Composition)，聚合 (Aggregation)，关联 (Association)，依赖 (Dependency)。
 
 各种关系的强弱顺序： 泛化 = 实现 > 组合 > 聚合 > 关联 > 依赖
 

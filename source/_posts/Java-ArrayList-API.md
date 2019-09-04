@@ -1,5 +1,5 @@
 ---
-title: Java ArrayList Handbook
+title: Java：List API
 toc: true
 date: 2019-05-21 21:54:33
 categories: Java
@@ -59,105 +59,110 @@ ArrayList 继承了<font color=#f07c82> AbstractList</font>, 直接实现了<fon
 
 ### ArrayList 应用示例
 
-1. ArrayList与数组之间的转换
+**1. ArrayList与数组之间的转换**
+```Java
+    // 转数组
 
-    ```Java
-        // 转数组
+    List<String> list = new ArrayList<>();
+    String[] strings = new String[list.size()];
+    list.toArray(strings);
 
-        List<String> list = new ArrayList<>();
-        String[] strings = new String[list.size()];
-        list.toArray(strings);
+    // 或者
+    String[] strings = (String[])list.toArray(new String[list.size()]);
 
-        // 或者
-        String[] strings = (String[])list.toArray(new String[list.size()]);
+    // 数组转List
+    // 法1 快速，但是以视图形式返回，无法对数据进行删除及添加操作；
+    // 可用 set() 方法修改元素，但是原始List数据会随之改变
 
-        // 数组转List
-        // 法1 快速，但是以视图形式返回，无法对数据进行删除及添加操作；
-        // 可用 set() 方法修改元素，但是原始List数据会随之改变
+    String[] s = {"abc", "def", "ghi"};
+    List<String> list = java.util.Arrays.asList(s);
 
-        String[] s = {"abc", "def", "ghi"};
-        List<String> list = java.util.Arrays.asList(s);
+    //法 2 慢，但是新生成一个ArrayList，可对List进行操作不会对原对象产生影响
 
-        //法 2 慢，但是新生成一个ArrayList，可对List进行操作不会对原对象产生影响
+    List<String> assertList = new ArrayList();
+    Collections.addAll(assertList, strings);
+```
+**2. ArrayList遍历方式**
+```Java
+List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5));
 
-        List<String> assertList = new ArrayList();
-        Collections.addAll(assertList, strings);
-    ```
-2. ArrayList遍历方式
+// 第一种，通过迭代器遍历。即通过Iterator去遍历。
+Integer value = null;
+Iterator iter = list.iterator();
+while (iter.hasNext()) {
+value = (Integer)iter.next();
+}
 
-    ```Java
-    // 第一种，通过迭代器遍历。即通过Iterator去遍历。
-    Integer value = null;
-    Iterator iter = list.iterator();
-    while (iter.hasNext()) {
-        value = (Integer)iter.next();
+// 第二种，随机访问，通过索引值去遍历。
+Integer value = null;
+int size = list.size();
+for (int i=0; i < size; i++) {
+value = (Integer)list.get(i);        
+}
+
+// 第三种，for循环遍历。
+Integer value = null;
+for (Integer integer: list) {
+value = integer;
+}
+
+// 第四种，利用Stream API的 stream.forEach()方法依次获取。
+list.forEach(num -> System.out.println(num));
+```
+
+**3. 初始化**
+```Java
+// 第一种方式 Arrays.asList()方法
+ArrayList<Integer> list = new Arraylist<>(Arrays.asList(1, 2, 3));
+
+// 第二种方法 常规方式
+ArrayList<Integer> list = new ArrayList<>();
+list.add(1);
+list.add(2);
+list.add(3);
+
+//或者
+List innerList = Arrays.asList(1, 2, 3);
+list.addAll(innerList);
+
+// 第三种方法 使用生成匿名内部类
+ArrayList<Integer> list = new ArrayList<>(){
+    {
+        add(1);
+        add(2);
+        add(3);
+    }
+}；
+
+// 第四种方式 使用Collection.nCopies
+int element = 1;
+ArrayList<Integer> list = new ArrayList<>(Collections.nCopies(2, element)); //复制伍分到list中。
+```
+**4. 打印信息**
+
+由于ArrayList内部实现了toString()方法，所以可以直接打印
+```Java
+    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
+    System.out.println(list);
+```
+
+对于数组信息的打印
+```Java
+    int[] A = {1, 2, 3};
+
+    // 方法一
+    for(Integer i: A){
+        System.out.println(i);
     }
 
-    // 第二种，随机访问，通过索引值去遍历。
-    Integer value = null;
-    int size = list.size();
-    for (int i=0; i < size; i++) {
-        value = (Integer)list.get(i);        
-    }
+    //方法二
+    System.out.println(Arrays.toString(A));
+```
 
-    // 第三种，for循环遍历。
-    Integer value = null;
-    for (Integer integer: list) {
-        value = integer;
-    }
-    ```
+**5. 大量头部的增删操作**
 
-3. 初始化
-
-    ```Java
-    // 第一种方式 Arrays.asList()方法
-    ArrayList<Integer> list = new Arraylist<>(Arrays.asList(1, 2, 3));
-
-    // 第二种方法 常规方式
-    ArrayList<Integer> list = new ArrayList<>();
-    list.add(1);
-    list.add(2);
-    list.add(3);
-
-    //或者
-    List innerList = Arrays.asList(1, 2, 3);
-    list.addAll(innerList);
-
-    // 第三种方法 使用生成匿名内部类
-    ArrayList<Integer> list = new ArrayList<>(){
-        {
-            add(1);
-            add(2);
-            add(3);
-        }
-    }；
-
-    // 第四种方式 使用Collection.nCopies
-    int element = 1;
-    ArrayList<Integer> list = new ArrayList<>(Collections.nCopies(2, element)); //复制伍分到list中。
-    ```
-4. 打印信息
-
-    由于ArrayList内部实现了toString()方法，所以可以直接打印
-
-    ```Java
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
-        System.out.println(list);
-    ```
-
-    对于数组信息的打印
-
-    ```Java
-        int[] A = {1, 2, 3};
-
-        // 方法一
-        for(Integer i: A){
-            System.out.println(i);
-        }
-
-        //方法二
-        System.out.println(Arrays.toString(A));
-    ```
+> ArrayList是数组实现的，使用的是连续的内存空间，当有在数组头部将元素添加或者删除的时候，需要对头部以后的数据进行复制并重新排序，效率很低。针对有大量类似操作的场景，出于性能考虑，我们应该使用 <font color="f07c82">LinkedList</font> 代替。
+> 由于LinkedList 是基于链表实现，当需要操作的元素位置位于List 前半段时，就从头开始遍历，马上找到后将把元素在相应的位置进行插入或者删除操作。
 
 # 参考资料
 
