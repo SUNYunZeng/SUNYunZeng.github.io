@@ -39,7 +39,7 @@ Servlet规范也没有想象中的那么高大上，其实它就是一个**Java�
 
 **Tomcat**就是一个开源的Servlet的容器，它也是一个Web服务器。
 
-<font color=#f07c82>HttpServlet<font>就是已经实现好的一个Servlet类，他对一些方法进行了详细的补充，我们通过doGet()、doPost()等方法很方便地实现处理HTTP请求功能。
+<font color=#f07c82>HttpServlet</font>就是已经实现好的一个Servlet类，他对一些方法进行了详细的补充，我们通过doGet()、doPost()等方法很方便地实现处理HTTP请求功能。
 
 它的一些源码如下：
 
@@ -220,3 +220,90 @@ http://127.0.0.1 是一个监听地址，需要服务器实现监听，此时就
 首先，定义在 doPost() 和 doGet()里的方法由于是**局部变量**，再每个用户调用实例方法时都会初始化，所以**不存在线程安全**。（一些属性尽量定义在实例的局部方法中）
 
 实在需要共享的资源，只需加<font color=#f07c82>synchronized同步机制</font>，在共享资源被某一线程占用后，该线程就拥有锁，其它线程只有等待该线程执行完毕才能使用该资源（抢占锁后一一执行）。
+
+# Servlet的常用方法
+
+在HttpServlet中sercive方法中，参数列表接受两个对象，一个是<font color=#f07c82>HttpServletResponse</font>对象，一个是<font color=#f07c82>HttpServletRequest</font>对象。
+
+## HttpServletRequest常用方法
+
+**常见方法**
+
+方法名 | 作用
+:-: | :-:
+request.getRequestURL() | 浏览器发出请求时的完整URL，包括协议 主机名 端口(如果有)"
+request.getRequestURI() | 浏览器发出请求的资源名部分，去掉了协议和主机名"
+request.getQueryString() | 请求行中的参数部分，只能显示以get方式发出的参数，post方式的看不到
+request.getRemoteAddr() | 浏览器所处于的客户机的IP地址
+request.getRemoteHost() | 浏览器所处于的客户机的主机名
+request.getRemotePort() | 浏览器所处于的客户机使用的网络端口
+request.getLocalAddr() | 服务器的IP地址
+request.getLocalName() | 服务器的主机名
+request.getMethod() | 得到客户机请求方式一般是GET或者POST
+
+**获取参数**
+
+方法名 | 作用
+:-: | :-:
+request.getParameter() | 是常见的方法，用于获取单值的参数
+request.getParameterValues() | 用于获取具有多值的参数，比如注册时候提交的 "hobits"，可以是多选的。
+request.getParameterMap() | 用于遍历所有的参数，并返回Map类型。
+
+**获取头信息**
+
+方法名 | 作用
+:-: | :-:
+request.getHeader() | 获取浏览器传递过来的头信息。
+比如getHeader("user-agent") | 可以获取浏览器的基本资料，这样就能判断是firefox、IE、chrome、或者是safari浏览器
+request.getHeaderNames() | 获取浏览器所有的头信息名称，根据头信息名称就能遍历出所有的头信息
+
+头信息含义：
+>host: 主机地址
+>user-agent: 浏览器基本资料
+>accept: 表示浏览器接受的数据类型
+>accept-language: 表示浏览器接受的语言
+>accept-encoding: 表示浏览器接受的压缩方式，是压缩方式，并非编码
+>connection: 是否保持连接
+>cache-control: 缓存时限
+
+## HttpServletResponse常用方法
+
+1. 设置相应内容
+
+    <font color=#f07c82>PrintWriter pw= response.getWriter();</font>
+
+    通过`response.getWriter();` 获取一个PrintWriter 对象
+
+    可以使用`println()`,`append()`,`write()`,`format()`等等方法设置返回给浏览器的html内容。
+
+2. 设置相应内容
+
+    <font color=#f07c82>response.setContentType("text/html");</font>
+
+3. 设置相应编码
+
+    + `response.setContentType("text/html; charset=UTF-8");`
+    不仅发送到浏览器的内容会使用UTF-8编码，而且还通知浏览器使用UTF-8编码方式进行显示。所以总能正常显示中文
+
+    + `response.setCharacterEncoding("UTF-8");`
+    仅仅是发送的浏览器的内容是UTF-8编码的，至于浏览器是用哪种编码方式显示不管。 所以当浏览器的显示编码方式不是UTF-8的时候，就会看到乱码，需要手动再进行一次设置。
+
+4. 301或者302客户端跳转
+
+    客户端有两种跳转:
+
+    + 302 表示临时跳转
+        `response.sendRedirect("fail.html");`
+
+    + 301 表示永久性跳转
+        `response.setStatus(301);`
+        `response.setHeader("Location", "fail.html");`
+
+5. 设置不使用缓存
+    ```java
+    response.setDateHeader("Expires",0 );
+    response.setHeader("Cache-Control","no-cache");
+    response.setHeader("pragma","no-cache");
+    ```
+
+参考: <u>http://how2j.cn/k/servlet/servlet-upload/587.html#nowhere</u>
