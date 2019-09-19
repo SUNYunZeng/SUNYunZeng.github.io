@@ -39,7 +39,41 @@ tags: Binary Tree
 
 所以先序遍历的第一个数值为根节点，在中序遍历中找到根节点位置，前面为左子树的中序遍历，后面为右子树的中序遍历。
 
-java代码太冗长了，不能很好地反映，所以采用更简洁的Python代码
+Java代码如下:
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        if(preorder==null || inorder==null)
+            return null;
+        if(preorder.length==0 || inorder.length==0){
+            return null;
+        }
+        if(preorder.length!=inorder.length){
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[0]);
+        int len = preorder.length;
+        for(int i=0; i<len; i++){
+            if(inorder[i]==preorder[0]){
+                root.left = buildTree(Arrays.copyOfRange(preorder,1,i+1), Arrays.copyOfRange(inorder,0,i));
+                root.right = buildTree(Arrays.copyOfRange(preorder,i+1,len),Arrays.copyOfRange(inorder,i+1,len));
+            }
+        }
+        return root;
+    }
+}
+```
+
+Python代码如下：
 
 ```python
 # Definition for a binary tree node.
