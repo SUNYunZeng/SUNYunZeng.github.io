@@ -25,7 +25,7 @@ tags: Other Algorithm
 
 # 思路+代码
 
-先<font color=#f07c82>排序</font>，然后三数之和等于零必定有<font color=#f07c82> 1 ~ 2 </font>个小于零，<font color=#f07c82> 1 ~ 2 </font>个大于零。
+先<font color=#f07c82>排序</font>，然后三数之和等于零必定有<font color=#f07c82> 1 到 2 </font>个小于零，<font color=#f07c82> 1 到 2 </font>个大于零。
 
 然后我们采用<font color=#f07c82>双指针</font>，先固定最小的一个数（负值）；然后双指针再后面区间寻找两个数，与前面数相加等于零。
 
@@ -78,7 +78,6 @@ class Solution {
     }
 }
 ```
-
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/3sum
