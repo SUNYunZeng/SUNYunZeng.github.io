@@ -62,6 +62,7 @@ class Solution {
 
 动态规划，用一个长度为n的数值维度维护每个位置的最大长度，然后取其中最大值。
 
+```java
 class Solution {
     public int findLengthOfLCIS(int[] nums) {
         if(nums==null || nums.length==0)
@@ -80,7 +81,7 @@ class Solution {
         return res;
     }
 }
-
+```
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
