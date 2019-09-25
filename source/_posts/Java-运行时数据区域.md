@@ -3,7 +3,7 @@ title: Java 运行时数据区域
 comments: true
 toc: true
 date: 2019-08-08 14:00:55
-categories: Java
+categories: JVM
 tags: JVM
 ---
 

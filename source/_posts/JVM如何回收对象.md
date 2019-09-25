@@ -54,7 +54,55 @@ tags: JVM
 
 将内存空间分为**新生代**与**老生代**。新生代中每次垃圾回收时都会有大量对象死亡，需要复制的对象很少，因此采用复制算法。老生代对象的利用率高，存活时间长，因此采用标记-清理或者标记整理算法。
 
+# 垃圾回收器
 
-参考: [深入理解java虚拟机](https://book.douban.com/subject/6522893/)
+## 新生代垃圾收集器
+
+**<font color=#f07c82>1. Serial收集器</font>** 
+
+**特点：** Serial 收集器只能使用一条线程进行垃圾收集工作，并且在进行垃圾收集的时候，所有的工作线程都需要停止工作，等待垃圾收集线程完成以后，其他线程才可以继续工作。
+
+**使用算法：复制算法**
+
+**<font color=#f07c82>2. ParNew收集器</font>** 
+
+**特点：** ParNew 垃圾收集器是Serial收集器的多线程版本。为了利用 CPU 多核多线程的优势，ParNew 收集器可以运行多个收集线程来进行垃圾收集工作。这样可以提高垃圾收集过程的效率。
+
+**使用算法：复制算法**
+
+**<font color=#f07c82>3. Parallel Scavenge收集器</font>** 
+
+**特点：** Parallel Scavenge 收集器是一款多线程的垃圾收集器，但是它又和 ParNew 有很大的不同点。
+Parallel Scavenge 收集器和其他收集器的关注点不同。其他收集器，比如 ParNew 和 CMS 这些收集器，它们主要关注的是如何缩短垃圾收集的时间。而 Parallel Scavenge 收集器关注的是如何控制系统运行的吞吐量。这里说的吞吐量，指的是 CPU 用于运行应用程序的时间和 CPU 总时间的占比，吞吐量 = 代码运行时间 / （代码运行时间 + 垃圾收集时间）。如果虚拟机运行的总的 CPU 时间是 100 分钟，而用于执行垃圾收集的时间为 1 分钟，那么吞吐量就是 99%。
+
+**使用算法：复制算法**
+
+## 老年代垃圾收集器
+
+**<font color=#f07c82>1. Serial Old收集器</font>** 
+
+**特点：** Serial Old 收集器是 Serial 收集器的老年代版本。这款收集器主要用于客户端应用程序中作为老年代的垃圾收集器，也可以作为服务端应用程序的垃圾收集器。
+
+**使用算法：标记-整理**
+
+**<font color=#f07c82>2. Parallel Old收集器</font>**
+
+**特点：** Parallel Old 收集器是 Parallel Scavenge 收集器的老年代版本这个收集器是在 JDK1.6 版本中出现的，所以在 JDK1.6 之前，新生代的 Parallel Scavenge 只能和 Serial Old 这款单线程的老年代收集器配合使用。Parallel Old 垃圾收集器和 Parallel Scavenge 收集器一样，也是一款关注吞吐量的垃圾收集器，和 Parallel Scavenge 收集器一起配合，可以实现对 Java 堆内存的吞吐量优先的垃圾收集策略。
+
+**使用算法：标记-整理**
+
+**<font color=#f07c82>3. CMS收集器</font>**
+
+**特点：** CMS 收集器是目前老年代收集器中比较优秀的垃圾收集器。CMS 是 Concurrent Mark Sweep，从名字可以看出，这是一款使用"标记-清除"算法的并发收集器。CMS 收集器的工作过程可以分为 4 个阶段：初始标记（CMS initial mark）阶段、并发标记（CMS concurrent mark）阶段、重新标记（CMS remark）阶段、并发清除(（CMS concurrent sweep）阶段。
+
+**使用算法：**复制+标记清除
+
+**<font color=#f07c82>3. G1 垃圾收集器</font>**
+
+**特点：** 主要步骤：初始标记，并发标记，重新标记，复制清除。
+**使用算法：**复制 + 标记整理
+
+
+参考: [深入理解java虚拟机](https://book.douban.com/subject/6522893/)  [JVM面试突破](https://zhuanlan.zhihu.com/p/79794189)
 
 
