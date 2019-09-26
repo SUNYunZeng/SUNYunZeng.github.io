@@ -103,6 +103,10 @@ Parallel Scavenge 收集器和其他收集器的关注点不同。其他收集�
 **使用算法：**复制 + 标记整理
 
 
-参考: [深入理解java虚拟机](https://book.douban.com/subject/6522893/)  [JVM面试突破](https://zhuanlan.zhihu.com/p/79794189)
+# 参考:
+
+[深入理解java虚拟机](https://book.douban.com/subject/6522893/)  
+
+[JVM面试突破](https://zhuanlan.zhihu.com/p/79794189)
 
 

@@ -90,7 +90,7 @@ public class HelloClass {
 
 常量池后面是访问标志。
 
-<center>{% asset_img assess_flags.png %}</center>
+<center>{% asset_img access_flags.png %}</center>
 
 不同访问标志求 <font color=#f07c82>|</font> 运算得到。
 
@@ -101,6 +101,8 @@ public class HelloClass {
 各自指向一个 **CONSTANT_Class_info** 的类描述常量。
 
 ## 字段表集合
+
+**<font color=#f07c82>字段表(field_info)</font>用来描述接口或类中声明的变量，字段包括类级别变量以及实例级别变量。**但不包括方法内部声明的局部变量。
 
 字段需要用访问标志描述，<font color=#f07c82>包括作用域(public、protected、default、private)、实例变量还是类变量(static)、是否为final、并发可见性(volatile)、是否可序列化(transient)、类型(基本类型、对象及数组)以及字段名称。</font>
 
@@ -129,3 +131,51 @@ public class HelloClass {
 <center>{% asset_img fangfa.PNG %}</center>
 
 方法中的代码描述，由编译器编译成字节指令后，存放在属性表**attributes** 的 **<font color=#f07c82>Code</font>**属性里。
+
+## 属性表
+
+<font color=#f07c82>属性表(attributes_info)</font>在Class文件、属性表与方法表内都有出现，用于描述场景特殊信息。
+
+属性表其它数据项目严格要求的顺序、长度和内容，它**不再要求各个属性有严格的顺序，且只要不与已有属性名重复，任何实现的编译器都可向属性表中写入自己定义的属性信息；**Java虚拟机在运行时会忽略掉不认识的属性。
+
+《Java虚拟机规范(Java SE 7)》中，预定义的属性为：
+
+<center>{% asset_img predefine1.PNG %}</center>
+<center>{% asset_img predefine2.PNG %}</center>
+
+其中每个属性表首先根据 <font color=#f07c82>attributes_name_index</font> 去常量池引用 <font color=#f07c82>CONSTANT_Class_info</font> 类型的名称，然后用一个 <font color=#f07c82>u4</font> 长度的属性说明属性表占用的长度 <font color=#f07c82>attribute_length</font> 即可。属性表中描述的信息单位是 <font color=#f07c82>u1</font>，共<font color=#f07c82>attribute_length</font>个。
+
+属性表的结构如下：
+
+<center>{% asset_img attributes_info.PNG %}</center>
+
+### Code属性
+
+**java程序方法体内的代码通过编译成字节码后，存在Code属性中。**
+
+Code属性存储在**方法表的属性表集合**中。
+
+Code属性是Class文件中**最重要的**属性，是对代码的描述。其它信息可以看做是对元数据（类型、字段、方法及其他信息）的描述。
+
+Code的属性表如下：
+
+<center>{% asset_img code_info.PNG %}</center>
+
+各部分的含义如下：
+
+类型 |名称 | 含义
+:-:|:-:|:-: 
+u2 |attributes_name_index | 指向 CONSTANT_Class_info 常量索引，表示该属性表名称
+u1 | attribute_length | 属性表长度。由于属性名称索引 u2 加长属性名长度 u4，所以属性表长度为整个属性表长度减去 **6** 字节。
+u2 | max_stack | 栈的最大深度。**Java虚拟机为该方法体分配栈针的操作栈深度**。
+u2 | max_locals | 局部变量的最大存储空间。**方法参数、显示异常处理的参数及方法体中定义的局部变量都需用局部变量表表示。**局部变量中统计单位是 **Slot**。小于32位(boolean、short、char、int、float、returnAddress)的变量用一个 Slot 表示，double与long两个64位的用两个Slot表示。
+u4 | code_length | 字节码长度。实际是 u2 长度，即16个字节， 65535条字节码，超过改长度虚拟机将拒绝编译。
+u1 | code | 一些类的字节码指令，用于描述编译后的方法体内方法。
+u2 | exception_table_lenght | 显示异常处理表长度。
+excessption_info | exception_table | 显示异常处理表
+u2 | attributes_count | 属性表数量
+attributes_info | attributes | 属性表
+
+# 参考
+
+[深入理解java虚拟机](https://book.douban.com/subject/6522893/)
