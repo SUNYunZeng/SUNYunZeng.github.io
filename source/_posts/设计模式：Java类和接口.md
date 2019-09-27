@@ -130,3 +130,176 @@ public final class Sub extends Super {
 上述子类由于重写了方法，调用父类时 instant 成员没有指向任何一个对象，因此有问题。
 
 专门为了继承而设计类是一件很辛苦的工作。你必须建立文档说明其所有的自用模式，并且一旦建立了文档，在这个类的整个生命周期中都必须遵守。如果没有做到，子类就会依赖父类的实现细节，如果父类的实现发生了变化，它就有可能遭到破坏。为了允许其他人能编写出高效的子类，还你必须导出一个或者多个受保护的方法。除非知道真正需要子类，否则最好通过将类声明为 <font color=#f07c82>final</font>，或者确保没有可访问的构造器来禁止类被继承。
+
+# 接口优先抽象类
+
+抽象类的实现只有继承，限制了**混合类型**的定义。
+
+同时，对于非层次的类级关系，想要为类**添加额外**的功能，接口是一个很好的方法。
+
+**<font color=#f07c82>骨架抽象类</font>**，首先是一个**抽象类**，然后该抽象类**实现了一个接口**的基本方法，形成默认的方法实现，提供基础的功能。
+
+用户可以自由的选择是选择**继承该抽象类**还是**直接实现该抽象类实现的接口**，从而保证灵活性。
+
+骨架抽象类的例子：<font color=#f07c82>AbstractList、AbstractSet</font>等。
+
+例子：
+
+```java
+// Skeletal implementation class
+public abstract class AbstractMapEntry<K,V>
+        implements Map.Entry<K,V> {
+
+    // Entries in a modifiable map must override this method
+    @Override public V setValue(V value) {
+        throw new UnsupportedOperationException();
+    }
+
+    // Implements the general contract of Map.Entry.equals
+    @Override 
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Map.Entry))
+            return false;
+        Map.Entry<?,?> e = (Map.Entry) o;
+        return Objects.equals(e.getKey(),  getKey())
+            && Objects.equals(e.getValue(), getValue());
+    }
+
+    // Implements the general contract of Map.Entry.hashCode
+    @Override 
+    public int hashCode() {
+        return Objects.hashCode(getKey())
+             ^ Objects.hashCode(getValue());
+    }
+
+    @Override 
+    public String toString() {
+        return getKey() + "=" + getValue();
+    }
+
+}
+```
+
+# 接口用户定义类型
+
+# 层次类优先于标签类
+
+**标签类：**是一个类，该类的实例根据**构造方法传入标签**的不同而不同。
+
+    问题：代码可读性差，扩展性差，且内存负担大，因为类实例保存很多不属于它本身的字段。
+
+**层次类：**即在顶层实现一个**抽象类**，该抽象类将属于**公共的方法、字段及依赖于标签值的方法包括起来，提供实现样板**。然后根据需求依次实现不同的**子类**，每个子类实现各自的方法。
+
+```java
+// 标签类
+
+// Tagged class - vastly inferior to a class hierarchy!
+class Figure {
+    enum Shape { RECTANGLE, CIRCLE };
+
+    // Tag field - the shape of this figure
+    final Shape shape;
+
+    // These fields are used only if shape is RECTANGLE
+    double length;
+    double width;
+
+    // This field is used only if shape is CIRCLE
+    double radius;
+
+    // Constructor for circle
+    Figure(double radius) {
+        shape = Shape.CIRCLE;
+        this.radius = radius;
+    }
+
+    // Constructor for rectangle
+    Figure(double length, double width) {
+        shape = Shape.RECTANGLE;
+        this.length = length;
+        this.width = width;
+    }
+
+    double area() {
+        switch(shape) {
+          case RECTANGLE:
+            return length * width;
+          case CIRCLE:
+            return Math.PI * (radius * radius);
+          default:
+            throw new AssertionError(shape);
+        }
+    }
+}
+```
+
+```java
+// 层次类
+// Class hierarchy replacement for a tagged class
+abstract class Figure {
+    abstract double area();
+}
+
+class Circle extends Figure {
+    final double radius;
+
+    Circle(double radius) { this.radius = radius; }
+
+    @Override double area() { return Math.PI * (radius * radius); }
+}
+class Rectangle extends Figure {
+    final double length;
+    final double width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width  = width;
+    }
+    @Override double area() { return length * width; }
+}
+
+// 类之间的层次关系可读且灵活
+class Square extends Rectangle {
+    Square(double side) {
+        super(side, side);
+    }
+}
+
+```
+
+# 嵌套类
+
+**嵌套类**最好只存在于宿主类 (enclosing class) 中, 否则，就应将其设计为**顶层类**。
+
+**四种嵌套类：**<font color=#f07c82>静态内部类</font>、<font color=#f07c82>非静态内部类</font>、<font color=#f07c82>匿名类</font>、<font color=#f07c82>局部类</font>。
+
+**静态内部类：**不与类的实例有关联，一个用法是提供类的帮助类。
+
+**非静态内部类：**确定**与实例有关联**才用，否则其默认将引用传给宿主类的实例，会占用存储空间与时间。最常用方法就是 Adapter 模式，可将外部类的实例视为某个不相关类的实例。
+
+**例子：**
+```java
+// Typical use of a nonstatic member class
+public class MySet<E> extends AbstractSet<E> {
+    ... // Bulk of the class omitted
+
+    @Override 
+    public Iterator<E> iterator() {
+        return new MyIterator();
+    }
+
+    private class MyIterator implements Iterator<E> {
+        ...
+    }
+}
+```
+
+**匿名类：** 只能在**非静态上下文环境中**使用时声明与实例化，**在静态上下文环境**，只能带有**常量型变量**（<font color=#f07c82>final</font>修饰的基本类型及初始化为 <font color=#f07c82>String</font>）。不能执行 <font color=#f07c82>instanceof</font> 方法测试，不能在运行外实例化，不能实现多个接口或继承一个类同时实现一个接口。常用：**创建小函数对象和处理对象的首选方法。**
+
+**局部类：**非静态上下文中定义它们时，它们才会包含实例，并且它们不能包含静态成员。
+
+# 永远不要将多个顶级类或接口放在一个源文件中
+
+**保证在编译时不能有多个定义。**
