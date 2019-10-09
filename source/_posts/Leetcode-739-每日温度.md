@@ -31,7 +31,7 @@ class Solution {
                     results[i]=tmp+1;
                     break;
                 }
-            Q    tmp++;
+                tmp++;
             }
         }
         return results;
