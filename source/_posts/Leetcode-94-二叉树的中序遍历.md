@@ -49,19 +49,22 @@ tags: Binary Tree
  * }
  */
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
-        if(root==null) return list;
-        List<Integer> 递归算法很简单，你可以通过迭代算法完成吗？
-        List<Integer> rightList = inorderTraversal(root.right);
-        for(int i=0; i<leftList.size(); i++){
-            list.add(leftList.get(i));
+    public List <Integer> inorderTraversal(TreeNode root) {
+        List <Integer> res = new ArrayList <> ();
+        helper(root, res);
+        return res;
+    }
+
+    public void helper(TreeNode root, List <Integer> res) {
+        if (root != null) {
+            if (root.left != null) {
+                helper(root.left, res);
+            }
+            res.add(root.val);
+            if (root.right != null) {
+                helper(root.right, res);
+            }
         }
-        list.add(root.val);
-        for(int i=0; i<rightList.size(); i++){
-            list.add(rightList.get(i));
-        }
-        return list;
     }
 }
 ```

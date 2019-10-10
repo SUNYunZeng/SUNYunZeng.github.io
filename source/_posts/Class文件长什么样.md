@@ -104,17 +104,19 @@ public class HelloClass {
 
 **<font color=#f07c82>字段表(field_info)</font>用来描述接口或类中声明的变量，字段包括类级别变量以及实例级别变量。**但不包括方法内部声明的局部变量。
 
-字段需要用访问标志描述，<font color=#f07c82>包括作用域(public、protected、default、private)、实例变量还是类变量(static)、是否为final、并发可见性(volatile)、是否可序列化(transient)、类型(基本类型、对象及数组)以及字段名称。</font>
+字段需要用**访问标志描述**，<font color=#f07c82>包括作用域(public、protected、default、private)、实例变量还是类变量(static)、是否为final、并发可见性(volatile)、是否可序列化(transient)、类型(基本类型、对象及数组)以及字段名称。</font>
 
 <center>{% asset_img ziduan.PNG %}</center>
 
-字段表的结果除了字段描述，还有字段的简单名称 **name_index** 及方法的描述符 **discriptor_index**、属性表统计 **attributes_count** 及属性表 **attributes**。
+字段表的结果除了访问标志描述，还有字段的简单名称 **name_index** 及方法的描述符 **discriptor_index**、属性表统计 **attributes_count** 及属性表 **attributes**。
 
 <center>{% asset_img attributes.png %}</center>
 
 字段的简单名称及方法描述符都是对常量池引用。
 
 **描述符是用来描述字段与方法的类型与返回参数的。**
+
+**<font color=#f07c82>由于这类信息不能跟访问标志描述一样，可以用固定长度来表示，所以需要在常量池中表示后然后引用。</font>**
 
 基本数据类型用相应大写字母表示，对象类型用大写字母 **L**加对象全限定名表示。
 

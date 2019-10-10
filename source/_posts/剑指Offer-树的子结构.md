@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-09-29 16:33:23
 categories: Algorithm
-tags: Binary Tree
+tags: 剑指Offer
 ---
 
 # 树的子结构
