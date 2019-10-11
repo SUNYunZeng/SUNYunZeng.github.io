@@ -89,7 +89,7 @@ public enum Season implements{
 }
 ```
 
-**2. 可利用枚举实现单例**
+**3. 可利用枚举实现单例**
 ```java
 public enmu Sigleton{
     SINGLETON;
@@ -101,4 +101,11 @@ public enmu Sigleton{
 @test
 System.out.println(Singleton.SINGLETON.method())
 // 打印 method
+```
+
+**4. 调用values()方法遍历枚举类型中的每个实例**
+```java
+for(Season season: Season.values){
+    System.out.println(season.getName());
+}
 ```
