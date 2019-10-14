@@ -3,7 +3,7 @@ title: 剑指Offer：二叉树和为某一值的路径
 comments: true
 toc: true
 date: 2019-10-08 17:50:05
-categories: Algorihm
+categories: Algorithm
 tags: 剑指Offer
 ---
 

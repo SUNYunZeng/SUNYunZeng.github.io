@@ -4,7 +4,9 @@ comments: true
 toc: true
 date: 2019-06-17 17:18:17
 categories: Algorithm
-tags: Dynamic Programming
+tags: 
+    - Dynamic Programming 
+    - 剑指Offer
 ---
 
 # 题目
