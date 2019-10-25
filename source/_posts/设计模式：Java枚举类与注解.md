@@ -109,3 +109,126 @@ for(Season season: Season.values){
     System.out.println(season.getName());
 }
 ```
+
+**嵌套枚举**
+
+```java
+// The strategy enum pattern
+enum PayrollDay {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY,
+    SATURDAY(PayType.WEEKEND), SUNDAY(PayType.WEEKEND);
+
+    private final PayType payType;
+
+    PayrollDay(PayType payType) { this.payType = payType; }
+    PayrollDay() { this(PayType.WEEKDAY); }  // Default
+
+    int pay(int minutesWorked, int payRate) {
+        return payType.pay(minutesWorked, payRate);
+    }
+
+    // The strategy enum type
+    private enum PayType {
+        WEEKDAY {
+            int overtimePay(int minsWorked, int payRate) {
+                return minsWorked <= MINS_PER_SHIFT ? 0 :
+                  (minsWorked - MINS_PER_SHIFT) * payRate / 2;
+            }
+        },
+        WEEKEND {
+            int overtimePay(int minsWorked, int payRate) {
+                return minsWorked * payRate / 2;
+            }
+        };
+
+        abstract int overtimePay(int mins, int payRate);
+        private static final int MINS_PER_SHIFT = 8 * 60;
+
+        int pay(int minsWorked, int payRate) {
+            int basePay = minsWorked * payRate;
+            return basePay + overtimePay(minsWorked, payRate);
+        }
+    }
+}
+```
+
+# 实例属性代替内置序数
+
+内置序数会随枚举内部类位置而改变，通过在内部类的实例属性实现标记与类的一一对应。
+
+```java
+public enum Ensemble {
+    SOLO(1), DUET(2), TRIO(3), QUARTET(4), QUINTET(5),
+    SEXTET(6), SEPTET(7), OCTET(8), DOUBLE_QUARTET(8),
+    NONET(9), DECTET(10), TRIPLE_QUARTET(12);
+
+    private final int numberOfMusicians;
+
+    Ensemble(int size) { this.numberOfMusicians = size; }
+    public int numberOfMusicians() { return numberOfMusicians; }
+}
+```
+
+# 按位属性替换为EnumSet
+
+**替代前:**
+
+```java
+class Test{
+    public static final int STYLE_BOLD          = 1 << 0;  // 1
+    public static final int STYLE_ITALIC        = 1 << 1;  // 2
+    public static final int STYLE_UNDERLINE     = 1 << 2;  // 4
+    public static final int STYLE_STRIKETHROUGH = 1 << 3;  // 8
+
+    // Parameter is bitwise OR of zero or more STYLE_ constants
+    public void applyStyles(int styles) { ... }
+}
+```
+
+**修改后：**
+
+```java
+// EnumSet - a modern replacement for bit fields
+public class Text {
+    public enum Style { BOLD, ITALIC, UNDERLINE, STRIKETHROUGH }
+
+    // Any Set could be passed in, but EnumSet is clearly best
+    public void applyStyles(Set<Style> styles) { ... }
+}
+
+// ----------------------------------------------------------------
+text.applyStyles(EnumSet.of(Style.BOLD, Style.ITALIC));
+
+```
+
+# 使用EnumMap
+
+```java
+class Plant {
+    enum LifeCycle { ANNUAL, PERENNIAL, BIENNIAL }
+    final String name;
+    final LifeCycle lifeCycle;
+
+    Plant(String name, LifeCycle lifeCycle) {
+        this.name = name;
+        this.lifeCycle = lifeCycle;
+    }
+
+    @Override public String toString() {
+        return name;
+    }
+}
+
+// Using an EnumMap to associate data with an enum
+Map<Plant.LifeCycle, Set<Plant>>  plantsByLifeCycle =
+    new EnumMap<>(Plant.LifeCycle.class);
+
+for (Plant.LifeCycle lc : Plant.LifeCycle.values())
+    plantsByLifeCycle.put(lc, new HashSet<>());
+
+for (Plant p : garden)
+    plantsByLifeCycle.get(p.lifeCycle).add(p);
+
+System.out.println(plantsByLifeCycle);
+
+```
