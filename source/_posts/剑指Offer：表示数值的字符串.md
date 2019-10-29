@@ -35,7 +35,7 @@ public class Solution {
 }
 ```
 
-**方法2: 特殊情况排除法**
+**方法2: 特殊情况排除**
 
 ```java
 public class Solution {
