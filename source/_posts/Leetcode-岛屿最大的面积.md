@@ -76,7 +76,7 @@ void dfs(int step)
 
 + check是是否为陆地（数值是否为1）。
 
-+ 标记是将遍历过的陆地变成海洋（置为1）。
++ 标记是将遍历过的陆地变成海洋（置为0）。
 
 ```java
 class Solution {
