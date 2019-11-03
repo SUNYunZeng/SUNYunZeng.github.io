@@ -1,31 +1,39 @@
 ---
-title: Algorithm-排序算法
+title: 快速排序 | 选择排序 | 冒泡排序
 toc: true
 date: 2019-05-27 21:38:08
 categories: Algorithm
-tags: Algorithm
+tags: 排序算法
 ---
-# 插入排序
-每次遍历都将对应位置的数字插入到合适的位置，当前位置之前的数据保持排序。
-{% asset_img sort1.gif %}
 
-## 代码
+# 选择排序
 
-```Java
-public class InsertionSort {
-    public static int[] sort(int[] arr){
-        int len = arr.length;
+每次选择最小的元素放在第一个位置，再选第二小元素放到第二个位置... 以此类推，排序完成。
+
+```java
+public class SelectSort {
+    public static int[] sort(int[] nums){
+        if(nums==null || nums.length==0)
+            return null;
+        int len = nums.length;
         int[] A = new int[len];
-        System.arraycopy(arr, 0, A, 0, len);
-        int i,j;
-        for (i = 1; i < len; i++) {
-            int temp = A[i];
-            for (j = i; j > 0 && A[j - 1] > temp; j--) {
-                A[j] = A[j-1];
+        System.arraycopy(nums, 0, A, 0, len);
+        for(int i=0; i<len-1; i++){
+            int min = i;
+            for(int j=i+1; j<len; j++){
+                if(A[min]>A[j]){
+                    min = j;
+                }
             }
-            A[j] = temp;
+            swap(A, i, min);
         }
         return A;
+    }
+
+    private static void swap(int[] nums, int i, int j){
+        int tmp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = tmp;
     }
 }
 ```
@@ -214,6 +222,12 @@ public class QuickSort {
 }
 ```
 
-[1.参考资料](https://zhuanlan.zhihu.com/p/52884590)      [2.参考资料](https://blog.csdn.net/shujuelin/article/details/82423852)
+**学习资料:**
 
-[十大排序算法讲解推荐](https://mp.weixin.qq.com/s/IAZnN00i65Ad3BicZy5kzQ)(快排图片来源，侵删)
++ [LeetCode 知乎回答排序算法](https://zhuanlan.zhihu.com/p/52884590)      
+
++ [快速排序--CSDN讲解](https://blog.csdn.net/shujuelin/article/details/82423852)
+
++ [十大排序算法讲解推荐--微信公众号](https://mp.weixin.qq.com/s/IAZnN00i65Ad3BicZy5kzQ)(快排图片来源，侵删)
+
++ [排序算法--CyC2018大神博客](https://cyc2018.github.io/CS-Notes/#/notes/%E7%AE%97%E6%B3%95%20-%20%E6%8E%92%E5%BA%8F)

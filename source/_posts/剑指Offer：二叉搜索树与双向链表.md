@@ -4,7 +4,9 @@ comments: true
 toc: true
 date: 2019-10-10 14:04:38
 categories: Algorithm 
-tags: 剑指Offer
+tags: 
+    - 剑指Offer
+    - Binary Search Tree
 ---
 
 # 题目

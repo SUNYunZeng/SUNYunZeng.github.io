@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-10-22 22:20:34
 categories: Algorithm
-tags: Algorithm
+tags: 剑指Offer
 ---
 
 # 题目
