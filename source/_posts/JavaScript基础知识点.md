@@ -88,7 +88,7 @@ ECMAScript没有定义任何语言运行的环境要求，只是说明，你按�
 
 +  **引入位置：**JS的\<script\>标签放在\<body\>标签内最下方，使浏览器先加载页面再加载JS代码，保证界面流畅。
 
-+  **嵌入外部文件：**尽量不要再 HTML 文件中嵌入 JS代码，而是引入JS外部文件的方式。提高可维护性与缓存效率。
++  **嵌入外部文件：**尽量不要再 HTML 文件中嵌入JS代码，而是引入JS外部文件的方式。提高可维护性与缓存效率。
 
 + **严格模式：**在整个脚本顶部或者函数内部上方加上语句<font color=#f07c82>"use strict"</font>。
 
@@ -100,7 +100,7 @@ ECMAScript没有定义任何语言运行的环境要求，只是说明，你按�
     ```
 ## 数据类型
 
-+ **数据类型：**JS一共6中数据类型，5中基本数据类型：<font color=#f07c82>String、Number、Boolean、Null、Undefined</font> 及一种复杂类型 <font color=#f07c82>Object</font>。基本数据类型占据固定的内存大小，存储在栈内存中。引用类型的对象保存在栈空间中。
++ **数据类型：**JS一共6中数据类型，5中基本数据类型：<font color=#f07c82>String、Number、Boolean、Null、Undefined</font> 及一种复杂类型 <font color=#f07c82>Object</font>。基本数据类型占据固定的内存大小，存储在栈内存中。引用类型的变量名保存在栈空间中。
 
     + JS的变量只是转递数据的载体，其本身是松散类型，一个变量即可存储字符串又可存储数组。此时需要用<font color=#f07c82>typeof</font>操作符检查数据类型。
 
@@ -117,7 +117,7 @@ ECMAScript没有定义任何语言运行的环境要求，只是说明，你按�
                 let b = a;
                 b = 13;
             ```
-    + 引用数据类型的变量存储在栈内存中，**值存储在堆内存(heap)**中。
+    + 引用数据类型的变量名存储在栈内存中，**值存储在堆内存(heap)**中。
         + 浏览器从电脑内存中开辟一块栈内存，再分配一个主线程自上而下执行程序。
         + 由于引用数据类型的值非常复杂，因此开辟一块堆内存，每块内存对应一个唯一的内存地址。
         + 赋值操作 = 将变量与堆内存的内存地址关联起来。
@@ -134,7 +134,7 @@ ECMAScript没有定义任何语言运行的环境要求，只是说明，你按�
 
 + **String类型**
 
-    + 不同于Java,它是简单类型，但相同点是**它是不可变的**。
+    + 不同于Java,它是简单数据类型，但相同点是**它是不可变的**。
     + 任何数据都可转为String类型。通过调用对象的toString方法或者对于Null及Undefined直接返回"null"与"undefined"。
     + 通过 a.toString()转换。
     + 通过String(a, n)转换。n为可选项，当a为数值类型时，n可以指定转换的进制数。
@@ -175,7 +175,7 @@ ECMAScript没有定义任何语言运行的环境要求，只是说明，你按�
     + **== 是相等，即判断两者不同时，先进行类型转换。**
     + true转为数值 1， false转为0。
     + 字符串与数值比较，先转为数值。
-    + 对象比较，先调用valueOf()方法转为字符串，再按照上面规则判定。
+    + 对象与其它类型数据比较，先调用valueOf()方法将对象转为字符串，再按照上面规则判定。
     + **NaN与任何数据比较都是false。**
     + **对象的比较是他们是否指向同一个对象。**
     + **null==undefined**返回ture。
@@ -226,7 +226,7 @@ ECMAScript没有定义任何语言运行的环境要求，只是说明，你按�
 + **Onject类型**
 
     + 所有JS的对象类型都基于Object类，因此含有它一切的方法。
-    + hasOwnProperty("propertyName"): 检查**对象实例中**属性是否存在。
+    + hasOwnProperty("propertyName"): 检查**对象实例中**属性是存在实例自身还是存在于原型对象中。
     + isPrototypeOf(Object): 检查传入对象是否是传入对象的原型。
     + toLocalString(): 返回本地环境的对象字符串表示。
     + toString(): 返回对象的字符串表示。
@@ -331,10 +331,10 @@ JS的数组比Java的强大太多，不仅可以支持类似于Python的切片�
         -**slice(startIndex, endIndex)函数**实现数组切片,返回新数组
         ```javascript
         var arr = [1,2,3,4,5];
-        var arr2 = arr.splice(1,3); 
+        var arr2 = arr.slice(1,3); 
         console.log(arr2); // 输出[2,3]
 
-        arr2 = arr.splice(3);
+        arr2 = arr.slice(3);
         console.log(arr2); // 输出[4,5],默认从位置3开始切片到末尾
 
         arr2 = arr.slice(-1);
@@ -371,6 +371,10 @@ JS的数组比Java的强大太多，不仅可以支持类似于Python的切片�
         console.log(a.sort()); //输出[ 1, 10, 15, 20, 5 ]
 
         //传入比较函数，实现自定义排序
+        /*
+        比较函数接收两个参数，如果第一个参数应该位于第二个之前则返回一个负数，如果两个参数相等 则返回 0，如果第
+        一个参数应该位于第二个之后则返回一个正数。
+        */
         function compare(v1, v2){
             // 逆序
             return v2-v1;
@@ -523,7 +527,7 @@ alert(str.name); //输出undefined，因为执行完毕后立即销毁该包装�
 ```
 上面的例子生成一个string类型的基本数据，但是调用substring()方法时，是调用的同时生成的基本包装类型String对象内的方法。在执行完毕后该对象立马销毁。
 
-基本包装类型有Boolean、Number和String，都有Object内置的toString()、toLocalString()以及valueOf()方法。
+基本包装类型有Boolean、Number和String，都有Object内置的toString()、toLocalString()以及valueOf()等方法。
 - **String包装类型内置方法**
     + 三种切片方法substring、slice及substr，返回新的字符串
         - **substring(startIndex, endIndex):**在索引都是正数时，与slice()一样，但是遇到负数取零。
