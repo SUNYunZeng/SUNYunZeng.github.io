@@ -134,13 +134,6 @@ var person2 = object(Person);
 person1.name = "gad";
 person1.friend.push("uzi");
 
-var person1 = object(Person);
-person1.name = "John";
-person1.friends.push("lili");
-var person2 = object(Person);
-person2.name = "gad";
-person1.friends.push("uzi");
-
 console.log(person1.name); // John
 console.log(person2.name); // gad
 console.log(person1.friends); // [ 'mzp', 'wjh', 'lili', 'uzi' ]

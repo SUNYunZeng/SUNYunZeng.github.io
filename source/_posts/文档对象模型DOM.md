@@ -29,13 +29,19 @@ DOM 1级定义了一个**Node**接口，由DOM中所有的节点实现。
 
 Document节点表示整个文档。浏览器中的document是一个全局对象，表示HTML页面，是HTMLDocument对象的实例。
 
-> document.documentElement可以快速取得对html的引用。
+> document.documentElement：快速取得对html的引用。
 > document对象只有一个子节点，也就是< html >对象，没必要使用节点操作方法。
 > document的title、URL、domain、referrer等方法可以访问网页的标题、URL地址、域名及连接当前URL的前一URL。
-> document.getElementById()方法获取指定id的元素。
-> ducument.getElementsByTagName()方法获取指定标签名的元素，例如`var img = ducument.getElementsByTagName("img")`，返回一个HTMLCollection类型的实例，其中`img.namedItem("imgName")`可以返回执行name的元素。
-> ducument.getElementsByName()获取指定name的元素集合。
+> document.getElementById()：获取指定id的元素。
+> ducument.getElementsByTagName()：获取指定标签名的元素，例如`var img = ducument.getElementsByTagName("img")`，返回一个HTMLCollection类型的实例，其中`img.namedItem("imgName")`可以返回执行name的元素。
+> ducument.getElementsByName()：获取指定name的元素集合。
 > ducument.write()与ducument.writeln()写入文档。
+> getElementsByClassName()：获取同一类的元素列表，返回NodeList。
+> document.activeElement()：获得当前焦点所在的元素，例如页面加载中，焦点所在的元素是document.body，之后变成null。
+> document.hasFocus()：判断当前文档是否获取了焦点。
+> document.readyState："loading"正在加载文档，"complete"加载完毕。
+> document.compatMode："CSS1Compat"渲染模式为标准，"BackCompat"渲染模式为混杂模式。
+> document.charset：查看与设置文档字符集，默认"UTF-16"。
 
 ## Element
 
@@ -155,4 +161,32 @@ try{
 }
 var head = document.getElementsByTagName("head")[0];
 head.appendChild(style);
+```
+
+# DOM扩展
+
+## 选择符
+
+1. <font color=#f07c82>querySelector()与querySelectorAll()</font>方法。
+
+> querySelector()
+```javascript
+//取得 body 元素
+var body = document.querySelector("body"); 
+//取得 ID 为"myDiv"的元素
+var myDiv = document.querySelector("#myDiv"); 
+//取得类为"selected"的第一个元素
+var selected = document.querySelector(".selected"); 
+//取得类为"button"的第一个图像元素
+var img = document.body.querySelector("img.button");
+```
+
+> querySelectorAll()
+```javascript
+//取得某<div>中的所有<em>元素（类似于 getElementsByTagName("em")） 
+var ems = document.getElementById("myDiv").querySelectorAll("em"); 
+//取得类为"selected"的所有元素
+var selecteds = document.querySelectorAll(".selected"); 
+//取得所有<p>元素中的所有<strong>元素
+var strongs = document.querySelectorAll("p strong");
 ```
