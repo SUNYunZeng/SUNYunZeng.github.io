@@ -9,8 +9,6 @@ tags: Vue
 
 # 背景
 
-# 背景
-
 自己做了一点点的小尝试：基于前馈神经网络 LSTM 的个体出行目的地预测模型，基于个体历史出行数据，模型可以实现出行目的地的实时动态预测功能。
 
 模型其实具有实际应用功能，为了对其应用场景进行探索，拟开发一个全栈的项目，在Web客户端实现用户出行的动态预测效果，同时能够提供数据可视分析等功能。
@@ -22,7 +20,7 @@ tags: Vue
 
 # Leftlet底图模块构建
 
-需要安装的依赖库与样式查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能]()。
+需要安装的依赖库与样式查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能](http://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/)。
 
 在 src/components/common 文件夹下添加 LeftletMap.vue文件，作为Leftlet地图的基础模块。
 
@@ -77,7 +75,7 @@ tags: Vue
 </style>
 ```
 
-其中 this.state 是用Vuex插件定义的全局状态变量，其本身是 src/store/index.js文件中定义的一个对象，在其中我们定义了各种地图的配置选项。具体内容可查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能]()。
+其中 this.state 是用Vuex插件定义的全局状态变量，其本身是 src/store/index.js文件中定义的一个对象，在其中我们定义了各种地图的配置选项。具体内容可查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能](http://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/)。
 
 # 热力图实现
 
