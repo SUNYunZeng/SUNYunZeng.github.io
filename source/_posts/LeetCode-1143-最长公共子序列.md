@@ -72,6 +72,47 @@ class Solution(object):
 链接：https://leetcode-cn.com/problems/longest-common-subsequence
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
+# 两个字符串的删除操作(最长公共子序列的变体)
+
+给定两个单词 word1 和 word2，找到使得 word1 和 word2 相同所需的最小步数，每步可以删除任意一个字符串中的一个字符。
+
+示例 1:
+
+输入: "sea", "eat"
+输出: 2
+解释: 第一步将"sea"变为"ea"，第二步将"eat"变为"ea"
+说明:
+
+给定单词的长度不超过500。
+给定单词中的字符只含有小写字母。
+
+## 思路 + 代码
+
+最长公共子序列的变体，其实就是求最长公共自序列。
+
+```python
+class Solution(object):
+    def minDistance(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: int
+        """
+        m, n = len(word1), len(word2)
+        dp = [[0]*(n+1) for _ in range(m+1)]
+        for i in range(1, m+1):
+            for j in range(1,n+1):
+                if word1[i-1]==word2[j-1]:
+                    dp[i][j] = dp[i-1][j-1] + 1
+                else:
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+        return m+n-2*dp[m][n]
+```
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/delete-operation-for-two-strings
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
 # 分割等和子集
 
 给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
@@ -96,32 +137,6 @@ class Solution(object):
 
 解释: 数组不能分割成两个元素和相等的子集.
  ```
-
-```python
-class Solution(object):
-    def canPartition(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        size = len(nums)
-        s = sum(nums)
-        if s & 1 == 1:
-            return False
-        target = s // 2
-        dp = [[False for _ in range(target+1)] for _ in range(size)]
-        for i in range(target+1):
-            if nums[0]==i:
-                dp[0][i] = True
-        for i in range(1,size):
-            n = nums[i]
-            for j in range(target+1):
-                if j>=n:
-                    dp[i][j] = dp[i-1][j] or dp[i-1][j-n]
-                else:
-                    dp[i][j] = dp[i-1][j]
-        return dp[-1][-1]
-```
 
 **题解**
 
