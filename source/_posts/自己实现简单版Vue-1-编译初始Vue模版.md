@@ -85,7 +85,7 @@ Vue的可以说是开箱即用，它的使用非常简单，如下所示：
 2. 元素节点中模版表达式的编译
     例如 v-text、v-model、v-html、 v-on:click、 v-bind等
 
-## Mvue入口类设计
+## MVue入口类设计
 
 Mvue类接收一个参数对象作为初始输入，然后利用<font color=#f07c82>Compiler</font>类对模版进行编译及渲染。
 
@@ -240,3 +240,4 @@ class Compiler {
     }
 }
 ```
+
