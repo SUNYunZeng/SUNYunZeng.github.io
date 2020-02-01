@@ -9,6 +9,10 @@ tags: Vue
 
 # 前言
 
+Vue的双向绑定效果如下：
+
+{% asset_img demo.gif %}
+
 Vue的底层到底是怎么实现的呢？
 
 通过手写简单的示例来学习Vue框架的运行机制。
@@ -72,6 +76,18 @@ Vue的可以说是开箱即用，它的使用非常简单，如下所示：
 ```
 
 通过 new Vue 新建一个Vue实例，并将元素节点与该实例通过<font color=#f07c82> el </font> 实现双向绑定，之后h5中的元素内容跟对象数据就融为一体，开发者的关注重点可以集中在代码逻辑的设计，而不是繁琐的页面与数据绑定问题。
+
+我们的实现原理图如下所示：
+
+{% asset_img MVVM.png %}
+
+1. 需要实现一个Observer通过Object.defineProperty()劫持数据实现数据的监听。
+
+2. 实现一个Dep收集各数据的监听Watcher，负责通知Watcher数据发生变化。
+
+3. 实现Watcher对视图进行更新。
+
+4. 实现Complier对Vue指令（v-text等）进行解析初始化，以及订阅对应的watcher。
 
 # Vue模版的编译
 
@@ -240,4 +256,8 @@ class Compiler {
     }
 }
 ```
+
+# 项目地址
+
+https://github.com/SUNYunZeng/ImitateVue
 
