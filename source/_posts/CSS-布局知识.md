@@ -74,7 +74,7 @@ tags: CSS
         background-color: aquamarine;
         vertical-algin: middle;
         text-algin: center;
-        line-height: center;
+        line-height: 300px;
     }
     .child{
         display: inline-block;
@@ -341,7 +341,7 @@ flex布局实现三栏布局的思想是：利用flex:0 0 200px固定左右两�
 .left{
     margin-left: -200px;
     position: relative;
-    left: -200px;
+    left: -100%;
 }
 ```
 
@@ -461,7 +461,7 @@ margin-left: -100%;
 **4. 设置右栏位置**
 
 ```css
-margin-left: -200px;
+margin-right: -200px;
 ```
 
 **5. 完整代码**

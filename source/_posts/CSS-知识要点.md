@@ -68,6 +68,7 @@ p.specialtext {font-style:italic;}
 ```
 
 **ID选择**
+
 ```css
 /*把 ID 为 mainmenu 元素中的 a 元素的字体颜色修改*/
 #mainmenu a {color:orange;}
@@ -125,7 +126,7 @@ CSS 样式叠加遵循以下四个规则：
 
 **2. 按照以下顺序层叠显示，越靠后的 CSS 定义方式显示级别越高。**
 
-+ 浏览爱情默认样式
++ 浏览器默认样式
 + 用户自定义样式
 + 链接样式 （`<link href="style.css" rel=stylesheet type="text/css" />`）
 + 嵌入样式 
@@ -164,14 +165,14 @@ I-C-E 表示 ID、Class、Element三个维度的得分三位数，初始为 0-0-
 
 例如：
 
-···css
+```css
 p                              0-0-1 特指度=1 
 p.largetext                    0-1-1 特指度=11 
 p#largetext                    1-0-1 特指度=101
 body p#largetext               1-0-2 特指度=102
 body p#largetext ul.mylist     1-1-3 特指度=113        
 body p#largetext ul.mylist li  1-1-4 特指度=114
-···
+```
 
 **4. 特指度相同的情况下按照叠加顺序**
 
