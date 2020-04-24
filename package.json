@@ -31,6 +31,9 @@
     "hexo-wordcount": "^6.0.1",
     "live2d-widget-model-hijiki": "^1.0.5",
     "lodash": ">=4.17.13",
-    "lodash.merge": ">=4.6.2"
+    "lodash.merge": ">=4.6.2",
+    "https-proxy-agent": ">=2.2.3",
+    "minimist": ">=1.2.3",
+    "acorn": ">=6.4.1"
   }
 }
