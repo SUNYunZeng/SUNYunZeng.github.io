@@ -81,7 +81,7 @@ deploy:
 - type: git
   repo: 
     github: git@github.com:SUNYunZeng/SUNYunZeng.github.io.git
-    coding: git@git.dev.tencent.com:SUNYunZeng/SUNYunZeng.git
+    coding: git@e.coding.net:SUNYunZeng/SUNYunZeng.git
   branch: master
 - type: baidu_url_submitter
 
