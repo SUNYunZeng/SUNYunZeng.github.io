@@ -410,3 +410,176 @@ Function.muBind = function(context){
     }
 }
 ```
+
+# 判断一个对象是否是数组
+
++ 判断是否为数组的实例
+
++ 判断原型对象与数组的原型对象是否一致
+
++ 判断对象的构造函数是否是 Array
+
++ 调用 Array.isArray() 方法
+
+```javascript
+function judgeArray(arr, pattern){
+    switch(pattern){
+        case 1:
+            return Array.isArray(arr);
+            break;
+        case 2:
+            return arr instanceof Array;
+            break;
+        case 3:
+            return arr.constructor === Array;
+            break;
+        case 4:
+            return Object.getPrototypeOf(arr) === Array.prototype;
+            break;
+    }
+}
+```
+
+# 实现 Promise.all
+
+Promise.all 允许定义的 Promise 按照数组传入，并依次执行 Promise 并将结果保存在一个列表中，返回一个Promise.
+
+```javascript
+let p1 = new Promise((resolve, reject)=>{
+    resolve("只要有爱,");
+});
+
+let p2 = new Promise((resolve, reject)=>{
+    resolve("在哪里都是天堂！")
+});
+
+let p3 = Promise.reject("不要让恨遮蔽了双眼！");
+
+Promise.all([p1, p2]).then(res=>{
+    console.log(res)
+})
+
+Promise.all([p1, p2, p3]).then(res=>{
+    console.log(res);
+}).catch(err=>{
+    console.log(err);
+})
+
+// output
+// [ '只要有爱,', '在哪里都是天堂！' ]
+// 不要让恨遮蔽了双眼！
+
+```
+
+自己实现.
+
+```javascript
+Promise.myAll = function(promises){
+    return new Promise((resolve, reject)=>{
+        let res = [];
+        promises.forEach((promise, index)=>{
+            promise.then(data=>{
+                res.push(data);
+                if(index===promises.length-1){
+                    resolve(res);
+                }
+            }).catch(err=>{
+                reject(err);
+            })
+        });
+    })
+}
+
+Promise.myAll([p1, p2]).then(res=>{
+    console.log(res)
+})
+
+Promise.myAll([p1, p2, p3]).then(res=>{
+    console.log(res);
+}).catch(err=>{
+    console.log(err);
+})
+```
+
+# 模拟 Node.js 的 Event 模块
+
+```javascript
+class Event {
+    constructor(){
+        this.fns = {};
+    }
+    emit(name, value){
+        if(!this.fns[name]){
+            throw Error("No such event");
+        }
+        this.fns[name].forEach(fn=>{
+            fn(value);
+        })
+    }
+    on(name, cb){
+        if(!this.fns[name]){
+            this.fns[name] = [];
+        }
+        this.fns[name].push(cb);
+    }
+}
+
+let event = new Event();
+
+event.on('sayName', function(name){
+    console.log(name);
+})
+
+event.on('sayName', function(name){
+    console.log(`I am ${name}`);
+})
+
+event.emit('sayName', 'syz');
+
+// 输出
+// syz
+// I am syz
+```
+
+# 深克隆
+
+一般深度克隆可以采用 Json.Parse(Json.stringify())，但是克隆存在一些[问题](https://segmentfault.com/a/1190000020297508)
+
+```javascript
+function deepClone(obj){
+    if(obj instanceof Date){
+        return new Date(obj);
+    }
+    let res = obj instanceof Array?[]:{};
+    Object.keys(obj).forEach(key=>{
+        res[key] = typeof obj[key] === 'object'? deepClone(obj[key]):obj[key];
+    });
+    return res;
+}
+
+let rawObj = {name:'syz'}
+let testObj = deepClone(rawObj);
+
+testObj.name = 'xz';
+
+console.log(rawObj)
+console.log(testObj)
+```
+
+# 自己实现模版字符串
+
+```javascript
+const obj = {
+    name: 'zj',
+    age: 18
+  }
+const str = `我的名字叫${ obj.name }，今年${obj.age}岁`
+
+ function replace(str){
+     return str.replace(/\$\{([^}]+)\}/, function(data){
+         return data;
+     });
+ }
+
+console.log(replace(str))
+```
