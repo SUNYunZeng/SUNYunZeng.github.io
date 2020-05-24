@@ -1,5 +1,5 @@
 ---
-title: 用JS写算法
+title: 用JS写算法(一)：大数相乘
 comments: true
 toc: true
 date: 2020-04-24 18:13:50
@@ -582,4 +582,36 @@ const str = `我的名字叫${ obj.name }，今年${obj.age}岁`
  }
 
 console.log(replace(str))
+```
+
+# 实现展开任意深度的嵌套列表
+
+```javascript
+// -1表示全部展开
+function flatten(arr, depth=-1){
+    if(depth===-1){
+        return [].concat(
+            ...arr.map((item)=>{
+                return Array.isArray(item)?flatten(item):item
+            })
+        );
+    }
+    if(depth===1){
+        return arr.reduce((pre, cur)=>pre.concat(cur),[])
+    }else{
+        return arr.reduce((pre, cur)=>pre.concat(Array.isArray(cur)?flatten(cur, depth-1):cur), []);
+    }
+}
+```
+
+# 实现金钱的每三位划分
+
+```javascript
+let arr = '1234567890'
+function trans(arr){
+    return arr.split('').reverse().reduce((pre, cur, idx)=>{
+        return ((idx%3)?cur:cur+',') + pre
+    })
+}
+console.log(trans(arr));// [1, 2, 3, 4]
 ```
