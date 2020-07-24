@@ -1,6 +1,6 @@
 # 自己搭建的博客
 
-sunyunzeng.com
+http://sunyunzeng.com
 
 # 搭建教程
 
