@@ -1,6 +1,5 @@
 ---
 title: 深入了解JS基础
-mathjax: true
 comments: true
 toc: true
 date: 2020-07-25 12:47:29

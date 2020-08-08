@@ -1,6 +1,5 @@
 ---
 title: JS中的优化技巧
-mathjax: true
 comments: true
 toc: true
 date: 2020-07-23 15:47:29
