@@ -1,7 +1,7 @@
 # links
 我们的团队:
   link: https://github.com/ZPGuiGroupWhu
-  avatar: https://avatars2.githubusercontent.com/u/45173858?s=200&v=4
+  avatar: https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=53701636,1482044515&fm=26&gp=0.jpg
   desc: 专注地理数据挖掘、高性能地理计算
 
 # 马志鹏的博客:
@@ -9,7 +9,22 @@
 #   avatar: https://mzzzzzzzp.github.io/images/avatar.png
 #   desc: 手写Spring框架
 
-吴京航的博客:
-  link: https://oduesp.github.io/
-  avatar: https://oduesp.github.io/images/head.jpg
-  desc: 手写Spark框架
+# 吴京航的博客:
+#   link: https://oduesp.github.io/
+#   avatar: https://oduesp.github.io/images/head.jpg
+#   desc: 手写Spark框架
+
+mathor的博客:
+  link: https://wmathor.com/
+  avatar: https://s2.ax1x.com/2020/01/08/l2xtUO.jpg
+  desc: 深度学习相关知识分享
+
+Angel_Kitty的博客:
+  link: https://www.cnblogs.com/ECJTUACM-873284962/
+  avatar: https://i.loli.net/2017/08/02/598187babf39e.gif
+  desc: 博客园美化知识分享
+
+zhangmingemma的博客:
+  link: https://zhangmingemma.github.io/
+  avatar: https://tvax1.sinaimg.cn/crop.0.0.512.512.180/b6d1042bly8gfz7rzh66ij20e80e8q3e.jpg?KID=imgbed,tva&Expires=1601050571&ssig=OKQ7C3C8wb
+  desc: 同门优秀师姐的博客分享
