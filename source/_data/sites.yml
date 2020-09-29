@@ -1,7 +1,12 @@
 阮一峰的博客:
-  link: http://www.ruanyifeng.com/home.html/
+  link: http://www.ruanyifeng.com/
   avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2288848202,3335572986&fm=26&gp=0.jpg
   desc: 优秀JS知识分享
+
+龙喵资源站点:
+  link: https://ailongmiao.com/
+  avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1717333002,2695568834&fm=26&gp=0.jpg
+  desc: 资源站点合集
 
 React官网:
   link: https://react.docschina.org/
@@ -10,5 +15,10 @@ React官网:
 
 Pytorch:
   link: https://pytorch.org/
-  avatar: https://pytorch.org/assets/images/logo-icon.svg
+  avatar: https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4234230985,2315122419&fm=11&gp=0.jpg
   desc: FaceBook 开源的深度学习框架
+
+Cesium: 
+  link: https://cesium.com/cesiumjs/
+  avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1544563962,724356262&fm=26&gp=0.jpg
+  desc: 一款三维地理数据可视化库
