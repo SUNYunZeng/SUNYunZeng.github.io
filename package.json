@@ -33,7 +33,7 @@
     "hexo-wordcount": "^6.0.1",
     "https-proxy-agent": ">=2.2.3",
     "live2d-widget-model-hijiki": "^1.0.5",
-    "lodash": ">=4.17.13",
+    "lodash": ">=4.17.19",
     "lodash.merge": ">=4.6.2",
     "minimist": ">=1.2.3"
   }
