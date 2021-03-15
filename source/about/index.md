@@ -23,7 +23,7 @@ sidebar: custom
 <!-- <iframe style="height:480px !important;" src="https://www.google.com/maps/d/embed?mid=1wzkSoshSsnFiiCUM406Y2rsWg9lnEUT2" width="640" height="480"></iframe>
 <div><font size="2" color="#777">（足迹地图依赖谷歌地图，需要科学上网 -> <a href='https://zhuanlan.zhihu.com/p/181676731'>谷歌浏览器科学上网教程</a>）</font></div> -->
 
-<iframe scrolling=no style="min-height:480px !important;" src="http://footprint.sunyunzeng.com/" width="100%" height="100%"></iframe>
+<iframe scrolling=no style="min-height:480px !important;" src="https://footprint.sunyunzeng.com/" width="100%" height="100%"></iframe>
 
 足迹地图教程见  https://github.com/SUNYunZeng/FootprintMap
 
