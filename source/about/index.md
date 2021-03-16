@@ -25,5 +25,8 @@ sidebar: custom
 
 <iframe scrolling=no style="min-height:480px !important;" src="https://footprint.sunyunzeng.com/" width="100%" height="100%"></iframe>
 
-足迹地图教程见  https://github.com/SUNYunZeng/FootprintMap
 
+
+- 足迹地图教程：https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/
+
+- 足迹地图项目地址：  https://github.com/SUNYunZeng/FootprintMap
