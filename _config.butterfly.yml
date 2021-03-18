@@ -306,11 +306,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/logo.png
 
 # Avatar (頭像)
 avatar:
-  img: /images/avatar.png
+  img: /img/avatar.png
   effect: false
 
 # Disable all banner image
