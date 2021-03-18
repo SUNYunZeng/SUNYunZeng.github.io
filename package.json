@@ -9,6 +9,7 @@
     "acorn": "^8.1.0",
     "braces": ">=3.0.2",
     "hexo": "^5.4.0",
+    "hexo-algoliasearch": "^1.0.0",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
     "hexo-autonofollow": "^1.0.1",
     "hexo-baidu-url-submit": "0.0.6",

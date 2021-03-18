@@ -1,23 +1,97 @@
 - class_name: 友情链接
   class_desc: 那些人，那些事
   link_list:
-    - name: Hexo
-      link: https://hexo.io/zh-tw/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、简单且强大的网誌框架
+    - name: 我们的团队
+      link: https://github.com/ZPGuiGroupWhu
+      avatar: https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=53701636,1482044515&fm=26&gp=0.jpg
+      descr: 专注地理数据挖掘、高性能地理计算
+    - name: 王锦添的博客
+      link: https://wangjintian.com/
+      avatar: https://cdn.jsdelivr.net/gh/jtwang7/jtwang7.github.io@master/img/myblog_pic.jpg
+      descr: 同门优秀师弟1的博客分享
+    - name: mathor的博客
+      link: https://wmathor.com/
+      avatar: https://s2.ax1x.com/2020/01/08/l2xtUO.jpg
+      descr: 深度学习相关知识分享
+    - name: Angel_Kitty的博客
+      link: https://www.cnblogs.com/ECJTUACM-873284962/
+      avatar: https://i.loli.net/2017/08/02/598187babf39e.gif
+      descr: 博客园美化知识分享
+    - name: zhangmingemma的博客
+      link: https://zhangmingemma.github.io/
+      avatar: https://tvax1.sinaimg.cn/crop.0.0.512.512.180/b6d1042bly8gfz7rzh66ij20e80e8q3e.jpg?KID=imgbed,tva&Expires=1601050571&ssig=OKQ7C3C8wb
+      descr: 同门优秀师姐的博客分享
+    - name: 小马要上天的博客
+      link: https://tadpolema.com/
+      avatar: https://tadpolema.com/img/header.png
+      desc: 同门优秀师弟2的博客分享
+    - name: 鑫空间
+      link: https://www.zhangxinxu.com/
+      avatar: https://cdn.zhangxinxu.com/wordpress/wp-content/themes/default/images/index_logo.gif
+      descr: 前段大神的博客
+    - name: 夏栀的博客
+      link: http://www.wjn1996.cn/blog/allblog
+      avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
+      descr: 一个会深度学习与WEB的研究生-王嘉宁
+    - name: 数学小兵儿
+      link: https://matnoble.me/
+      avatar: https://matnoble.me/icons/android-chrome-512x512.png
+      descr: 数学＆计算机 我都爱
+    - name: Figurant Memo
+      link: https://www.unclear.top/
+      avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
+      descr: 落叶聚还散，寒鸦栖复惊。
+    - name: LiZeC 的博客
+      link: https://lizec.top/
+      avatar: https://lizec.top/images/logo.png
+      descr: Abstractness is the price of generality
+    - name: AomanHao
+      link: https://www.aomanhao.top/
+      avatar: https://www.aomanhao.top/images/Avatar.jpg
+      descr: 热爱图像处理，优化彩色世界
+    - name: 吴佳轶同学
+      link: http://www.wujiayi.vip
+      avatar: http://www.wujiayi.vip/logo.png
+      descr: 学习的最好方式是分享
 
 - class_name: 网站
   class_desc: 值得推荐的网站
   link_list:
-    - name: Youtube
-      link: https://www.youtube.com/
-      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-      descr: 视频网站
+    # - name: Youtube
+    #   link: https://www.youtube.com/
+    #   avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+    #   descr: 视频网站
     - name: Weibo
       link: https://www.weibo.com/
       avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
       descr: 中国最大社交分享平台
-    - name: Twitter
-      link: https://twitter.com/
-      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
-      descr: 社交分享平台
+    # - name: Twitter
+    #   link: https://twitter.com/
+    #   avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+    #   descr: 社交分享平台
+    - name: 阮一峰的博客
+      link: http://www.ruanyifeng.com/
+      avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2288848202,3335572986&fm=26&gp=0.jpg
+      descr: 优秀JS知识分享
+
+    - name: 龙喵资源站点
+      link: https://ailongmiao.com/
+      avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1717333002,2695568834&fm=26&gp=0.jpg
+      descr: 资源站点合集
+
+    - name: React官网
+      link: https://react.docschina.org/
+      avatar: https://react.docschina.org/favicon-32x32.png?v=f4d46f030265b4c48a05c999b8d93791
+      descr: FaceBook 开源的面向 View 的 JS 库
+
+    - name: Pytorch
+      link: https://pytorch.org/
+      avatar: https://pytorch.org/assets/images/logo-icon.svg
+      descr: FaceBook 开源的深度学习框架
+
+    - name: Cesium
+      link: https://cesium.com/cesiumjs/
+      avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1544563962,724356262&fm=26&gp=0.jpg
+      descr: 一款三维地理数据可视化库
+    
+
