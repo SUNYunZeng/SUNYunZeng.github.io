@@ -6,4 +6,5 @@ node_modules/
 public/
 .deploy*/
 themes/pure
+themes/butterfly
 
