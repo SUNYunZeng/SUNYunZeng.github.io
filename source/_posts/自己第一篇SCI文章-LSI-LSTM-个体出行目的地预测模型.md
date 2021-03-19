@@ -5,6 +5,8 @@ toc: true
 date: 2021-03-15 12:51:50
 categories: 算法
 tags: 深度学习
+sticky: 1
+cover: https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/%E5%9B%BE3.png
 ---
 
 # 内容导读
