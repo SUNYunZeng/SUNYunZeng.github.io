@@ -10,4 +10,5 @@ top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/spongebob.png
 ![](https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/wallhaven.png)
 ![](https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/alone.png)
 ![](https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/blog_home_picture.png)
+![](https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/caodi.png)
 {% endgallery %}
