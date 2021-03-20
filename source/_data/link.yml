@@ -57,6 +57,18 @@
 - class_name: 网站
   class_desc: 值得推荐的网站
   link_list:
+    - name: wallhaven
+      link: https://wallhaven.cc/
+      avatar: https://wallhaven.cc/images/layout/logo.png
+      descr: 免费的壁纸下载网站
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/avatar.png
+      descr: 本博客采用的 hexo 主题
+    - name: Font Awesome
+      link: http://www.thinkcmf.cn/font_awesome.html
+      avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
+      descr: 一款惊艳的字体图标！
     # - name: Youtube
     #   link: https://www.youtube.com/
     #   avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
@@ -82,12 +94,12 @@
     - name: React官网
       link: https://react.docschina.org/
       avatar: https://react.docschina.org/favicon-32x32.png?v=f4d46f030265b4c48a05c999b8d93791
-      descr: FaceBook 开源的面向 View 的 JS 库
+      descr: 开源的面向 View 的 JS 库
 
     - name: Pytorch
       link: https://pytorch.org/
       avatar: https://pytorch.org/assets/images/logo-icon.svg
-      descr: FaceBook 开源的深度学习框架
+      descr: 流行的开源的深度学习框架
 
     - name: Cesium
       link: https://cesium.com/cesiumjs/

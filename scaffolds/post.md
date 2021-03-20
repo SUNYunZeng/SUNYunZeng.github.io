@@ -4,5 +4,7 @@ date: {{ date }}
 comments: true
 categories: 
 tags: 
-toc: true 
+toc: true
+cover: 
+description: 
 ---
