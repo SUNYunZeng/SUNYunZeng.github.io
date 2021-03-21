@@ -219,7 +219,7 @@ algolia:
 ## 豆瓣读书
 douban:
   user: 178089077
-  builtin: false
+  builtin: true
   book:
     title: '我的书单'
     quote: '读书破万卷，下笔如有神'

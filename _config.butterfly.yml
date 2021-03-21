@@ -984,5 +984,6 @@ artitalk:
   js: https://cdn.jsdelivr.net/npm/artitalk
   option:
   front_matter:
+    title: 我的说说
     comments: false
     top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/alone.png

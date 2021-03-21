@@ -5,10 +5,12 @@
       link: https://github.com/ZPGuiGroupWhu
       avatar: https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=53701636,1482044515&fm=26&gp=0.jpg
       descr: 专注地理数据挖掘、高性能地理计算
+
     - name: 王锦添的博客
       link: https://wangjintian.com/
       avatar: https://cdn.jsdelivr.net/gh/jtwang7/jtwang7.github.io@master/img/myblog_pic.jpg
       descr: 同门优秀师弟1的博客分享
+
     - name: mathor的博客
       link: https://wmathor.com/
       avatar: https://s2.ax1x.com/2020/01/08/l2xtUO.jpg
@@ -17,42 +19,66 @@
       link: https://www.cnblogs.com/ECJTUACM-873284962/
       avatar: https://i.loli.net/2017/08/02/598187babf39e.gif
       descr: 博客园美化知识分享
+
     - name: zhangmingemma的博客
       link: https://zhangmingemma.github.io/
       avatar: https://tvax1.sinaimg.cn/crop.0.0.512.512.180/b6d1042bly8gfz7rzh66ij20e80e8q3e.jpg?KID=imgbed,tva&Expires=1601050571&ssig=OKQ7C3C8wb
       descr: 同门优秀师姐的博客分享
+
     - name: 小马要上天的博客
       link: https://tadpolema.com/
       avatar: https://tadpolema.com/img/header.png
       desc: 同门优秀师弟2的博客分享
+
     - name: 鑫空间
       link: https://www.zhangxinxu.com/
       avatar: https://cdn.zhangxinxu.com/wordpress/wp-content/themes/default/images/index_logo.gif
-      descr: 前段大神的博客
+      descr: 前端大神的博客
+
     - name: 夏栀的博客
       link: http://www.wjn1996.cn/blog/allblog
       avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
       descr: 一个会深度学习与WEB的研究生-王嘉宁
+      
     - name: 数学小兵儿
       link: https://matnoble.me/
       avatar: https://matnoble.me/icons/android-chrome-512x512.png
       descr: 数学＆计算机 我都爱
+
     - name: Figurant Memo
       link: https://www.unclear.top/
       avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
       descr: 落叶聚还散，寒鸦栖复惊。
+
     - name: LiZeC 的博客
       link: https://lizec.top/
       avatar: https://lizec.top/images/logo.png
       descr: Abstractness is the price of generality
+
     - name: AomanHao
       link: https://www.aomanhao.top/
       avatar: https://www.aomanhao.top/images/Avatar.jpg
       descr: 热爱图像处理，优化彩色世界
+
     - name: 吴佳轶同学
       link: http://www.wujiayi.vip
       avatar: http://www.wujiayi.vip/logo.png
       descr: 学习的最好方式是分享
+    
+    - name: 科学空间
+      link: https://kexue.fm/
+      avatar: https://kexue.fm/usr/themes/geekg/images/logo.png
+      descr: 渴望成为一个小飞侠
+    
+    - name: StubbornHuang's Blog
+      link: https://www.stubbornhuang.com
+      avatar: https://www.stubbornhuang.com/wp-content/uploads/2019/11/2019112216333826.png
+      descr: 计算机相关博客
+    
+    - name: Feng Yu的空间
+      link: https://fzhiy.net
+      avatar: https://img.fzhiy.net/img/favicon.ico
+      descr: Stay hungry. Stay foolish.
 
 - class_name: 网站
   class_desc: 值得推荐的网站
@@ -61,10 +87,12 @@
       link: https://wallhaven.cc/
       avatar: https://wallhaven.cc/images/layout/logo.png
       descr: 免费的壁纸下载网站
+
     - name: Butterfly
       link: https://butterfly.js.org/
       avatar: https://butterfly.js.org/img/avatar.png
       descr: 本博客采用的 hexo 主题
+
     - name: Font Awesome
       link: http://www.thinkcmf.cn/font_awesome.html
       avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
@@ -105,5 +133,10 @@
       link: https://cesium.com/cesiumjs/
       avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1544563962,724356262&fm=26&gp=0.jpg
       descr: 一款三维地理数据可视化库
+    
+    - name: LeanCloud
+      link: https://www.leancloud.cn/
+      avatar: https://www.leancloud.cn/assets/imgs/qr-wechat-borderless.11ef7253.png
+      descr: 博客说说评论用到的 Serverless 云服务
     
 

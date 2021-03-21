@@ -1,5 +1,5 @@
 ---
-title: photos
+title: 我的相册
 date: 2021-03-19 21:04:58
 comments: false
 top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/camera.png

@@ -1,5 +1,5 @@
 ---
-title: messageboard
+title: 留言板
 date: 2021-03-19 21:50:57
 comments: true
 top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/board.png
