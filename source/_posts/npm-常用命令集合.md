@@ -54,7 +54,6 @@ npm-check
 
 ```
 npm install -g npm-upgrade
-
 npm-upgrade
 ```
 
@@ -62,6 +61,5 @@ npm-upgrade
 
 ```
 npm update -g
-
 npm update --save
 ```

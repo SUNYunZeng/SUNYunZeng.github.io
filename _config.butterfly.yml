@@ -430,8 +430,8 @@ footer:
   owner:
     enable: true
     since: 2018
-  custom_text: © 2021 孙云增的博客
-  copyright: false # Copyright of theme and framework
+  custom_text: 极简生活，极致内涵
+  copyright: true # Copyright of theme and framework
 
 # Analysis
 # --------------------------------------
@@ -512,7 +512,7 @@ theme_color:
   paginator: "#1B1F23"
   button_hover: "#1cbbb4"
   text_selection: "#00c4b6"
-  link_color: "#B0C4DE"
+  link_color: "#66a9c9"
   meta_color: "#858585"
   hr_color: "#A4D8FA"
   code_foreground: "#F47466"
