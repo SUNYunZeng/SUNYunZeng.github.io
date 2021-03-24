@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-09-22 21:14:07
 categories: Java
-tags: Java设计模式
+tags: 设计模式
 ---
 
 # 使用 <font color=#f07c82>try-with-resources</font>调用用完需关闭的方法。

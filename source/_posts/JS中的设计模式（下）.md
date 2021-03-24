@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2020-06-10 12:57:36
 categories: Web前端
-tags: JavaScript
+tags: 设计模式
 ---
 
 # 命令模式

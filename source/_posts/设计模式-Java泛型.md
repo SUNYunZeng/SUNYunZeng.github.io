@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-09-28 22:17:08
 categories: Java
-tags: Java设计模式
+tags: 设计模式
 ---
 
 # 不要使用原始类型

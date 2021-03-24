@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-09-20 21:20:39
 categories: Java
-tags: Java设计模式
+tags: 设计模式
 ---
 
 # 使用静态工厂方法代替构造方法

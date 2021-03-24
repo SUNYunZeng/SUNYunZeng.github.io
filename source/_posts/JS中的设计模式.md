@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2020-06-01 15:33:12
 categories: Web前端
-tags: JavaScript
+tags: 设计模式
 ---
 
 # 单例模式

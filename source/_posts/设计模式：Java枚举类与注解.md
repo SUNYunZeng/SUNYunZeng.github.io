@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-09-30 22:45:23
 categories: Java
-tags: Java设计模式
+tags: 设计模式
 ---
 
 # 枚举类替代整形常量

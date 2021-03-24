@@ -4,7 +4,7 @@ comments: true
 toc: true
 date: 2019-09-23 19:52:56
 categories: Java
-tags: Java设计模式
+tags: 设计模式
 ---
 
 # 使类与成员可访问性最小

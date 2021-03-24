@@ -77,8 +77,13 @@
     
     - name: Feng Yu的空间
       link: https://fzhiy.net
-      avatar: https://img.fzhiy.net/img/favicon.ico
+      avatar: https://avatars.githubusercontent.com/u/16906464?s=48&v=4
       descr: Stay hungry. Stay foolish.
+    
+    - name: 龙猫汪汪汪
+      link: https://blog.codesensi.top/
+      avatar: https://blog.codesensi.top/upload/2021/03/avatar-abfa8fb90bc04568af8da8a5aa114f78.png
+      descr: 没有最菜只有更菜，我只会比别人更菜
 
 - class_name: 网站
   class_desc: 值得推荐的网站

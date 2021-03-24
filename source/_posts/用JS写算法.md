@@ -1,5 +1,5 @@
 ---
-title: 用JS写算法(一)：大数相乘
+title: 用JS写算法
 comments: true
 toc: true
 date: 2020-04-24 18:13:50
