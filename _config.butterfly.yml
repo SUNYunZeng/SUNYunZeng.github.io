@@ -89,7 +89,9 @@ mathjax:
 
 # KaTeX
 katex:
-  enable: false
+  enable: true
+  # true 表示每一页都加载katex.js
+  # false 需要时加载，须在使用的Markdown Front-matter 加上 katex: true
   per_page: false
   hide_scrollbar: true
 
@@ -430,7 +432,7 @@ footer:
   owner:
     enable: true
     since: 2018
-  custom_text: 极简生活，极致内涵
+  custom_text:
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -683,7 +685,7 @@ aside:
       link: https://github.com/SUNYunZeng
   card_announcement:
     enable: true
-    content: 想留友链接的可以留言～互相推荐～
+    content: 欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~
   card_recent_post:
     enable: false
     limit: 5 # if set 0 will show all

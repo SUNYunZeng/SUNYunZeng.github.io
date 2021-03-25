@@ -219,7 +219,7 @@ algolia:
 ## 豆瓣读书
 douban:
   user: 178089077
-  builtin: false
+  builtin: true
   book:
     title: '我的书单'
     quote: '读书破万卷，下笔如有神'
@@ -241,4 +241,11 @@ douban:
   #   comments: true
   #   top_img: https://cccccc.png
   #   aside: true
-  timeout: 10000 
+  timeout: 10000
+
+Markdown:
+  plugins:
+    - plugin:
+      name: '@neilsustc/markdown-it-katex'
+      options:
+        strict: false
