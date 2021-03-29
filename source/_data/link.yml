@@ -38,18 +38,13 @@
 
     - name: 夏栀的博客
       link: http://www.wjn1996.cn/blog/allblog
-      avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
+      avatar: http://www.wjn1996.cn/images/logo.png
       descr: 一个会深度学习与WEB的研究生-王嘉宁
       
     - name: 数学小兵儿
       link: https://matnoble.me/
       avatar: https://matnoble.me/icons/android-chrome-512x512.png
       descr: 数学＆计算机 我都爱
-
-    - name: Figurant Memo
-      link: https://www.unclear.top/
-      avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
-      descr: 落叶聚还散，寒鸦栖复惊。
 
     - name: LiZeC 的博客
       link: https://lizec.top/
@@ -78,20 +73,35 @@
     
     - name: Feng Yu的空间
       link: https://fzhiy.net
-      avatar: https://avatars.githubusercontent.com/u/16906464?s=48&v=4
+      avatar: https://cdn.v2ex.com/gravatar/6d351b2dc778df90e6b7823dd63d4c74?s=100&r=X&d=mm
       descr: Stay hungry. Stay foolish.
     
     - name: 龙猫汪汪汪
       link: https://blog.codesensi.top/
       avatar: https://blog.codesensi.top/upload/2021/03/avatar-abfa8fb90bc04568af8da8a5aa114f78.png
       descr: 没有最菜只有更菜，我只会比别人更菜
+    
+    - name: Sanarous
+      link: https://bestzuo.cn
+      avatar: https://cdn.jsdelivr.net/gh/Sanarous/files/images/avatar.jpeg
+      descr: Dream it possible, make it possible
+
+    - name: Akilarの糖果屋
+      link: https://akilar.top/
+      avatar: https://akilar.top/img/siteicon/favicon.png
+      descr: 期待您的光临！
+
+    - name: 天昕
+      link: https://sutianxin.top
+      avatar: https://gitee.com/sutianxin/my-hexo-blog-photo/raw/master/20210213111233.png
+      descr: 往者不谏 来者可追
 
 - class_name: 网站
   class_desc: 值得推荐的网站
   link_list:
     - name: wallhaven
       link: https://wallhaven.cc/
-      avatar: https://wallhaven.cc/images/layout/logo.png
+      avatar: https://z3.ax1x.com/2021/03/29/c9oleU.png
       descr: 免费的壁纸下载网站
 
     - name: Butterfly
@@ -101,20 +111,19 @@
 
     - name: Font Awesome
       link: http://www.thinkcmf.cn/font_awesome.html
-      avatar: https://avatars.githubusercontent.com/u/28821742?s=40&v=4
+      avatar: https://z3.ax1x.com/2021/03/29/c9ogSI.png
       descr: 一款惊艳的字体图标！
-    # - name: Youtube
-    #   link: https://www.youtube.com/
-    #   avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-    #   descr: 视频网站
-    - name: Weibo
-      link: https://www.weibo.com/
-      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
-      descr: 中国最大社交分享平台
-    # - name: Twitter
-    #   link: https://twitter.com/
-    #   avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
-    #   descr: 社交分享平台
+      
+    - name: IconFont
+      link: https://www.iconfont.cn/
+      avatar: https://image.bestzuo.cn/images/20200615231317.png!getwebp
+      descr: 阿里旗下的矢量图标
+    
+    - name: 网站颜色搭配
+      link: http://tool.c7sky.com/webcolor/
+      avatar: https://image.bestzuo.cn/images/20200720121155.png!getwebp
+      descr: 网站色彩搭配方案
+
     - name: 阮一峰的博客
       link: http://www.ruanyifeng.com/
       avatar: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2288848202,3335572986&fm=26&gp=0.jpg
@@ -142,7 +151,17 @@
     
     - name: LeanCloud
       link: https://www.leancloud.cn/
-      avatar: https://www.leancloud.cn/assets/imgs/qr-wechat-borderless.11ef7253.png
-      descr: 博客说说评论用到的 Serverless 云服务
+      avatar: https://pic1.zhimg.com/50/6d5a1fb3a4e2ad923b02d366710b3072_720w.jpg?source=54b3c3a5
+      descr: Serverless 云服务
+    
+    - name: PicGo
+      link: https://github.com/Molunerfinn/PicGo
+      avatar: https://pic4.zhimg.com/80/v2-8471c2221a9c45d2817c11f770770af3_720w.jpg
+      descr: 客户端图床
+
+    - name: dev-sidecar
+      link: https://github.com/docmirror/dev-sidecar
+      avatar: https://z3.ax1x.com/2021/03/29/c9IOde.png
+      descr: github 加速
     
 

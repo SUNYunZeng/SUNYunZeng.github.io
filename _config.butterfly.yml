@@ -687,7 +687,7 @@ aside:
     enable: true
     content: 欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~
   card_recent_post:
-    enable: false
+    enable: true
     limit: 5 # if set 0 will show all
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
@@ -698,8 +698,8 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
-    limit: 40 # if set 0 will show all
-    color: false
+    limit: 10 # if set 0 will show all
+    color: true
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
     enable: false
