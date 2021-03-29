@@ -3,8 +3,8 @@ title: LeetCode 208.实现Trie(前缀树)
 comments: true
 toc: true
 date: 2019-11-11 21:04:14
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

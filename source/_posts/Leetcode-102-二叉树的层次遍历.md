@@ -3,8 +3,8 @@ title: Leetcode 102.二叉树的层次遍历
 comments: true
 toc: true
 date: 2019-07-04 12:32:30
-categories: Algorithm
-tags: Binary Tree
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目

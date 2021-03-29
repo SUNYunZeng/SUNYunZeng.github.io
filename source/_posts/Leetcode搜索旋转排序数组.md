@@ -3,8 +3,8 @@ title: Leetcode 33.搜索旋转排序数组
 comments: true
 toc: true
 date: 2019-09-15 20:50:03
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

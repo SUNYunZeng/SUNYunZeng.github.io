@@ -3,8 +3,8 @@ title: Leetcode 46.全排列
 comments: true
 toc: true
 date: 2019-10-10 15:47:46
-categories: Algorithm
-tags: backtrace
+categories: 算法题
+tags: 回溯法
 ---
 
 # 题目

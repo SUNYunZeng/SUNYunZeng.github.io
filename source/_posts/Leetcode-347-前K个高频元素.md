@@ -3,8 +3,8 @@ title: Leetcode 347.前K个高频元素
 comments: true
 toc: true
 date: 2019-07-15 11:52:16
-categories:
-tags:
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

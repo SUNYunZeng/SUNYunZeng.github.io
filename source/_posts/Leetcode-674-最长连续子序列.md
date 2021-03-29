@@ -3,8 +3,8 @@ title: Leetcode 674.最长连续子序列
 comments: true
 toc: true
 date: 2019-09-23 22:38:36
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

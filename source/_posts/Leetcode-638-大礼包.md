@@ -3,8 +3,8 @@ title: Leetcode 638.大礼包
 comments: true
 toc: true
 date: 2019-08-13 21:50:25
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

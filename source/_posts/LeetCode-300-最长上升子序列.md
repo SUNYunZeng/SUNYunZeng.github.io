@@ -3,8 +3,8 @@ title: LeetCode 300.最长上升子序列
 comments: true
 toc: true
 date: 2019-12-26 10:04:32
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 最长上升子序列

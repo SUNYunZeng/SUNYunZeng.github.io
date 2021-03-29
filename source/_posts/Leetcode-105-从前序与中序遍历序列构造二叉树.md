@@ -3,8 +3,8 @@ title: Leetcode 105.从前序与中序遍历序列构造二叉树
 comments: true
 toc: true
 date: 2019-07-01 00:03:04
-categories: Algorithm
-tags: Binary Tree
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目

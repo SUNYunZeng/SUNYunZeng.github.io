@@ -3,8 +3,8 @@ title: Leetcode 无重复字符的最长子串（String 练习 02）
 comments: true
 toc: true
 date: 2019-08-30 21:23:46
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

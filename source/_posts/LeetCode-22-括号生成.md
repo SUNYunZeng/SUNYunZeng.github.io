@@ -3,8 +3,8 @@ title: LeetCode 22.括号生成
 comments: true
 toc: true
 date: 2019-11-05 22:36:55
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

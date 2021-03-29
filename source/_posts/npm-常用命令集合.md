@@ -4,7 +4,9 @@ comments: true
 toc: true
 date: 2021-03-20 21:06:59
 categories: Web前端
-tags: npm
+tags: 
+    - npm
+    - 语法
 cover: https://w.wallhaven.cc/full/4y/wallhaven-4yqm8x.jpg
 description: 对于 npm 的一些常用命令的汇总
 ---

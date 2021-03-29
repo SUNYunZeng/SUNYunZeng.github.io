@@ -3,8 +3,8 @@ title: LeetCode 621.任务调度器
 comments: true
 toc: true
 date: 2019-11-02 16:16:15
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

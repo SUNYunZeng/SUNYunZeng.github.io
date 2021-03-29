@@ -3,8 +3,8 @@ title: Leetcode 215.数组中第K个最大元素
 comments: true
 toc: true
 date: 2019-07-01 21:42:03
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

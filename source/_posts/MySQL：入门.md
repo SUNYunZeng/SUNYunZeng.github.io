@@ -3,8 +3,8 @@ title: MySQL：入门
 comments: true
 toc: true
 date: 2019-10-31 21:52:12
-categories: 数据库管理系统
-tags: MySQL
+categories: MySQL
+tags: 语法
 ---
 
 # MySQL 简介

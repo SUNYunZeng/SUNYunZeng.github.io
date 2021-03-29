@@ -3,8 +3,8 @@ title: Leetcode 94.二叉树的中序遍历
 comments: true
 toc: true
 date: 2019-07-03 17:11:32
-categories: Algorithm
-tags: Binary Tree
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目描述

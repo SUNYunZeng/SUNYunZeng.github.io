@@ -3,8 +3,8 @@ title: Leetcode 969.煎饼排序
 comments: true
 toc: true
 date: 2019-08-28 10:20:20
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

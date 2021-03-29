@@ -3,8 +3,8 @@ title: Leetcode 11.盛最多水的容器
 comments: true
 toc: true
 date: 2019-07-17 15:08:09
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

@@ -3,8 +3,8 @@ title: LeetCode 62.不同路径
 comments: true
 toc: true
 date: 2019-11-08 21:36:50
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

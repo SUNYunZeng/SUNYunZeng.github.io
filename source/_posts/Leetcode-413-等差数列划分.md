@@ -3,8 +3,8 @@ title: Leetcode 413.等差数列划分
 comments: true
 toc: true
 date: 2019-12-25 11:21:09
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 等差数列划分

@@ -3,8 +3,8 @@ title: Leetcode 287.寻找重复数
 comments: true
 toc: true
 date: 2019-07-06 19:55:07
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

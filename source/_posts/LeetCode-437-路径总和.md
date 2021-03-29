@@ -3,8 +3,8 @@ title: LeetCode 437.路径总和 III
 comments: true
 toc: true
 date: 2019-11-05 17:16:41
-categories: Algorithm
-tags: Binary Tree
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目

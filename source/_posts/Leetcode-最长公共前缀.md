@@ -3,8 +3,8 @@ title: Leetcode 最长公共前缀 (String 练习 01)
 comments: true
 toc: true
 date: 2019-08-31 17:03:25
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

@@ -3,8 +3,8 @@ title: LeetCode 160.相交链表
 comments: true
 toc: true
 date: 2019-11-04 18:49:13
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

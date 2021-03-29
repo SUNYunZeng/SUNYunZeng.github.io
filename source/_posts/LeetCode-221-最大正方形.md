@@ -3,8 +3,8 @@ title: LeetCode 221.最大正方形
 comments: true
 toc: true
 date: 2019-11-09 22:02:04
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

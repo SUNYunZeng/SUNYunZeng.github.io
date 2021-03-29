@@ -3,8 +3,8 @@ title: Leetcode 2：两数相加
 comments: true
 toc: true
 date: 2019-10-21 22:03:45
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

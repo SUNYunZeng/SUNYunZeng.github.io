@@ -2,8 +2,8 @@
 title: Minimum-Falling-Path-Sum
 toc: true
 date: 2019-05-25 21:11:46
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 下降路径最小和

@@ -3,8 +3,8 @@ title: Leetcode 字符串的排列 (String 练习 03)
 comments: true
 toc: true
 date: 2019-09-01 12:30:02
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

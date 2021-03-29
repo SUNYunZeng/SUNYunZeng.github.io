@@ -3,8 +3,8 @@ title: Leetcode 581.最短无序连续子数组
 comments: true
 toc: true
 date: 2019-11-02 14:51:27
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

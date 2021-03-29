@@ -4,7 +4,7 @@ toc: true
 date: 2019-05-27 21:30:57
 categories: Linux
 tags: 
-    - Tips
+    - 语法
 ---
 
 # 常用指令集

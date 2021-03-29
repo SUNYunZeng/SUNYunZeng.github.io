@@ -3,8 +3,8 @@ title: Leetcode 746.使用最小花费爬楼梯
 comments: true
 toc: true
 date: 2019-07-05 09:40:49
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

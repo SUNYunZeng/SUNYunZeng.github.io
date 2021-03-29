@@ -3,8 +3,8 @@ title: LeetCode 494.目标和
 comments: true
 toc: true
 date: 2019-11-04 21:54:31
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

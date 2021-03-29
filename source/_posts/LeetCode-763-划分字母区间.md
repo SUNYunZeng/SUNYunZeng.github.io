@@ -3,8 +3,8 @@ title: LeetCode 763. 划分字母区间
 comments: true
 toc: true
 date: 2019-12-20 19:56:57
-categories: Algorithm
-tags: Greedy Algorithm
+categories: 算法题
+tags: 贪心法
 ---
 
 # 题目

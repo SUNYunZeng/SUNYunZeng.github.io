@@ -3,8 +3,8 @@ title: LeetCode 560.和为K的子数组
 comments: true
 toc: true
 date: 2019-11-03 11:17:21
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

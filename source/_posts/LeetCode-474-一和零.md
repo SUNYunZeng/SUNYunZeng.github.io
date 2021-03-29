@@ -3,8 +3,8 @@ title: LeetCode 474.一和零
 comments: true
 toc: true
 date: 2019-12-28 11:24:01
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

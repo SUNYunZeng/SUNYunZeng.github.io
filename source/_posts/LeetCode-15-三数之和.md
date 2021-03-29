@@ -3,8 +3,8 @@ title: LeetCode 15.三数之和
 comments: true
 toc: true
 date: 2019-09-24 09:27:20
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

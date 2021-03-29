@@ -3,8 +3,8 @@ title: LeetCode 524.通过删除字母匹配到字典里最长单词
 comments: true
 toc: true
 date: 2019-12-21 11:49:45
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

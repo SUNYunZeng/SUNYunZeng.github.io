@@ -3,8 +3,8 @@ title: LeetCode 543.二叉树的直径
 comments: true
 toc: true
 date: 2019-11-03 18:22:01
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目

@@ -3,8 +3,8 @@ title: Leetcode 647.回文子串
 comments: true
 toc: true
 date: 2019-07-28 08:21:05
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

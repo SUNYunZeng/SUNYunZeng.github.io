@@ -3,8 +3,8 @@ title: LeetCode 96.不同的二叉搜索树
 comments: true
 toc: true
 date: 2019-11-12 16:44:44
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

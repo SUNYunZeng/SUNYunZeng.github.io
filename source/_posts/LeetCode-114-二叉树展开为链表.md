@@ -3,8 +3,8 @@ title: LeetCode 114.二叉树展开为链表
 comments: true
 toc: true
 date: 2019-11-06 16:57:36
-categories: Algorithm
-tags: Binary Tree
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目

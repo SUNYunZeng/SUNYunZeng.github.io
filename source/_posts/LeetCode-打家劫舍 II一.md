@@ -3,8 +3,8 @@ title: LeetCode 打家劫舍 II
 comments: true
 toc: true
 date: 2019-12-23 16:38:56
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

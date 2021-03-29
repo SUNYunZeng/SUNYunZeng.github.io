@@ -3,8 +3,8 @@ title: LeetCode 1143.最长公共子序列
 comments: true
 toc: true
 date: 2019-12-27 17:04:47
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 最长公共子序列

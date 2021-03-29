@@ -3,8 +3,8 @@ title: Leetcode 1046.最后一块石头的重量
 comments: true
 toc: true
 date: 2019-07-30 14:36:49
-categories: Algorithm
-tags: Greedy Algorithm
+categories: 算法题
+tags: 贪心法
 ---
 
 # 题目

@@ -3,8 +3,10 @@ title: TCP/IP协议
 comments: true
 toc: true
 date: 2019-09-10 08:41:44
-categories: HTTP
-tags: TCP/IP
+categories: Web前端
+tags: 
+    - TCP/IP
+    - http
 ---
 
 # 起源

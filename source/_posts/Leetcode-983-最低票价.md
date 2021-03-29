@@ -3,8 +3,8 @@ title: Leetcode 983.最低票价
 comments: true
 toc: true
 date: 2019-07-18 21:02:54
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目
