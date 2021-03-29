@@ -3,7 +3,7 @@ title: 剑指Offer：数组中只出现一次的数字
 comments: true
 toc: true
 date: 2019-10-21 19:09:12
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

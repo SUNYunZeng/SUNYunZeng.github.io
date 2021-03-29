@@ -4,7 +4,7 @@ toc: true
 date: 2019-05-21 21:54:33
 categories: Java
 tags: 
-    - Tips
+    - 语法
 ---
 
 # **Java List**

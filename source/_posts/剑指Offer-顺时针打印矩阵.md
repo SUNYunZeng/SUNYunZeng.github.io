@@ -3,7 +3,7 @@ title: '剑指Offer: 顺时针打印矩阵'
 comments: true
 toc: true
 date: 2019-09-30 20:14:36
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

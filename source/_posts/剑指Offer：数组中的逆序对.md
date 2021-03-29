@@ -3,7 +3,7 @@ title: 剑指Offer：数组中的逆序对
 comments: true
 toc: true
 date: 2019-10-17 20:46:53
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

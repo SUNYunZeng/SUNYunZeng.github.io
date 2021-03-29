@@ -3,7 +3,7 @@ title: 剑指Offer：删除链表中重复的节点
 comments: true
 toc: true
 date: 2019-10-27 22:42:07
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

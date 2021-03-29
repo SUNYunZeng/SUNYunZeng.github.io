@@ -3,7 +3,7 @@ title: 剑指Offer：剪绳子
 comments: true
 toc: true
 date: 2019-10-31 20:25:30
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

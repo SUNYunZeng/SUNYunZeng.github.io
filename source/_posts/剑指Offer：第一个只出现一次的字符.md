@@ -3,7 +3,7 @@ title: 剑指Offer：第一个只出现一次的字符
 comments: true
 toc: true
 date: 2019-10-15 18:45:02
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

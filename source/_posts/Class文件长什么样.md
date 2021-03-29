@@ -3,7 +3,7 @@ title: Class文件长什么样
 comments: true
 toc: true
 date: 2019-09-25 19:55:16
-categories: JVM
+categories: Java
 tags: JVM
 ---
 

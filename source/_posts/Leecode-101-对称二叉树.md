@@ -3,8 +3,8 @@ title: Leetcode 101.对称二叉树
 comments: true
 toc: true
 date: 2019-06-25 21:52:19
-categories: Algorithm
-tags: Binary Tree
+categories: 算法题
+tags: 二叉树
 ---
 
 # 题目

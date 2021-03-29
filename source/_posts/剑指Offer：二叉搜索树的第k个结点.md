@@ -3,10 +3,10 @@ title: 剑指Offer：二叉搜索树的第k个结点
 comments: true
 toc: true
 date: 2019-10-30 11:06:47
-categories: Algorithm
+categories: 算法题
 tags: 
     - 剑指Offer
-    - Binary Search Tree
+    - 二叉树
 ---
 
 # 题目

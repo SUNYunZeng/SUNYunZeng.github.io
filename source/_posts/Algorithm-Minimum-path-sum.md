@@ -2,9 +2,9 @@
 title: Algorithm--Minimum path sum
 toc: true
 date: 2019-05-21 16:47:00
-categories: Algorithm
+categories: 算法题
 tags: 
-    - Dynamic Programming
+    - 动态规划
 ---
 
 # **Dynamic Programming**

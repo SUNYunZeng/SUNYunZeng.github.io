@@ -3,10 +3,10 @@ title: 剑指Offer：二叉搜索树的后序遍历序列
 comments: true
 toc: true
 date: 2019-10-06 15:44:08
-categories: Algorithm
+categories: 算法题
 tags: 
     - 剑指Offer
-    - Binary Search Tree
+    - 二叉树
 ---
 
 # 题目

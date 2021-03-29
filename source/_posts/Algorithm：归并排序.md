@@ -3,7 +3,7 @@ title: 归并排序 | 插入排序 | 希尔排序
 comments: true
 toc: true
 date: 2019-11-01 16:32:51
-categories: Algorithm
+categories: 算法题
 tags: 排序算法
 ---
 

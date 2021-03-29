@@ -2,8 +2,8 @@
 title: Algorithm--Coin Change
 toc: true
 date: 2019-05-19 21:11:54
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # **Dynamic Programming**

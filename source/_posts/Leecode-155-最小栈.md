@@ -3,8 +3,8 @@ title: Leetcode 155.最小栈
 comments: true
 toc: true
 date: 2019-06-22 14:07:29
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

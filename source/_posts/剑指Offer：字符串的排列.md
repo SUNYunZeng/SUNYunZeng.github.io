@@ -3,7 +3,7 @@ title: 剑指Offer：字符串的排列
 comments: true
 toc: true
 date: 2019-10-10 18:25:16
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

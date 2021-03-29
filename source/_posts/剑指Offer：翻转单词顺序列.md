@@ -3,7 +3,7 @@ title: 剑指Offer：翻转单词顺序列
 comments: true
 toc: true
 date: 2019-10-22 22:20:34
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

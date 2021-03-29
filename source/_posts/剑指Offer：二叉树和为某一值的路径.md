@@ -3,10 +3,10 @@ title: 剑指Offer：二叉树和为某一值的路径
 comments: true
 toc: true
 date: 2019-10-08 17:50:05
-categories: Algorithm
+categories: 算法题
 tags: 
     - 剑指Offer
-    - Binary Tree 
+    - 二叉树 
 ---
 
 # 题目

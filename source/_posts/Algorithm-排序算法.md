@@ -2,7 +2,7 @@
 title: 快速排序 | 选择排序 | 冒泡排序
 toc: true
 date: 2019-05-27 21:38:08
-categories: Algorithm
+categories: 算法题
 tags: 排序算法
 ---
 

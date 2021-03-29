@@ -3,7 +3,7 @@ title: 剑指Offer：最小的K个数
 comments: true
 toc: true
 date: 2019-10-13 15:52:01
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

@@ -2,8 +2,8 @@
 title: Algorithm--Find Common Characters
 toc: true
 date: 2019-05-17 12:29:20
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 # Find Common Characters
 ## **Title detail**

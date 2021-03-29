@@ -3,7 +3,7 @@ title: 剑指Offer：从上往下打印二叉树
 comments: true
 toc: true
 date: 2019-10-06 10:00:41
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

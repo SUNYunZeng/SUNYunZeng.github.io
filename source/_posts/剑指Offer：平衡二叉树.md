@@ -3,7 +3,7 @@ title: 剑指Offer：平衡二叉树
 comments: true
 toc: true
 date: 2019-10-21 18:51:48
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

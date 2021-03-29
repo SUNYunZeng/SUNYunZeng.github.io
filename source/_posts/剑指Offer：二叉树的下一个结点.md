@@ -3,9 +3,9 @@ title: 剑指Offer：二叉树的下一个结点
 comments: true
 toc: true
 date: 2019-10-28 20:44:51
-categories: Algorithm
+categories: 算法题
 tags: 
-    - Binary Tree
+    - 二叉树
     - 剑指Offer
 ---
 

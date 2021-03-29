@@ -3,7 +3,7 @@ title: JVM如何回收对象
 comments: true
 toc: true
 date: 2019-08-14 21:33:32
-categories: JVM
+categories: Java
 tags: JVM
 ---
 

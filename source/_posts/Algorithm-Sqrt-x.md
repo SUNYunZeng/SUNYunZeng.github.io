@@ -3,8 +3,8 @@ title: Algorithm--Sqrt(x)
 toc: true
 mathjax: true
 date: 2019-05-19 13:11:49
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # Some Algorithm using Math Algorithm

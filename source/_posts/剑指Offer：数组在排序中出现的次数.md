@@ -3,7 +3,7 @@ title: 剑指Offer：数组在排序中出现的次数
 comments: true
 toc: true
 date: 2019-10-17 21:44:11
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

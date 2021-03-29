@@ -2,8 +2,8 @@
 title: Algorithm--Fast and Slow Pointer
 toc: true
 date: 2019-05-17 22:00:47
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 # **快慢指针的应用**
 

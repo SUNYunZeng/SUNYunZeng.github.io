@@ -3,7 +3,7 @@ title: 剑指Offer：两个链表的第一个公共结点
 comments: true
 toc: true
 date: 2019-10-17 20:57:58
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

@@ -3,8 +3,8 @@ title: Leetcode 48.旋转图像
 comments: true
 toc: true
 date: 2019-06-24 11:47:24
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 题目

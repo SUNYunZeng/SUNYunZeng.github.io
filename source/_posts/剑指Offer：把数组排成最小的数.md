@@ -3,7 +3,7 @@ title: 剑指Offer：把数组排成最小的数
 comments: true
 toc: true
 date: 2019-10-14 21:23:50
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

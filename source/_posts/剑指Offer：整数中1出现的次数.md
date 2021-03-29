@@ -3,7 +3,7 @@ title: 剑指Offer：整数中1出现的次数
 comments: true
 toc: true
 date: 2019-10-14 20:48:41
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

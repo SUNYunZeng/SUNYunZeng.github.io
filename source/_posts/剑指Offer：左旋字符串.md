@@ -3,7 +3,7 @@ title: 剑指Offer：左旋字符串
 comments: true
 toc: true
 date: 2019-10-22 22:03:20
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

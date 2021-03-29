@@ -3,9 +3,9 @@ title: 剑指Offer：按之字形顺序打印二叉树
 comments: true
 toc: true
 date: 2019-10-29 10:55:19
-categories: Algorithm
+categories: 算法题
 tags: 
-    - Binary Tree
+    - 二叉树
     - 剑指Offer
 ---
 

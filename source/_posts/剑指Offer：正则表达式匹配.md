@@ -3,7 +3,7 @@ title: 剑指Offer：正则表达式匹配
 comments: true
 toc: true
 date: 2019-10-25 20:43:14
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

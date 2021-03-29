@@ -3,7 +3,7 @@ title: 剑指Offer 树的子结构
 comments: true
 toc: true
 date: 2019-09-29 16:33:23
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

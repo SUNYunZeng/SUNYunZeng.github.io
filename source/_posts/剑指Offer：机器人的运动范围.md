@@ -3,10 +3,10 @@ title: 剑指Offer：机器人的运动范围
 comments: true
 toc: true
 date: 2019-10-31 19:59:05
-categories: Algorithm
+categories: 算法题
 tags: 
     - 剑指Offer
-    - backtrace
+    - 回溯法
 ---
 
 # 题目

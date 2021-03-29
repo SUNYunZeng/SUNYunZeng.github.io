@@ -3,7 +3,7 @@ title: 剑指Offer：表示数值的字符串
 comments: true
 toc: true
 date: 2019-10-25 21:57:44
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

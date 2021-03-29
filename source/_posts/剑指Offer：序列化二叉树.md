@@ -3,9 +3,9 @@ title: 剑指Offer：序列化二叉树
 comments: true
 toc: true
 date: 2019-10-30 10:00:30
-categories: Algorithm
+categories: 算法题
 tags: 
-    - Binary Tree
+    - 二叉树
     - 剑指Offer
 ---
 

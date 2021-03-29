@@ -3,7 +3,7 @@ title: 剑指Offer：滑动窗口的最大值
 comments: true
 toc: true
 date: 2019-10-31 18:41:27
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

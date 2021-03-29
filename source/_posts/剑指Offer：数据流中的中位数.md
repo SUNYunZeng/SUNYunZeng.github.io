@@ -3,7 +3,7 @@ title: 剑指Offer：数据流中的中位数
 comments: true
 toc: true
 date: 2019-10-31 09:37:29
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

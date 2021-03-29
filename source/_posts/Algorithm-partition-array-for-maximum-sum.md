@@ -2,9 +2,9 @@
 title: Algorithm--Partition-array-for-maximum-sum
 toc: true
 date: 2019-05-21 15:13:00
-categories: Algorithm
+categories: 算法题
 tags:
-    - Dynamic Programming 
+    - 动态规划 
 ---
 
 # **Dynamic Programming**

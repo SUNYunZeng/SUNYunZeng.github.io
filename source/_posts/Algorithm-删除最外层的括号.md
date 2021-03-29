@@ -2,8 +2,8 @@
 title: Algorithm：删除最外层的括号
 toc: true
 date: 2019-05-21 21:42:55
-categories: Algorithm
-tags: Other Algorithm
+categories: 算法题
+tags: LeetCode
 ---
 
 # 删除最外层括号

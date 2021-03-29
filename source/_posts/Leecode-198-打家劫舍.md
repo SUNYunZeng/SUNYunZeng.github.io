@@ -3,8 +3,8 @@ title: Leetcode 198.打家劫舍
 comments: true
 toc: true
 date: 2019-06-17 20:51:57
-categories: Algorithm
-tags: Dynamic Programming
+categories: 算法题
+tags: 动态规划
 ---
 
 # 题目

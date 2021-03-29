@@ -3,9 +3,9 @@ title: Leetcode 53.最大子序和
 comments: true
 toc: true
 date: 2019-06-17 17:18:17
-categories: Algorithm
+categories: 算法题
 tags: 
-    - Dynamic Programming 
+    - 动态规划 
     - 剑指Offer
 ---
 

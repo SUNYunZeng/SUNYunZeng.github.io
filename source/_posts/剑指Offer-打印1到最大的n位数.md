@@ -3,7 +3,7 @@ title: 剑指Offer 打印1到最大的n位数
 comments: true
 toc: true
 date: 2019-09-24 21:23:35
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 

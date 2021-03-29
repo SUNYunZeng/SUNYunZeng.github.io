@@ -3,7 +3,7 @@ title: 剑指Offer：扑克牌顺子
 comments: true
 toc: true
 date: 2019-10-23 12:54:32
-categories: Algorithm
+categories: 算法题
 tags: 剑指Offer
 ---
 
