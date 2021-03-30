@@ -10,7 +10,7 @@ wrong_pass_message: 抱歉，您输入的密码不对，请重试
 date: 2019-04-26 10:08:24
 cover:
 description:
-katex: true
+mathjax: true
 ---
 
 
