@@ -80,9 +80,9 @@ theme: butterfly
 deploy:
 - type: git
   repo: 
-    github: https://github.com/SUNYunZeng/SUNYunZeng.github.io.git
-    coding: https://e.coding.net/SUNYunZeng/SUNYunZeng.git
-    gitee: https://gitee.com/sunyunzeng/SUNYunZeng.github.io.git
+    github: git@github.com:SUNYunZeng/SUNYunZeng.github.io.git
+    coding: git@e.coding.net:SUNYunZeng/SUNYunZeng.git
+    gitee: git@gitee.com:sunyunzeng/SUNYunZeng.github.io.git
   branch: master
 - type: baidu_url_submitter
 
