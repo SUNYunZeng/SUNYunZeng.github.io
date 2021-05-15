@@ -103,21 +103,36 @@
       link: https://butterfly.js.org/
       avatar: https://butterfly.js.org/img/avatar.png
       descr: 本博客采用的 hexo 主题
+    
+    - name: ppt市场
+      link: https://ppt.sotary.com/web/wxapp/index.html
+      avatar: https://ppt.sotary.com/web/wxapp/v0/img/logo.png
+      descr: 免费ppt下载
+
+    - name: removebg
+      link: https://www.remove.bg/zh
+      avatar: https://static.remove.bg/remove-bg-web/a72f919da581145bc8a52ac0c5d21f5c4741f367/assets/logo-nav-22aab70183946de3d717620adef36247aca127c1a0f04885d786c6be1d2cf9fa.svg
+      descr: 在线抠图
+
+    - name: IconFont
+      link: https://www.iconfont.cn/
+      avatar: https://image.bestzuo.cn/images/20200615231317.png!getwebp
+      descr: 阿里旗下的矢量图标
 
     - name: Font Awesome
       link: http://www.thinkcmf.cn/font_awesome.html
       avatar: https://z3.ax1x.com/2021/03/29/c9ogSI.png
       descr: 一款惊艳的字体图标！
       
-    - name: IconFont
-      link: https://www.iconfont.cn/
-      avatar: https://image.bestzuo.cn/images/20200615231317.png!getwebp
-      descr: 阿里旗下的矢量图标
-    
     - name: 网站颜色搭配
       link: http://tool.c7sky.com/webcolor/
       avatar: https://image.bestzuo.cn/images/20200720121155.png!getwebp
       descr: 网站色彩搭配方案
+    
+    - name: MSDN
+      link: https://msdn.itellyou.cn/
+      avatar: https://msdn.itellyou.cn/images/itellyou.cn.png
+      descr: 系统软件下载
 
     - name: 阮一峰的博客
       link: http://www.ruanyifeng.com/
@@ -158,5 +173,16 @@
       link: https://github.com/docmirror/dev-sidecar
       avatar: https://z3.ax1x.com/2021/03/29/c9IOde.png
       descr: github 加速
+
+    - name: 中国色
+      link: http://zhongguose.com/
+      avatar: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/cha_color_logo.png
+      descr: 中国风颜色
+    
+    - name: 唐宋文学编年地图
+      link: https://sou-yun.cn/PoetLifeMap.aspx
+      avatar: https://sou-yun.cn/images/publish.png
+      descr: 唐宋文学编年系地信息平台
+    
     
 
