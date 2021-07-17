@@ -13,13 +13,13 @@ top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/sun.png
 
 <div style="background: linear-gradient(to right, green, blue);color: transparent;-webkit-background-clip: text;font-size:20px">
 
-我是谁?
+<p>我是谁?</p>
 
-研三老学生，人生路上的摸索者
+<p>国家打工人，社会主义的建设者与接班人！</p>
 
-专注体验设计 xx 年，善于模仿，不善于创造
+<p>Stay foolish, Stay Hungry</p>
 
-瞎读书，乱投篮，没事撸撸代码、调调参
+<p>读书，运动，coding、writing</p>
 </div>
 
 # 个人足迹
