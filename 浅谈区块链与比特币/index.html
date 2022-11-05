@@ -1,0 +1,396 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>浅谈区块链与比特币 | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是区块链和比特币？有人说区块链是新一代价值互联网，有人说它是最慢的数据库，有人说区块链是一项类似于蒸汽机一样巨大的发明创新，也有人说区块链是一个巨大的庞氏骗局。到底什么是比特币，为什么它这么火？本篇文章将带你揭示比特币的前世今生。 区块链跟比特币的定义  区块链是一种去中心化的分布式记账本，而比特币是账本中所记录的数字货币的一种实现。  作为区块链的一种实际应用，比特币（Bitcoin）的原型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈区块链与比特币">
+<meta property="og:url" content="https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%AF%94%E7%89%B9%E5%B8%81/index.html">
+<meta property="og:site_name" content="孙云增的博客">
+<meta property="og:description" content="什么是区块链和比特币？有人说区块链是新一代价值互联网，有人说它是最慢的数据库，有人说区块链是一项类似于蒸汽机一样巨大的发明创新，也有人说区块链是一个巨大的庞氏骗局。到底什么是比特币，为什么它这么火？本篇文章将带你揭示比特币的前世今生。 区块链跟比特币的定义  区块链是一种去中心化的分布式记账本，而比特币是账本中所记录的数字货币的一种实现。  作为区块链的一种实际应用，比特币（Bitcoin）的原型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/bitcoin.png">
+<meta property="article:published_time" content="2021-03-27T12:29:18.000Z">
+<meta property="article:modified_time" content="2022-11-05T02:54:38.241Z">
+<meta property="article:author" content="孙云增">
+<meta property="article:tag" content="区块链">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/bitcoin.png"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%AF%94%E7%89%B9%E5%B8%81/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '浅谈区块链与比特币',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-05 10:54:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/bitcoin.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">浅谈区块链与比特币</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-27T12:29:18.000Z" title="发表于 2021-03-27 20:29:18">2021-03-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-05T02:54:38.241Z" title="更新于 2022-11-05 10:54:38">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E6%8A%80/">科技</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="浅谈区块链与比特币"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="什么是区块链和比特币？"><a href="#什么是区块链和比特币？" class="headerlink" title="什么是区块链和比特币？"></a>什么是区块链和比特币？</h1><p>有人说区块链是新一代价值互联网，有人说它是最慢的数据库，有人说区块链是一项类似于蒸汽机一样巨大的发明创新，也有人说区块链是一个巨大的庞氏骗局。到底什么是比特币，为什么它这么火？本篇文章将带你揭示比特币的前世今生。</p>
+<p><code>区块链跟比特币的定义</code></p>
+<blockquote>
+<p>区块链是一种去中心化的分布式记账本，而比特币是账本中所记录的数字货币的一种实现。</p>
+</blockquote>
+<p>作为区块链的一种实际应用，<code>比特币</code>（Bitcoin）的原型是由中本聪（Satoshi Nakamoto）在2008年11月1日发表的一篇论文中提出的。比特币的真正诞生是在2009年1月3日。到今天为止，比特币的市值已经水涨船高，一枚比特币的价值高达55484.70美元，合362869.94元人民币！</p>
+<p><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/bitcoinline.png" alt="比特币市值趋势图"></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://bitcoin.org/bitcoin.pdf">比特币白皮书</a></li>
+<li><a target="_blank" rel="noopener" href="https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf">比特币白皮书中文版</a></li>
+</ul>
+<h1 id="区块链要解决什么问题？"><a href="#区块链要解决什么问题？" class="headerlink" title="区块链要解决什么问题？"></a>区块链要解决什么问题？</h1><p>既然区块链是一种去中心化的货币结算体系，那么原来的货币结算体系有什么问题呢？中本聪在论文的原文讲到：<strong>中心化的金融机构由于信任问题，不可避免在交易过程中存在仲裁与纠纷，就导致无法实现不可撤销的交易，在撤销过程中会导致额外的支付成本</strong>。当然，这只是现有中心化货币体系不可避免的问题，而区块链基于分布式存储技术跟密码学，<strong>实现了交易的不可撤销性，通过去中心化金融机构的方式，实现点对点的交易，目的是通过加密上的可靠性解决人们之间的信任问题，从而提高效率</strong>。</p>
+<blockquote>
+<p>互联网通过提高信息传播的速度来提高效率；区块链通过降低信任成本提高效率。</p>
+</blockquote>
+<h1 id="区块链的工作原理"><a href="#区块链的工作原理" class="headerlink" title="区块链的工作原理"></a>区块链的工作原理</h1><p>区块链是<code>价值互联网</code>，人们间的财富通过比特币的数量度量，比特币的交易记录代表的是价值的交换。比特币本身是一种<code>加密货币</code>（crypto-currency），是一种虚拟的数字货币，由一串复杂代码组成。基于密码学的设计确保了比特币的所有权不能被篡改，同时保持了一定的匿名性。</p>
+<p>区块链为了实现分布式货币体系的功能，需要解答以下几个问题：</p>
+<ol>
+<li>怎么记账？</li>
+<li>怎么转账？</li>
+<li>由谁发行货币？</li>
+</ol>
+<h2 id="怎么记账？"><a href="#怎么记账？" class="headerlink" title="怎么记账？"></a>怎么记账？</h2><p>区块就是记账本，记账操作由区块完成。当一笔交易发生时，需向全体区块广播，然后所有区块都记录下这笔交易信息，完成记账。</p>
+<hr>
+<p><strong>区块</strong></p>
+<blockquote>
+<p>区块就是一个带有时间戳的记账本，链就是哈希指针，将区块相连。</p>
+</blockquote>
+<p>区块分布在不同的网络节点中，且是分布式的。区块的组成包括<code>块头</code>（Block Header）跟<code>块体</code>（Block Body）。</p>
+<ul>
+<li><p>块头：记录了区块链的版本、指向前一个区块块头的哈希指针（对前一个区块块头算哈希值）、Merkle tree的根哈希值、目标域（target）和随机数（nonce）。</p>
+</li>
+<li><p>块体：保存交易列表</p>
+</li>
+</ul>
+<p>其中目标域和随机数是挖矿用到的参数，而哈希指针就是连接区块的链。</p>
+<blockquote>
+<p>哈希指针既可以指向内容地址（通过结合 key-value 的数据库实现，key为当前区块哈希值，value为指向的前一区块哈希值），又可以保存内容的哈希值。如果内容改变，哈希指针也会相应改变。这样不诚实的区块篡改区块链的交易记录几乎不可能实现，因为一旦不诚实区块的交易记录篡改，该区域的哈希值就会改变，后面所有区块的哈希值都要修改，除非不诚实的区块与后面所有区块串通，这几乎是不可能的。</p>
+</blockquote>
+<hr>
+<p><strong>哈希算法</strong></p>
+<p>区块链中的哈希指针通过密码学中的<code>加密哈希算法</code>（cryptographic hash function）计算得到，它具有三个性质：</p>
+<ul>
+<li><p>哈希碰撞 （collision resistance）</p>
+<p>  哈希碰撞的数学表达为 $x\neq y\;H\left(x\right)=H\left(y\right)$，即不同的输入值得到了相同的哈希值。理论上任何一种哈希算法都不可避免哈希碰撞，因为输入空间是无限大的，而输出空间只有 $2^{256}$（以区块链所用的SHA-256算法为例）。但想制造哈希碰撞，需要通过暴力求解（brute-force）的方法。但是这种做法并不现实，因为计算量实在太大。借用此原理，可以通过检验一段信息（一串字符）的哈希值是否变化来核实这段信息是否被篡改。目前尚没有哈希函数被证明为哈希碰撞的，只能通过实践的经验。没有百分百安全的哈希函数，曾经被认为安全的哈希函数MD5已被找到人为制作哈希碰撞的方法。</p>
+</li>
+<li><p>计算不可逆（hiding）<br>  哈希函数的计算为单向的，计算过程不可逆。即计算出的哈希值隐藏了输入的任何信息。只能通过暴力的方法，检测哪个输入值的哈希值为目标哈希值。但是只要输入空间足够大，且输入分布比较均匀，各种取值的可能性接近，则难以实现哈希函数的逆运算，除非地球爆炸（SHA-256算法为例）。为了使得输入满足要求，同时将输入加入一个随机数nonce，再一起哈希，即 $H(x\parallel nonce)$，随机数的分布是比较均匀的。</p>
+</li>
+<li><p>puzzle friendly<br>  值结果是不可预测的，通过输入值我无法预测将来哈希值的取值范围。主要用于挖矿中<code>工作量证明</code>（proof of work）的计算，通过找到一个比特币块头的随机数nonce，使得 $H(block header)\leq target$,这个target就是目标哈希值。</p>
+</li>
+</ul>
+<hr>
+<p><strong>Merkle tree</strong></p>
+<p>块体中的交易记录通过默克尔树（Markle tree）的结构体来保存。它的结构与二叉树相同，唯一的区别是指针用哈希指针替代。这样做的目的是为了快速计算记录的交易有没有变化。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/merkletree.png" alt="默克尔树"></p>
+<p>Merkle tree 主要用来提供 Merkle proof（默克尔证明），来证明一笔交易是否真正发生。Merkle proof的原理是通过比较待验证交易（叶子节点）所最终得到的Merkle tree的根哈希值与轻节点块头保存的根哈希值是否相等即可，需要辅助计算的另一半哈希值由全节点的块体提供。</p>
+<hr>
+<p><strong>区块总结</strong></p>
+<p>区块的物理实体搭载在一个网络节点中，负责对发生过的比特币交易记账。通过哈希指针与前一个区块相连，避免了不诚实区块对交易内容的篡改。每一笔交易都用一个 Merkle tree 的叶子节点保存，通过哈希指针最终指向根节点。区块的块头只保存Merkle tree根节点的哈希值，用来进行Merkle proof检验。</p>
+<ul>
+<li><p>区块最终会指向第一个区块，被称为创世纪块（genesis block）。</p>
+</li>
+<li><p>区块链分为全节点与轻节点。</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">全节点</th>
+<th style="text-align:center">轻节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">一直在线</td>
+<td style="text-align:center">不是一直在线</td>
+</tr>
+<tr>
+<td style="text-align:center">在本地硬盘上维护完整的区块链信息</td>
+<td style="text-align:center">不用保存整个区块链，只要保存每个区块的块头</td>
+</tr>
+<tr>
+<td style="text-align:center">在内存里维护UTXO集合，以便快速检验交易的正确性</td>
+<td style="text-align:center">不同保存全部交易，只保存与自己相关的交易</td>
+</tr>
+<tr>
+<td style="text-align:center">监听比特币网络上的交易信息，验证每个交易的合法性</td>
+<td style="text-align:center">无法检验网上发布的区块的合法性</td>
+</tr>
+<tr>
+<td style="text-align:center">决定哪些交易会被打包到区块里</td>
+<td style="text-align:center">可以验证挖矿的难度</td>
+</tr>
+<tr>
+<td style="text-align:center">监听别的矿工挖出来的区块，验证其合法性</td>
+<td style="text-align:center">只能检测哪个是最长链，不知道哪个是最长合法链</td>
+</tr>
+<tr>
+<td style="text-align:center">挖矿<br>（决定沿哪条链挖下去）<br>（当出现等长的分叉，选择哪一个分叉）</td>
+<td style="text-align:center">不能决定挖矿</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="怎么转账"><a href="#怎么转账" class="headerlink" title="怎么转账"></a>怎么转账</h2><p>转账需要开户，区块链中的开户不需要向一个中心化的机构申请，只需要自己在本地创建一个<code>公私钥对</code>（比特币中公私钥对生成冲突的概率很小，比地球爆炸的概率还小，这样一个私钥就对应一个唯一的电子身份）。</p>
+<hr>
+<p><strong>公私钥对</strong></p>
+<p>公私钥对来自非对称加密（asymmetric encryption algorithm），公钥（public key）对内容加密，私钥（privte key）用来解密，同时私钥也可以用来加密，公钥用来解密。对称加密是用同一把密钥实现内容的加密，关键是找到一个安全传输密钥的途径，否则一旦密钥被破解，所加密的内容很容易被窃听或篡改。非对称加密用公钥加密，配对的私钥解密。公钥可以公开，且不能实现解密，私钥保存在本地，无需随内容传输，这样就保证了加密内容的安全，与https协议的原理一致。区块链中的利用非对称加密实现<code>数字签名</code>，对个人信息进行验证，<strong>用通讯方的私钥加密，然后用其公钥解密验证</strong>。</p>
+<hr>
+<p>自己给对方转账只需要对方的<code>地址</code>、要转的比特币数量以及自己的<code>公钥</code>即可。</p>
+<p>对方地址根据公钥算哈希再通过一定计算得到，自己的公钥是为了验证这笔交易的数字签名是由自己的私钥生成，验证自己的身份。</p>
+<p><strong>双花攻击</strong>（double-spending attack）</p>
+<p>如果我利用网络的延迟，同时向双发转一笔矛盾的比特币，例如我只有5个比特币，我同时向甲乙两人转5个比特币，就构成了双花攻击。</p>
+<blockquote>
+<p>区块之间除了有哈希指针指向前一个区块，还有指针指向比特币的来源，这样在转账的同时回回溯检测用户到底有没有双花行为，防范双花攻击。</p>
+</blockquote>
+<h2 id="由谁发行货币"><a href="#由谁发行货币" class="headerlink" title="由谁发行货币"></a>由谁发行货币</h2><p><code>Coinbase transaction 是生成比特币的唯一方法.</code></p>
+<p><code>创世纪</code>，即第一个区块链的区块，2009年1月3日由中本聪在位于芬兰赫尔辛基的一个小型服务器上挖出，并获得了50个比特币的奖励。后面每次新块的产生，系统都会给予一定的比特币奖励，这也是比特币的唯一来源。由于比特币像黄金一样供应量极少且数量有限，所以区块的挖掘被成为挖矿。</p>
+<p><strong>比特币产生规则</strong>：起初的21w个区块会有50个比特币的初块奖励，超过21w个区块后，每个区块会有25个比特币，再超过21w个区块后，每个区块获得到奖励会继续减半，只有12.5个比特币。</p>
+<hr>
+<p><strong>Proof of work</strong></p>
+<p>Proof of work —— CPU算力证明是区块被挖出的方法。因此比特币是跟CPU算力资源挂钩。</p>
+<blockquote>
+<p>区块头有一个 target 目标域，确定了要计算的哈希值的数值范围，只要对区块计算出的哈希值在此范围内，那么这个区块就被挖出。候选区块通过修改区块头中的 nonce 随机数实现对区块哈希值的控制。由于后期挖矿的人不断增加，挖矿的设备也像军备竞赛一样越发豪华（CPU-&gt;GPU-&gt;ASIC芯片 Application Specific Integrated），因此为了保证比特币数量的稳定，通过减小target 目标域提高计算难度。出块难度为10分钟生成一个区块。比特币规定每2016个区块后调整难度阈值，大概两周调整一次。</p>
+</blockquote>
+<p>通过CPU算力选出记账的区块，可以极大避免<code>51%攻击</code>。因为如果攻击者想要控制区块的生成，需要付出超过51%算力的计算资源，成本上是根本不划算的。</p>
+<p><strong>最长合法链</strong></p>
+<p>如果两个区块同时被挖出，那么区块链都认为两者有效。后续的候选区块可以选择在分叉的区块中任意选择，直到哪一条链的长度率先到达6，就将此链视为最长合法链，然后撤销另一条分叉链。</p>
+<p>比特币初期虽然竞争少，奖励多，但当时比特币不值钱，曾经出现过2w个比特币买1个披萨的案例。而现在虽然比特币竞争激烈，所耗电费相当于<a target="_blank" rel="noopener" href="http://jandan.net/p/108666">挪威一年的能源消耗</a>，但价值高。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>区块链本身是一种理论创新，分布式存储、加密算法以及通讯都是现有的技术。它主要解决中心化货币交易体系因不信任导致的纠纷所带来的支付代价问题，包括一些已有的支付方式无法解决的问题，例如跨境付款，而不是与已有的支付方式做竞争。区块链通过密码学上的不可篡改性，把数据从不可信变成可信。从技术角度看，区块链是互联网发展的一个升级，它和互联网相同的是，能提高社会整体的工作效率；不同的是，互联网从通信速度方面提高效率，区块链从信任角度提高效率。未来的区块链项目关键是看能否可以协助人们解决生产生活中的效率问题，而不能被神话，它的概念也不能被滥用，同时它的监管仍需要很长的路要走。</p>
+<hr>
+<p><strong>参考资料</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Vt411X7JF?p=1">北大《区块链技术与应用》公开课</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://bitcoin.org/bitcoin.pdf">区块链白皮书</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1oJ411E7Lg?from=search&amp;seid=17070640844222129150">【回形针PaperClip】区块链到底是什么？</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://jandan.net/p/108666">今年世界总发电量的0.6%被用于挖比特币</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.xueguoliang.cn/index.php/archives/93/">区块链分享</a></p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%AF%94%E7%89%B9%E5%B8%81/">https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%AF%94%E7%89%B9%E5%B8%81/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunyunzeng.com" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></div><div class="post_share"><div class="social-share" data-image="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/bitcoin.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/"><img class="prev-cover" src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">理解最小二乘法</div></div></a></div><div class="next-post pull-right"><a href="/npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/"><img class="next-cover" src="https://w.wallhaven.cc/full/4y/wallhaven-4yqm8x.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">npm 常用命令集合</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%BA%E5%9D%97%E9%93%BE%E5%92%8C%E6%AF%94%E7%89%B9%E5%B8%81%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是区块链和比特币？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E8%A6%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">区块链要解决什么问题？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">区块链的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E8%AE%B0%E8%B4%A6%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">怎么记账？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E8%BD%AC%E8%B4%A6"><span class="toc-number">3.2.</span> <span class="toc-text">怎么转账</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B1%E8%B0%81%E5%8F%91%E8%A1%8C%E8%B4%A7%E5%B8%81"><span class="toc-number">3.3.</span> <span class="toc-text">由谁发行货币</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/new_chapter.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迈向新阶段：学生时代的落幕"/></a><div class="content"><a class="title" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕">迈向新阶段：学生时代的落幕</a><time datetime="2021-05-15T09:13:24.000Z" title="发表于 2021-05-15 17:13:24">2021-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最大似然估计与最大后验估计"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计">理解最大似然估计与最大后验估计</a><time datetime="2021-04-01T03:25:32.000Z" title="发表于 2021-04-01 11:25:32">2021-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法"><img src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最小二乘法"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法">理解最小二乘法</a><time datetime="2021-03-30T08:58:27.000Z" title="发表于 2021-03-30 16:58:27">2021-03-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://gcore.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e5bf4e3eb22e24c3a3aa',
+      clientSecret: '0de08288494c890ba3318af78919f8a1cc901e9a',
+      repo: 'SUNYunZeng.github.io',
+      owner: 'SUNYunZeng',
+      admin: [''],
+      id: 'ae793d1de1336bbfcb7bb774691f0267',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>设计模式: Java泛型 | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="不要使用原始类型原始类型是Java(5之前)的历史遗留问题，之前集合对于类型在编译期间不进行检查，而在运行期进行类型检查。 这导致问题的定位困难，降低效率。 此后采用泛型解决这个问题，保证在编译期间进行检查。 例如List 类型是原始类型，而List&lt; E &gt;是泛型类型，指定了参数化类型为 E 类型。 List表明可以存储任何类型的对象，List&lt; E &gt; 是它的子类型，可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式: Java泛型">
+<meta property="og:url" content="https://sunyunzeng.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-Java%E6%B3%9B%E5%9E%8B/index.html">
+<meta property="og:site_name" content="孙云增的博客">
+<meta property="og:description" content="不要使用原始类型原始类型是Java(5之前)的历史遗留问题，之前集合对于类型在编译期间不进行检查，而在运行期进行类型检查。 这导致问题的定位困难，降低效率。 此后采用泛型解决这个问题，保证在编译期间进行检查。 例如List 类型是原始类型，而List&lt; E &gt;是泛型类型，指定了参数化类型为 E 类型。 List表明可以存储任何类型的对象，List&lt; E &gt; 是它的子类型，可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png">
+<meta property="article:published_time" content="2019-09-28T14:17:08.000Z">
+<meta property="article:modified_time" content="2022-11-05T02:13:35.399Z">
+<meta property="article:author" content="孙云增">
+<meta property="article:tag" content="设计模式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-Java%E6%B3%9B%E5%9E%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '设计模式: Java泛型',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-05 10:13:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">设计模式: Java泛型</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-28T14:17:08.000Z" title="发表于 2019-09-28 22:17:08">2019-09-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-05T02:13:35.399Z" title="更新于 2022-11-05 10:13:35">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="设计模式: Java泛型"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="不要使用原始类型"><a href="#不要使用原始类型" class="headerlink" title="不要使用原始类型"></a>不要使用原始类型</h1><p><strong>原始类型</strong>是Java(5之前)的历史遗留问题，<strong>之前集合对于类型在编译期间不进行检查，而在运行期进行类型检查。</strong></p>
+<p>这导致问题的定位困难，降低效率。</p>
+<p>此后采用<strong>泛型</strong>解决这个问题，保证在编译期间进行检查。</p>
+<p>例如<font color="#f07c82">List</font> 类型是原始类型，而<font color="#f07c82">List&lt; E &gt;</font>是泛型类型，指定了参数化类型为 <font color="#f07c82">E</font> 类型。</p>
+<p><strong>List</strong>表明可以存储任何类型的对象，<font color="#f07c82">List&lt; E &gt; </font>是它的子类型，可以转化为<strong>List</strong>类型，但是丧失了安全性检查；而<font color="#f07c82">List&lt; E &gt; </font> 却不是<font color="#f07c82">List&lt; Object &gt; </font>的子类型。<font color="#f07c82">List&lt; Object &gt; </font>只能是<font color="#f07c82">List&lt; Object &gt; </font>。</p>
+<p>如果想实现类似于<strong>List等存储任何类型的对象</strong>， 可以利用<strong>无限制通配符类型（unbounded wildcard types）</strong>表示泛型类型，即<font color="#f07c82">List&lt; ? &gt; </font>。</p>
+<p><strong>泛型的几个注意点：</strong></p>
+<p><strong>1. 类字面常量不允许使用泛型</strong></p>
+<p>数组<font color="#f07c82">String[].class</font>、基本类型<font color="#f07c82">int.class</font>、不带参数化类型的类<font color="#f07c82">List.class</font>可以使用。</p>
+<p><strong>2. instanceof 只能对无限制通配符类型的参数化类型的类或接口使用。</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(o <span class="keyword">instanceof</span> Set)&#123;</span><br><span class="line">    Set&lt;?&gt; s = (Set&lt;?&gt;) o;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">术语</th>
+<th style="text-align:center">中文含义</th>
+<th style="text-align:center">举例    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Parameterized type</td>
+<td style="text-align:center">参数化类型</td>
+<td style="text-align:center">List&lt; String &gt;</td>
+</tr>
+<tr>
+<td style="text-align:center">Actual type parameter</td>
+<td style="text-align:center">实际类型参数</td>
+<td style="text-align:center">String    </td>
+</tr>
+<tr>
+<td style="text-align:center">Generic type</td>
+<td style="text-align:center">泛型类型</td>
+<td style="text-align:center">List&lt; E &gt;    </td>
+</tr>
+<tr>
+<td style="text-align:center">Formal type parameter</td>
+<td style="text-align:center">形式类型参数</td>
+<td style="text-align:center">E    </td>
+</tr>
+<tr>
+<td style="text-align:center">Unbounded wildcard type</td>
+<td style="text-align:center">无限制通配符类型</td>
+<td style="text-align:center">List&lt;?&gt;    </td>
+</tr>
+<tr>
+<td style="text-align:center">Raw type</td>
+<td style="text-align:center">原始类型</td>
+<td style="text-align:center">List    </td>
+</tr>
+<tr>
+<td style="text-align:center">Bounded type parameter</td>
+<td style="text-align:center">限制类型参数</td>
+<td style="text-align:center">&lt; E extends Number&gt;    </td>
+</tr>
+<tr>
+<td style="text-align:center">Recursive type bound</td>
+<td style="text-align:center">递归类型限制</td>
+<td style="text-align:center">&lt; T extends Comparable&lt; T &gt;&gt;    </td>
+</tr>
+<tr>
+<td style="text-align:center">Bounded wildcard type</td>
+<td style="text-align:center">限制通配符类型</td>
+<td style="text-align:center">List&lt;? extends Number&gt;    </td>
+</tr>
+<tr>
+<td style="text-align:center">Generic method</td>
+<td style="text-align:center">泛型方法</td>
+<td style="text-align:center">static &lt; E &gt; List&lt; E &gt; asList(E[] a)    </td>
+</tr>
+<tr>
+<td style="text-align:center">Type token</td>
+<td style="text-align:center">类型令牌</td>
+<td style="text-align:center">String.class    </td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="列表优先于数组"><a href="#列表优先于数组" class="headerlink" title="列表优先于数组"></a>列表优先于数组</h1><p>即<font color="#f07c82">List</font>优先于数组。</p>
+<p>因为数组是<strong>协变类型</strong>的，所以下面代码编译期间是合法的, 但是运行期间是违法的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object[] o = <span class="keyword">new</span> String[<span class="number">1</span>];</span><br><span class="line">o[<span class="number">1</span>] = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>尽量使用<strong>列表</strong>来在编译过程中就确保安全性，虽然会损失掉一定的性能与简洁性。</p>
+<p>下面代码运行有警告，因为java程序中的泛型信息在编译后会进行<strong>擦除</strong>（这意味着它们只在编译时执行类型约束，并在运行时丢弃它们的元素类型信息），为了与Java5之前的代码共存。</p>
+<p>因此实际在运行中虚拟机并不知道返回数组具体类型，返回的类型是顶层类 Object, 在强制转换为<strong>T[]</strong>时会有问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Chooser</span><span class="params">(Collection&lt;T&gt; choices)</span> </span>&#123;</span><br><span class="line">    choiceArray = (T[]) choices.toArray();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因此最好采用List替代。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Chooser</span><span class="params">(Collection&lt;T&gt; choices)</span> </span>&#123;</span><br><span class="line">    choiceList = <span class="keyword">new</span> ArrayList&lt;&gt;(choices);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="优先考虑泛型"><a href="#优先考虑泛型" class="headerlink" title="优先考虑泛型"></a>优先考虑泛型</h1><p>一个简单实现的栈，原始版本 vs 添加泛型版本。</p>
+<p><strong>原始版本</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span></span>&#123;</span><br><span class="line">    <span class="comment">// 存储数量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 默认长度</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_INITIAL_CAPACITY;</span><br><span class="line">    <span class="comment">// 元素桶</span></span><br><span class="line">    <span class="keyword">private</span> Object[] elements;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Stack&#123;</span><br><span class="line">        elements = <span class="keyword">new</span> Object[DEFAULT_INITIAL_CAPACITY];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(Object e)</span></span>&#123;</span><br><span class="line">        ensureCapacity();</span><br><span class="line">        elements[size++] = e;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(size==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> EmptyStackException();</span><br><span class="line">        Object res = elements[--size];</span><br><span class="line">        <span class="comment">// 清除无用的引用</span></span><br><span class="line">        elements[size] = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ensureCapacity</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(elements.length==size)</span><br><span class="line">            elements = Arrays.copyOf(elements, size*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这样的版本Stack每次取出元素都要进行强制类型转换。</p>
+<p><strong>泛型版本</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span>&lt;<span class="title">E</span>&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// 存储数量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 默认长度</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_INITIAL_CAPACITY;</span><br><span class="line">    <span class="comment">// 元素桶</span></span><br><span class="line">    <span class="keyword">private</span> E[] elements;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 确保强制转换是安全的。有问题的数组（元素）保存在一个私有属性中，永远不会返回给客户端或传递给任何其他方法。 保存在数组中的唯一元素是那些传递给 push 方法的元素，它们是 E 类型的，所以未经检查的强制转换不会造成任何伤害</span></span><br><span class="line">    <span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 强制类型转换，因为无法创建泛型数组 new E[DEFAULT_INITIAL_CAPACITY];</span></span><br><span class="line">        elements = (E)<span class="keyword">new</span> Object[DEFAULT_INITIAL_CAPACITY];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(E e)</span></span>&#123;</span><br><span class="line">        ensureCapacity();</span><br><span class="line">        elements[size++] = e;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(size==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> EmptyStackException();</span><br><span class="line">        E res = elements[--size];</span><br><span class="line">        <span class="comment">// 清除无用的引用</span></span><br><span class="line">        elements[size] = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">isEmpty</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> size==<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ensureCapacity</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(elements.length==size)</span><br><span class="line">            elements = Arrays.copyOf(elements, size*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="考虑泛型方法"><a href="#考虑泛型方法" class="headerlink" title="考虑泛型方法"></a>考虑泛型方法</h1><p>声明类型参数的<strong>类型参数列表</strong>位于方法的<strong>修饰符</strong>和<strong>返回类型</strong>之间。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Generic method</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;E&gt; <span class="function">Set&lt;E&gt; <span class="title">union</span><span class="params">(Set&lt;E&gt; s1, Set&lt;E&gt; s2)</span> </span>&#123;</span><br><span class="line">    Set&lt;E&gt; result = <span class="keyword">new</span> HashSet&lt;&gt;(s1);</span><br><span class="line">    result.addAll(s2);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="限定通配符增加API灵活性"><a href="#限定通配符增加API灵活性" class="headerlink" title="限定通配符增加API灵活性"></a>限定通配符增加API灵活性</h1><p><strong>PECS代表： producer-extends，consumer-super。</strong></p>
+<p>如果一个参数化类型代表一个 <font color="#f07c82">T</font> 生产者，使用 <font color="#f07c82">&lt;? extends T&gt;</font>；如果它代表 <font color="#f07c82">T</font> 消费者，则使用 <font color="#f07c82">&lt;? super T&gt;</font>。 在我们的 <font color="#f07c82">Stack</font> 示例中，<font color="#f07c82">pushAll</font> 方法的 <font color="#f07c82">src</font> 参数生成栈使用的 <font color="#f07c82">E</font> 实例，因此 <font color="#f07c82">src</font> 的合适类型为 <font color="#f07c82">Iterable&lt;? extends E&gt;</font>；<font color="#f07c82">popAll</font> 方法的 <font color="#f07c82">dst</font> 参数消费 <font color="#f07c82">Stack</font> 中的 <font color="#f07c82">E</font> 实例，因此 <font color="#f07c82">dst</font> 的合适类型是 <font color="#f07c82">Collection &lt;? super E&gt;</font>。</p>
+<p><strong>所有 <font color="#f07c82">Comparable</font> 和 <font color="#f07c82">Comparator</font> 都是消费者。</strong></p>
+<h1 id="可变参数与泛型"><a href="#可变参数与泛型" class="headerlink" title="可变参数与泛型"></a>可变参数与泛型</h1><p>可变参数: 类型 <font color="#f07c82">T</font> 加<font color="#f07c82">…</font>构成，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(String ... strs)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(String s: strs)&#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Java用一个数组来保存变长的参数，但是<strong>可变参数的类型与泛型要注意混淆</strong>。</p>
+<p>考虑一个<strong>例子：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; T[] toArray(T ... t)&#123;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line">String[] strs = toArray(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;def&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>上面的会报错，因为泛型传递的是非具体类型，也就是编译时的类型信息要多与运行时信息（由于擦除），因此可变参数的数组用 <font color="#f07c82">Object</font>类型存储，当<font color="#f07c82">Object</font>转为<font color="#f07c82">String</font>时，会报错<font color="#f07c82">ClassCastException</font>。</p>
+<p><strong>另一个例子：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(List&lt;String&gt;... stringList)</span></span>&#123;</span><br><span class="line">    Object[] obj = stringList;</span><br><span class="line">    List&lt;Integer&gt; intList = List.of(<span class="number">15</span>); <span class="comment">// List.of生成一个不可变列表（不能用set设置数值）</span></span><br><span class="line">    obj[<span class="number">0</span>] = intList; <span class="comment">// 发成堆污染</span></span><br><span class="line">    String s = obj[<span class="number">0</span>].get(<span class="number">0</span>); <span class="comment">// 出现警告，编译没错，但是运行报错 ClassCastException。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可见，可变参数中混淆了泛型，还是很容易产生类型转换的不安全性，但是Java并没有因此抛弃，而在<font color="#f07c82">Arrays.asList(T… a)，Collections.addAll(Collection&lt;? super T&gt; c, T… elements)，EnumSet.of(E first, E… rest)</font>中大量使用，说明<strong>只要保证可变参数中的泛型是安全的（以下三点），就可：</strong></p>
+<p><strong>1. 可变参数数组不会存储跟修改。</strong><br><strong>2. 可变参数数组的引用不会转义。</strong><br><strong>3. 可变参数数组仅用来为方法传递可变参数。</strong></p>
+<p>当然，可变参数数组可以变为列表，但同时降低了一定性能与可读性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">toArray</span><span class="params">(List&lt;T&gt; t)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line">List&lt;String&gt; strs = toArray(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;def&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>可变参数的另一个用法</strong></p>
+<p>因为可变参数数组的产生都会产生性能损耗，因此当 95％ 的调用是三个或更少的参数的方法，那么声明该方法的五个重载。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">()</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">(<span class="keyword">int</span> a1)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">(<span class="keyword">int</span> a1, <span class="keyword">int</span> a2)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">(<span class="keyword">int</span> a1, <span class="keyword">int</span> a2, <span class="keyword">int</span> a3)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">(<span class="keyword">int</span> a1, <span class="keyword">int</span> a2, <span class="keyword">int</span> a3, <span class="keyword">int</span>... rest)</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="异构容器"><a href="#异构容器" class="headerlink" title="异构容器"></a>异构容器</h1><p>泛型中规定的可变类型数量总是有限的，例如单个类型约束<font color="#f07c82">&lt; T &gt;</font>以及Map的<font color="#f07c82">&lt; K , V&gt;</font>。</p>
+<p>异构容器可以通过<strong>参数化键</strong>的方式，实现泛型设定数量的灵活性。例如在数据库查询中任意列值。</p>
+<p>下面是一个异构容器的示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Favorites</span></span>&#123;</span><br><span class="line">    <span class="comment">// 用Class&lt;T&gt;存放未知的键</span></span><br><span class="line">    Map&lt;Class&lt;?&gt;, T&gt; favorites = <span class="keyword">new</span> HashMap&lt;&gt;(); </span><br><span class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">putFavorite</span><span class="params">(Class&lt;T&gt; type, T instance)</span></span>&#123;</span><br><span class="line">        favorites.put(Object.requireNonNull(type), type.cast(instance));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">get</span><span class="params">(Class&lt;T&gt; type)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> type.cast(favorites.get(type));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Favorites f = <span class="keyword">new</span> Favorites();</span><br><span class="line">    f.put(String.class, <span class="string">&quot;syz&quot;</span>);</span><br><span class="line">    f.put(Integer.class, <span class="number">12</span>);</span><br><span class="line">    f,get(String.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以使用 <font color="#f07c82">Column</font>Class&lt;/font&gt; 对象作为此类型安全异构容器的键。 以这种方式使用的 Class 对象称为类型令牌。 也可以使用自定义键类型。 例如，可以有一个表示数据库行（容器）的 <font color="#f07c82">DatabaseRow</font> 类型和一个泛型类型 <font color="#f07c82">Column&lt; T &gt;</font> 作为其键。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-Java%E6%B3%9B%E5%9E%8B/">https://sunyunzeng.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-Java%E6%B3%9B%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunyunzeng.com" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></div><div class="post_share"><div class="social-share" data-image="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E5%89%91%E6%8C%87Offer-%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/"><img class="prev-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">剑指Offer 树的子结构</div></div></a></div><div class="next-post pull-right"><a href="/Class%E6%96%87%E4%BB%B6%E9%95%BF%E4%BB%80%E4%B9%88%E6%A0%B7/"><img class="next-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Class文件长什么样</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/JS%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="JS中的设计模式（上）"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-01</div><div class="title">JS中的设计模式（上）</div></div></a></div><div><a href="/JS%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%8B%EF%BC%89/" title="JS中的设计模式（下）"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-10</div><div class="title">JS中的设计模式（下）</div></div></a></div><div><a href="/Java%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式：Java创建对象"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-20</div><div class="title">设计模式：Java创建对象</div></div></a></div><div><a href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9AJava%E6%96%B9%E6%B3%95/" title="设计模式：Java方法"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-22</div><div class="title">设计模式：Java方法</div></div></a></div><div><a href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9AJava%E6%9E%9A%E4%B8%BE%E7%B1%BB%E4%B8%8E%E6%B3%A8%E8%A7%A3/" title="设计模式：Java枚举类与注解"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-30</div><div class="title">设计模式：Java枚举类与注解</div></div></a></div><div><a href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9AJava%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" title="设计模式：Java类和接口"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-23</div><div class="title">设计模式：Java类和接口</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">不要使用原始类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E4%BC%98%E5%85%88%E4%BA%8E%E6%95%B0%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text">列表优先于数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E8%80%83%E8%99%91%E6%B3%9B%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">优先考虑泛型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%80%83%E8%99%91%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">考虑泛型方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%90%E5%AE%9A%E9%80%9A%E9%85%8D%E7%AC%A6%E5%A2%9E%E5%8A%A0API%E7%81%B5%E6%B4%BB%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">限定通配符增加API灵活性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E6%B3%9B%E5%9E%8B"><span class="toc-number">6.</span> <span class="toc-text">可变参数与泛型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E6%9E%84%E5%AE%B9%E5%99%A8"><span class="toc-number">7.</span> <span class="toc-text">异构容器</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/new_chapter.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迈向新阶段：学生时代的落幕"/></a><div class="content"><a class="title" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕">迈向新阶段：学生时代的落幕</a><time datetime="2021-05-15T09:13:24.000Z" title="发表于 2021-05-15 17:13:24">2021-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最大似然估计与最大后验估计"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计">理解最大似然估计与最大后验估计</a><time datetime="2021-04-01T03:25:32.000Z" title="发表于 2021-04-01 11:25:32">2021-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法"><img src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最小二乘法"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法">理解最小二乘法</a><time datetime="2021-03-30T08:58:27.000Z" title="发表于 2021-03-30 16:58:27">2021-03-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e5bf4e3eb22e24c3a3aa',
+      clientSecret: '0de08288494c890ba3318af78919f8a1cc901e9a',
+      repo: 'SUNYunZeng.github.io',
+      owner: 'SUNYunZeng',
+      admin: [''],
+      id: 'eca2d3d2423ad45b69ac1cb0105f811c',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

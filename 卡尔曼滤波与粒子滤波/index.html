@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>卡尔曼滤波与粒子滤波 | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="卡尔曼滤波卡尔曼滤波解决的是如何从多个不确定数据中提取相对精确的数据。 1) 实践前提是这些数据满足高斯分布。 2) 理论前提是一个高斯斑乘以另一个高斯斑可以得到第三个高斯斑，第三个高斯斑即为提取到相对精确的数据范围。 什么是卡尔曼滤波你可以在任何含有不确定因素的动态系统里使用卡尔曼滤波，而且你应该可以通过某种数学建模对系统下一步动向做一个大概的预测。尽管系统总是会受到一些未知的干扰，但是卡尔曼滤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卡尔曼滤波与粒子滤波">
+<meta property="og:url" content="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/index.html">
+<meta property="og:site_name" content="孙云增的博客">
+<meta property="og:description" content="卡尔曼滤波卡尔曼滤波解决的是如何从多个不确定数据中提取相对精确的数据。 1) 实践前提是这些数据满足高斯分布。 2) 理论前提是一个高斯斑乘以另一个高斯斑可以得到第三个高斯斑，第三个高斯斑即为提取到相对精确的数据范围。 什么是卡尔曼滤波你可以在任何含有不确定因素的动态系统里使用卡尔曼滤波，而且你应该可以通过某种数学建模对系统下一步动向做一个大概的预测。尽管系统总是会受到一些未知的干扰，但是卡尔曼滤">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v13.jpg">
+<meta property="article:published_time" content="2020-12-16T01:55:02.000Z">
+<meta property="article:modified_time" content="2022-11-05T02:32:21.903Z">
+<meta property="article:author" content="孙云增">
+<meta property="article:tag" content="控制论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v13.jpg"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '卡尔曼滤波与粒子滤波',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-05 10:32:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v13.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">卡尔曼滤波与粒子滤波</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-16T01:55:02.000Z" title="发表于 2020-12-16 09:55:02">2020-12-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-05T02:32:21.903Z" title="更新于 2022-11-05 10:32:21">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="卡尔曼滤波与粒子滤波"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="卡尔曼滤波"><a href="#卡尔曼滤波" class="headerlink" title="卡尔曼滤波"></a>卡尔曼滤波</h1><p>卡尔曼滤波解决的是如何从多个不确定数据中提取相对精确的数据。</p>
+<p>1) 实践前提是这些数据满足高斯分布。</p>
+<p>2) 理论前提是一个高斯斑乘以另一个高斯斑可以得到第三个高斯斑，第三个高斯斑即为提取到相对精确的数据范围。</p>
+<h2 id="什么是卡尔曼滤波"><a href="#什么是卡尔曼滤波" class="headerlink" title="什么是卡尔曼滤波"></a>什么是卡尔曼滤波</h2><p>你可以在任何含有不确定因素的动态系统里使用卡尔曼滤波，而且你应该可以通过某种数学建模对系统下一步动向做一个大概的预测。尽管系统总是会受到一些未知的干扰，但是卡尔曼滤波总是可以派上用场来提高系统预估的精确度，这样你就可以更加准确地知道到底发生了什么事情(系统状态是如何转移的)。而且它可以有效利用多个粗糙数据之间的关系，而单独面对这些数据你可能都无从下手。    </p>
+<p>卡尔曼滤波尤其适合动态系统。它对于内存要求极低（它仅需要保留系统上一个状态的数据，而不是一段跨度很长的历史数据）。并且它运算很快，这使得它非常适合解决实时问题和应用于嵌入式系统。</p>
+<h2 id="卡尔曼滤波我们可以做什么"><a href="#卡尔曼滤波我们可以做什么" class="headerlink" title="卡尔曼滤波我们可以做什么?"></a>卡尔曼滤波我们可以做什么?</h2><p>我们举一个玩具的栗子：你开发了一款小型机器人，它可以在树林里自主移动，并且这款机器人需要明确自己的位置以便进行导航。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/k00.png" class>
+<p>我们可以通过一组状态变量 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/x_.svg"> 来描述机器人的状态，包括位置和速度：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/k01.png" class>
+<p>注意这个状态仅仅是系统所有状态中的一部分，你可以选取任何数据变量作为观测的状态。在我们这个例子中选取的是位置和速度，它也可以是水箱中的水位，汽车引擎的温度，一个用户的手指在平板上划过的位置，或者任何你想要跟踪的数据。</p>
+<p>我们的机器人同时拥有一个GPS传感器，精度在10m。这已经很好了，但是对我们的机器人来说它需要以远高于10m的这个精度来定位自己的位置。在机器人所处的树林里有很多溪谷和断崖，如果机器人对位置误判了哪怕只是几步远的距离，它就有可能掉到坑里。所以仅靠GPS是不够的。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/k02.png" class>
+<p>同时我们可以获取到一些机器人的运动的信息：驱动轮子的电机指令对我们也有用处。如果没有外界干扰，仅仅是朝一个方向前进，那么下一个时刻的位置只是比上一个时刻的位置在该方向上移动了一个固定距离。当然我们无法获取影响运动的所有信息：机器人可能会受到风力影响，轮子可能会打滑，或者碰到了一些特殊的路况；所以轮子转过的距离并不能完全表示机器人移动的距离，这就导致通过轮子转动预测机器人位置不会非常准确。    </p>
+<p>GPS传感器也会告知我们一些关于机器人状态的信息，但是会包含一些不确定性因素。我们通过轮子转动可以预知机器人是如何运动的，同样也有一定的不准确度。    </p>
+<p>如果我们综合两者的信息呢？可以得到比只依靠单独一个信息来源更精确的结果么？答案当然是YES，这就是卡尔曼滤波要解决的问题。</p>
+<h2 id="利用卡尔曼滤波如何看待你的问题"><a href="#利用卡尔曼滤波如何看待你的问题" class="headerlink" title="利用卡尔曼滤波如何看待你的问题?"></a>利用卡尔曼滤波如何看待你的问题?</h2><p>我们再来看下需要解决的问题，同样是上边的系统，系统状态包括位置和速度。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/k0.png" class>
+<p>我们不知道位置和速度的准确值；但是我们可以列出一个准确数值可能落在的区间。在这个范围里，一些数值组合的可能性要高于另一些组合的可能性。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v1.jpg" class>
+<p>卡尔曼滤波假设所有的变量（在我们的例子中为位置和速度）是随机的且符合高斯分布（正态分布）。每个变量有一个平均值ｕ，代表了随机分布的中心值（也表示这是可能性最大的值），和一个方差 $\sigma^2$ ，代表了不确定度。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v2.jpg" class>
+<p>在上图中位置和速度是无关联的，即系统状态中的一个变量并不会告诉你关于另一个变量的任何信息。</p>
+<p>下图则展示了一些有趣的事情：在现实中，速度和位置是有关联的。如果已经确定位置的值，那么某些速度值存在的可能性更高。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v3.png" class>
+<p>假如我们已知上一个状态的位置值，现在要预测下一个状态的位置值。如果我们的速度值很高，我们移动的距离会远一点。相反，如果速度慢，机器人不会走的很远。</p>
+<p>这种关系在跟踪系统状态时很重要，因为它给了我们更多的信息：一个测量值告诉我们另一个测量值可能是什么样子。这就是卡尔曼滤波的目的，我们要尽量从所有不确定信息中提取有价值的信息！</p>
+<p>这种关系可以通过一个称作协方差的矩阵表述。简而言之，矩阵中的每个元素 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/ij.svg" style="height:18px"> 表示了第 i 个状态变量和第 j 个状态变量之间的关系。（你可能猜到了协方差矩阵是对称的，即交换下标 i 和 j 并无任何影响）。协方差矩阵通常表示为Σ，它的元素则表示为 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/ij.svg" style="height:18px">。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e1.svg" class>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v3.png" class>
+<hr>
+<p><strong>利用矩阵描述问题</strong></p>
+<p>我们对系统状态的分布建模为高斯分布，所以在k时刻我们需要两个信息：最佳预估值 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/xk.svg">（平均值，有些地方也表示为u），和它的协方差矩阵 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/pk.svg" style="height:18px"></p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e2.png" class>
+<p>(这里我们只记录了位置和速度，但是我们可以把任何数据变量放进我们的系统状态里)    </p>
+<p>下一步，我们需要通过 k-1 时刻的状态来预测 k 时刻的状态。请注意，我们不知道状态的准确值，但是我们的预测函数并不在乎。它仅仅是对 k-1 时刻所有可能值的范围进行预测转移，然后得出一个k时刻新值的范围。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v4.jpg" class>
+<p>我们可以通过一个状态转移矩阵 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/fk.svg" style="height:18px"> 来描述这个转换</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v5.jpg" class>
+<img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/fk.svg" style="height:18px"> 把 k-1 时刻所有可能的状态值转移到一个新的范围内，这个新的范围代表了系统新的状态值可能存在的范围，如果 k-1 时刻估计值的范围是准确的话。
+
+通过一个运动公式来表示这种预测下个状态的过程：
+
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e3.png" class>
+<p>整理为矩阵:</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e4.png" class>
+<p>我们现在有了一个状态转移矩阵，可以简单预测下个状态，但仍不知道如何更新协方差矩阵。</p>
+<p>这里我们需要另一个公式。如果我们对每个点进行矩阵A转换，它的协方差矩阵Σ会发生什么变化呢？</p>
+<p>Easy，直接告诉你结果。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e5.png" class>
+<p>结合（4）和（3）：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e6.png" class>
+<hr>
+<p><strong>外界作用力</strong></p>
+<p>我们并没有考虑到所有影响因素。系统状态的改变并不只依靠上一个系统状态，外界作用力可能会影响系统状态的变化。    </p>
+<p>例如，跟踪一列火车的运动状态，火车驾驶员可能踩了油门使火车提速。同样，在我们机器人例子中，导航软件可能发出一些指令启动或者制动轮子。如果我们知道这些额外的信息，我们可以通过一个向量 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/uk.svg" style="height:18px"> 来描述这些信息，把它添加到我们的预测方程里作为一个修正。</p>
+<p>假如我们通过发出的指令得到预期的加速度 a，上边的运动方程可以变化为：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e7.png" class>
+<p>矩阵形式：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e8.png" class>
+<p>其中 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/bk.svg" style="height:18px"> 称作控制矩阵，<img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/uk.svg" style="height:18px"> 称作控制向量（没有任何外界动力影响的系统，可以忽略该项）。</p>
+<p>我们增加另一个细节，假如我们的预测转换矩阵不是100%准确呢，会发生什么呢?</p>
+<hr>
+<p><strong>外界的不确定性</strong></p>
+<p>如果状态只会根据系统自身特性演变那将不会有任何问题。如果我们可以把所有外界作用力对系统的影响计算清楚那也不会有任何问题。    </p>
+<p>但是如果有些外力我们无法预测呢？假如我们在跟踪一个四轴飞行器，它会受到风力影响。如果我们在跟踪一个轮式机器人，轮子可能会打滑，或者地面上的突起会使它降速。我们无法跟踪这些因素，并且这些事情发生的时候上述的预测方程可能会失灵。    </p>
+<p>我们可以把“世界”中的这些不确定性统一建模，在预测方程中增加一个不确定项。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v6.jpg" class>
+<p>这样，原始状态中的每一个点可以都会预测转换到一个范围，而不是某个确定的点。可以这样描述： <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/xk1.svg" style="height:18px"> 中的每个点移动到一个符合方差 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/qk.svg" style="height:18px"> 的高斯分布里。另一种说法，我们把这些不确定因素描述为方差为 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/qk.svg" style="height:18px"> 的高斯噪声。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v7.jpg" class>
+<p>这会产生一个新的高斯分布，方差不同，但是均值相同。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v8.jpg" class>
+<p>对 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/qk.svg" style="height:18px"> 简单叠加，可以拿到扩展的方差，这样就得到了完整的预测转换方程。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e9.png" class>
+<p>新的预测转换方程只是引入了已知的可以预测的外力影响因素。</p>
+<p>新的不确定性可以通过老的不确定性计算得到，通过增加外界无法预测的、不确定的因素成分。</p>
+<p>到这里，我们得到了一个模糊的估计范围，一个通过 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/xk.svg" style="height:18px"> 和 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/pk.svg" style="height:18px"> 描述的范围。如果再结合我们传感器的数据呢？</p>
+<hr>
+<p><strong>通过测量值精炼预测值</strong></p>
+<p>我们可能还有一些传感器来测量系统的状态。目前我们不用太关心所测量的状态变量是什么。也许一个测量位置一个测量速度。每个传感器可以提供一些关于系统状态的数据信息，每个传感器检测一个系统变量并且产生一些读数。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v9.jpg" class>
+<p>注意传感器测量的范围和单位可能与我们跟踪系统变量所使用的范围和单位不一致。我们需要对传感器做下建模：通过矩阵 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/hk.svg" style="height:18px"></p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v10.jpg" class>
+<p>我们可以得到传感器读数分布的范围：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e10.png" class>
+<p>卡尔曼滤波也可以处理传感器噪声。换句话说，我们的传感器有自己的精度范围，对于一个真实的位置和速度，传感器的读数受到高斯噪声影响会使读数在某个范围内波动。<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v11.jpg" class></p>
+<p>我们观测到的每个数据，可以认为其对应某个真实的状态。但是因为存在不确定性，某些状态的可能性比另外一些可能性更高。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v12.jpg" class>
+<p>我们将这种不确定性的方差为描述为 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/rk.svg" style="height:18px"> 。读数的平均值为 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/zk.svg" style="height:18px"> 。</p>
+<p>所以现在我们有了两个高斯斑，一个来自于我们预测值，另一个来自于我们测量值。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v13.jpg" class>
+<p>我们必须尝试去把两者的数据预测值（粉色）与观测值（绿色）融合起来。</p>
+<p>所以我们得到的新的数据会长什么样子呢？对于任何状态( $z_1$ , $z_2$ )，我们有两个可能性：（1）传感器读数更接近系统真实状态（2）预测值更接近系统真实状态。    </p>
+<p>如果我们有两个相互独立的获取系统状态的方式，并且我们想知道两者都准确的概率值，我们只需要将两者相乘。所以我们将两个高斯斑相乘。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v14.jpg" class>
+<p>相乘之后得到的即为重叠部分，这个区域同时属于两个高斯斑。并且比单独任何一个区域都要精确。这个区域的平均值取决于我们更取信于哪个数据来源，这样我们也通过我们手中的数据得到了一个最好的估计值。</p>
+<p>唔~这看上去像另一个高斯斑。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v15.png" class>
+<p>已经被证明，当你对两个均值方差都不相同的侧高斯斑进行相乘，你可以得到一个新的高斯斑。你可以自行推导：新高斯分布的均值和方差均可以通过老的均值方差求得。</p>
+<hr>
+<p><strong>高斯乘法</strong></p>
+<p>我们从一维数据开始，一维高斯（均值 u,方差 $\sigma^2$ ）被定义为：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e11.png" class>
+<p>我们想知道两个高斯分布相乘会发生什么。蓝色曲线代表了两个高斯分布的交集部分。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e12.png" class>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e13.png" class>
+<p>把（9）带入（10）然后做一些变换，可以得到<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e14.png" class></p>
+<p>因式分解出一个部分，表示为 k<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e15.png" class></p>
+<p>注意你是如何将处理之前的预测值，仅仅是简单将两者叠加相乘就可以得到新的预测值。现在看下这个公式是多么简单。</p>
+<p>如果是一个多维矩阵呢？我们将（12）与（13）表示为矩阵形式。Σ 表示协方差矩阵， <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/u.svg" style="height:18px"> 表示平均向量：</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e16.png" class>
+<p>K 被称为卡尔曼增益，待会会用到。</p>
+<p>简单，我们快结束了。</p>
+<hr>
+<p><strong>综合所有信息</strong></p>
+<p>我们有两个独立的维度去估计系统状态：</p>
+<p>预测值</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e17.png" class>
+<p>测量值<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e18.png" class></p>
+<p>将两者相乘带入（15）寻找他们的重叠区域：<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e19.png" class></p>
+<p>从（14）可知，卡尔曼增益为<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e20.png" class></p>
+<p>将（16）中的 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/hk.svg" style="height:18px"> 从两边约去，注意（17）中的K也包含 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/hk.svg" style="height:18px"> 。得到<br><img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/e21.png" class></p>
+<p>至此，我们得到了每个状态的更新步骤 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/xk_.svg" style="height:20px"> 是我们最佳的预测值，我们可以持续迭代（独立于 <img class="inline-img" src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/pk_.svg" style="height:20px">）。</p>
+<img src="/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v15.jpg" class>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上所有公式，仅需要实现（7）（18）（19）    </p>
+<p>这使你可以对任何线性系统建模。对于非线性系统，可以使用扩展卡尔曼滤波，只是对观测值和预测值的平均值进行简单线性化。</p>
+<p>如果我可以利用卡尔曼解决我的问题，那么希望读者也可以认识到这有多酷，并且在某个新的领域将它实用。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/collection/199330648">知乎_如何通俗并尽可能详细地解释卡尔曼滤波？</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/#mathybits">How a Kalman filter works, in pictures</a></p>
+<h1 id="粒子滤波"><a href="#粒子滤波" class="headerlink" title="粒子滤波"></a>粒子滤波</h1><h2 id="什么是粒子滤波"><a href="#什么是粒子滤波" class="headerlink" title="什么是粒子滤波"></a>什么是粒子滤波</h2><p>粒子滤波是卡尔曼滤波的简化，放松了约束条件，即数据分布不一定是高斯分布，使其更具有泛化能力及对离散值有很好的支持，但是其计算复杂度也相应增加。</p>
+<h2 id="粒子滤波的工作原理"><a href="#粒子滤波的工作原理" class="headerlink" title="粒子滤波的工作原理"></a>粒子滤波的工作原理</h2><p>粒子滤波关键是粒子的选取，粒子其实就是预测状态各种有限的可能取值，称为“粒子”，初始粒子的分布一般假设均匀分布。</p>
+<p>测量系统负责给出粒子。</p>
+<p>状态系统通过上一时刻的粒子状态得到评估这一时刻的粒子各个概率大小。</p>
+<p>测量系统给出各个粒子的权重，对所有粒子加权求和得到当前的粒子状态。</p>
+<p>测量系统根据粒子的权重，筛选得到下一时刻的粒子，权重大的粒子被选出来的概率大，</p>
+<p>循环往复，直到预测完成。</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>粒子滤波的关键在于粒子的选择。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/">https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunyunzeng.com" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8E%A7%E5%88%B6%E8%AE%BA/">控制论</a></div><div class="post_share"><div class="social-share" data-image="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/v13.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E5%86%8D%E8%A7%812020%EF%BC%8C%E4%BD%A0%E5%A5%BD2021%EF%BC%81/"><img class="prev-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">再见2020，你好2021！</div></div></a></div><div class="next-post pull-right"><a href="/%E5%B7%A5%E4%BD%9C%E7%AD%BE%E7%BA%A6%E5%B0%8F%E8%AE%B0/"><img class="next-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">工作签约小记</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2"><span class="toc-number">1.</span> <span class="toc-text">卡尔曼滤波</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2"><span class="toc-number">1.1.</span> <span class="toc-text">什么是卡尔曼滤波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88"><span class="toc-number">1.2.</span> <span class="toc-text">卡尔曼滤波我们可以做什么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E4%BD%A0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">利用卡尔曼滤波如何看待你的问题?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">1.5.</span> <span class="toc-text">参考</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2"><span class="toc-number">2.</span> <span class="toc-text">粒子滤波</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2"><span class="toc-number">2.1.</span> <span class="toc-text">什么是粒子滤波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">粒子滤波的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-number">2.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/new_chapter.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迈向新阶段：学生时代的落幕"/></a><div class="content"><a class="title" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕">迈向新阶段：学生时代的落幕</a><time datetime="2021-05-15T09:13:24.000Z" title="发表于 2021-05-15 17:13:24">2021-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最大似然估计与最大后验估计"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计">理解最大似然估计与最大后验估计</a><time datetime="2021-04-01T03:25:32.000Z" title="发表于 2021-04-01 11:25:32">2021-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法"><img src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最小二乘法"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法">理解最小二乘法</a><time datetime="2021-03-30T08:58:27.000Z" title="发表于 2021-03-30 16:58:27">2021-03-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://gcore.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e5bf4e3eb22e24c3a3aa',
+      clientSecret: '0de08288494c890ba3318af78919f8a1cc901e9a',
+      repo: 'SUNYunZeng.github.io',
+      owner: 'SUNYunZeng',
+      admin: [''],
+      id: '45310feb12707bbd6c302392cfb32d93',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

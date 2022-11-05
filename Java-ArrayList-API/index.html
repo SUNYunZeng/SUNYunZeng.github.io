@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Java：List API | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Java List常用类型    类型 特征      ArrayList 随机访问元素快；中间插入与删除元素较慢；操作不是线程安全的    LinkedList 中间插入与删除操作代价较低，提供优化的顺序访问；随机访问元素慢      ArrayListArrayList的UML类图如下所示：  ArrayList 继承了 AbstractList, 直接实现了 Cloneable, Seria">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java：List API">
+<meta property="og:url" content="https://sunyunzeng.com/Java-ArrayList-API/index.html">
+<meta property="og:site_name" content="孙云增的博客">
+<meta property="og:description" content="Java List常用类型    类型 特征      ArrayList 随机访问元素快；中间插入与删除元素较慢；操作不是线程安全的    LinkedList 中间插入与删除操作代价较低，提供优化的顺序访问；随机访问元素慢      ArrayListArrayList的UML类图如下所示：  ArrayList 继承了 AbstractList, 直接实现了 Cloneable, Seria">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png">
+<meta property="article:published_time" content="2019-05-21T13:54:33.000Z">
+<meta property="article:modified_time" content="2022-11-05T02:13:35.234Z">
+<meta property="article:author" content="孙云增">
+<meta property="article:tag" content="语法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/Java-ArrayList-API/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java：List API',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-05 10:13:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java：List API</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-05-21T13:54:33.000Z" title="发表于 2019-05-21 21:54:33">2019-05-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-05T02:13:35.234Z" title="更新于 2022-11-05 10:13:35">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java：List API"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Java-List"><a href="#Java-List" class="headerlink" title="Java List"></a><strong>Java List</strong></h1><h2 id="常用类型"><a href="#常用类型" class="headerlink" title="常用类型"></a><strong>常用类型</strong></h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">特征 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>ArrayList</strong></td>
+<td style="text-align:center">随机访问元素快；中间插入与删除元素较慢；操作不是线程安全的 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>LinkedList</strong></td>
+<td style="text-align:center">中间插入与删除操作代价较低，提供优化的顺序访问；随机访问元素慢 </td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a><strong>ArrayList</strong></h2><p><strong>ArrayList的UML类图如下所示：</strong></p>
+<p><img src="http://www.plantuml.com/plantuml/png/TKynQiGm4Epr2k7UVa4AcrI1L4a-i9Ot85XB8AsBXFmahqWTo6_2VUDiOT_D2QuHgvcTsPa-AoLTPZ5lNeLjCwH47yy-w-ddz__xhp4-AATtScoVre56OO0UemWxzJ40kAaDZLaJERLEA6Sxx5yGtDdOr63sGc6Ay-0Svuo79GQkmhnoyYJ-iy2xwT76c2EzVVXgMmn-7LUgwwgezKfH5qVSG_AcoFQWxGvZgq93qakrca27SWeux8uwp81Ops5QPZa3" alt="avatar"></p>
+<p>ArrayList 继承了<font color="#f07c82"> AbstractList</font>, 直接实现了<font color="#f07c82"> Cloneable, Serializable，RandomAccess </font>类型标志接口。</p>
+<ul>
+<li><p>AbstractList 作为列表的抽象实现，将元素的增删改查都交给了具体的子类去实现，在元素的迭代遍历的操作上提供了默认实现。</p>
+</li>
+<li><p>RandomAccess 接口实现，表示 ArrayList 里的元素可以被高效效率的随机访问，以下标数字的方式获取元素。实现 RandomAccess 接口的列表上在遍历时可直接使用普通的<font color="#f07c82"> for </font>循环方式，并且执行效率上给迭代器方式更高。</p>
+</li>
+<li><p>Cloneable 接口的实现，表示了 ArrayList 支持调用 Object 的 <font color="#f07c82"> clone </font>方法，实现 ArrayList 的拷贝。</p>
+</li>
+<li><p>Serializable 接口实现，说明了 ArrayList 还支持序列化和反序列操作，具有固定的 <font color="#f07c82"> serialVersionUID </font> 属性值。</p>
+</li>
+</ul>
+<h3 id="ArrayList-常用-API"><a href="#ArrayList-常用-API" class="headerlink" title="ArrayList 常用 API"></a><strong>ArrayList 常用 API</strong></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>boolean add(E object)</strong></td>
+<td style="text-align:center">再 ArrayList 尾存入对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>void add(int location, E object)</strong></td>
+<td style="text-align:center">在 location 添加对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean addAll(Collection&lt;? extends E&gt; collection)</strong></td>
+<td style="text-align:center">将一个 Collection 对象中存储全部的对象复制并存入 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean addAll(int location, Collection&lt;? extends E&gt; collection)</strong></td>
+<td style="text-align:center">将一个 Collection 对象中存储全部的对象复制并存入location </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean contains(Object object)</strong></td>
+<td style="text-align:center">是否包对象 object </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean containsAll(Collection&lt;?&gt; collection)</strong></td>
+<td style="text-align:center">是否包含一个 Collection 对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean isEmpty()</strong></td>
+<td style="text-align:center">ArrayList 是否为空 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>E get(int location)</strong></td>
+<td style="text-align:center">获取 location 的对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>E set(int location, E object)</strong></td>
+<td style="text-align:center">将某个位置的元素替换成 object</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>int indexOf(Object object)</strong></td>
+<td style="text-align:center">获取某个对象的位置（顺序遍历第一个） </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>int lastIndexOf(Object object)</strong></td>
+<td style="text-align:center">获取某个对象的位置（逆序遍历第一个） </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>int size()</strong></td>
+<td style="text-align:center">返回 ArrayList 存储的对象数量 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean remove(Object object)</strong></td>
+<td style="text-align:center">删除存储的某个对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>E remove(int lcoation)</strong></td>
+<td style="text-align:center">删除位于 location 的对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>boolean removeAll(Collection&lt;?&gt; collection)</strong></td>
+<td style="text-align:center">删除存储的某个 Collection 对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Object [] toArray()</strong></td>
+<td style="text-align:center">ArrayList 转数组 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>List&lt;’E’&gt; subList(int start, int end)</strong></td>
+<td style="text-align:center">获取位于 start 与 end 之间的 List </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>void clone()</strong></td>
+<td style="text-align:center">克隆ArrayList </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>void clear()</strong></td>
+<td style="text-align:center">移除ArrayList中所有对象 </td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Iterator&lt;’E’&gt; iterator()</strong></td>
+<td style="text-align:center">获取该 ArrayList 对应的迭代器对象 </td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="ArrayList-应用示例"><a href="#ArrayList-应用示例" class="headerlink" title="ArrayList 应用示例"></a>ArrayList 应用示例</h3><p><strong>1. ArrayList与数组之间的转换</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 转数组</span></span><br><span class="line"></span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">String[] strings = <span class="keyword">new</span> String[list.size()];</span><br><span class="line">list.toArray(strings);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">String[] strings = (String[])list.toArray(<span class="keyword">new</span> String[list.size()]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组转List</span></span><br><span class="line"><span class="comment">// 法1 快速，但是以视图形式返回，无法对数据进行删除及添加操作；</span></span><br><span class="line"><span class="comment">// 可用 set() 方法修改元素，但是原始List数据会随之改变</span></span><br><span class="line"></span><br><span class="line">String[] s = &#123;<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;def&quot;</span>, <span class="string">&quot;ghi&quot;</span>&#125;;</span><br><span class="line">List&lt;String&gt; list = java.util.Arrays.asList(s);</span><br><span class="line"></span><br><span class="line"><span class="comment">//法 2 慢，但是新生成一个ArrayList，可对List进行操作不会对原对象产生影响</span></span><br><span class="line"></span><br><span class="line">List&lt;String&gt; assertList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">Collections.addAll(assertList, strings);</span><br></pre></td></tr></table></figure><br><strong>2. ArrayList遍历方式</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第一种，通过迭代器遍历。即通过Iterator去遍历。</span></span><br><span class="line">Integer value = <span class="keyword">null</span>;</span><br><span class="line">Iterator iter = list.iterator();</span><br><span class="line"><span class="keyword">while</span> (iter.hasNext()) &#123;</span><br><span class="line">value = (Integer)iter.next();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种，随机访问，通过索引值去遍历。</span></span><br><span class="line">Integer value = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">int</span> size = list.size();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">value = (Integer)list.get(i);        </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三种，for循环遍历。</span></span><br><span class="line">Integer value = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">for</span> (Integer integer: list) &#123;</span><br><span class="line">value = integer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第四种，利用Stream API的 stream.forEach()方法依次获取。</span></span><br><span class="line">list.forEach(num -&gt; System.out.println(num));</span><br></pre></td></tr></table></figure></p>
+<p><strong>3. 初始化</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种方式 Arrays.asList()方法</span></span><br><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> Arraylist&lt;&gt;(Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种方法 常规方式</span></span><br><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">list.add(<span class="number">2</span>);</span><br><span class="line">list.add(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">List innerList = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">list.addAll(innerList);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三种方法 使用生成匿名内部类</span></span><br><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;()&#123;</span><br><span class="line">    &#123;</span><br><span class="line">        add(<span class="number">1</span>);</span><br><span class="line">        add(<span class="number">2</span>);</span><br><span class="line">        add(<span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;；</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第四种方式 使用Collection.nCopies</span></span><br><span class="line"><span class="keyword">int</span> element = <span class="number">1</span>;</span><br><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(Collections.nCopies(<span class="number">2</span>, element)); <span class="comment">//复制伍分到list中。</span></span><br></pre></td></tr></table></figure><br><strong>4. 打印信息</strong></p>
+<p>由于ArrayList内部实现了toString()方法，所以可以直接打印<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>));</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure></p>
+<p>对于数组信息的打印<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] A = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="keyword">for</span>(Integer i: A)&#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line">System.out.println(Arrays.toString(A));</span><br></pre></td></tr></table></figure></p>
+<p><strong>5. 大量头部的增删操作</strong></p>
+<blockquote>
+<p>ArrayList是数组实现的，使用的是连续的内存空间，当有在数组头部将元素添加或者删除的时候，需要对头部以后的数据进行复制并重新排序，效率很低。针对有大量类似操作的场景，出于性能考虑，我们应该使用 <font color="f07c82">LinkedList</font> 代替。<br>由于LinkedList 是基于链表实现，当需要操作的元素位置位于List 前半段时，就从头开始遍历，马上找到后将把元素在相应的位置进行插入或者删除操作。</p>
+</blockquote>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<ol>
+<li><font color="#2b1216"> ArrayList源码剖析:</font> <u><a target="_blank" rel="noopener" href="http://www.spring4all.com/article/16262">http://www.spring4all.com/article/16262</a></u></li>
+</ol>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com/Java-ArrayList-API/">https://sunyunzeng.com/Java-ArrayList-API/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunyunzeng.com" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AF%AD%E6%B3%95/">语法</a></div><div class="post_share"><div class="social-share" data-image="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/Algorithm-Third-Maximum-Number/"><img class="prev-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Algorithm--Third Maximum Number</div></div></a></div><div class="next-post pull-right"><a href="/Algorithm-%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7/"><img class="next-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Algorithm：删除最外层的括号</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git 常用命令"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-11</div><div class="title">Git 常用命令</div></div></a></div><div><a href="/Java-Map-API/" title="Java：Map API"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-19</div><div class="title">Java：Map API</div></div></a></div><div><a href="/Java-for%E5%BE%AA%E7%8E%AF%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="Java-for循环那些事"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-21</div><div class="title">Java-for循环那些事</div></div></a></div><div><a href="/Linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="Linux终端常用指令"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-27</div><div class="title">Linux终端常用指令</div></div></a></div><div><a href="/MySQL%EF%BC%9A%E5%85%A5%E9%97%A8/" title="MySQL：入门"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-31</div><div class="title">MySQL：入门</div></div></a></div><div><a href="/npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/" title="npm 常用命令集合"><img class="cover" src="https://w.wallhaven.cc/full/4y/wallhaven-4yqm8x.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-20</div><div class="title">npm 常用命令集合</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-List"><span class="toc-number">1.</span> <span class="toc-text">Java List</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">常用类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList"><span class="toc-number">1.2.</span> <span class="toc-text">ArrayList</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList-%E5%B8%B8%E7%94%A8-API"><span class="toc-number">1.2.1.</span> <span class="toc-text">ArrayList 常用 API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList-%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">ArrayList 应用示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/new_chapter.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迈向新阶段：学生时代的落幕"/></a><div class="content"><a class="title" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕">迈向新阶段：学生时代的落幕</a><time datetime="2021-05-15T09:13:24.000Z" title="发表于 2021-05-15 17:13:24">2021-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最大似然估计与最大后验估计"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计">理解最大似然估计与最大后验估计</a><time datetime="2021-04-01T03:25:32.000Z" title="发表于 2021-04-01 11:25:32">2021-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法"><img src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最小二乘法"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法">理解最小二乘法</a><time datetime="2021-03-30T08:58:27.000Z" title="发表于 2021-03-30 16:58:27">2021-03-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e5bf4e3eb22e24c3a3aa',
+      clientSecret: '0de08288494c890ba3318af78919f8a1cc901e9a',
+      repo: 'SUNYunZeng.github.io',
+      owner: 'SUNYunZeng',
+      admin: [''],
+      id: 'ff10bf34be8e5835382a86d02eacf85d',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

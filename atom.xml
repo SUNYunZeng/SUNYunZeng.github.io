@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孙云增的博客</title>
+  <icon>https://sunyunzeng.com/icon.png</icon>
+  <subtitle>极简生活，极致内涵</subtitle>
+  <link href="https://sunyunzeng.com/atom.xml" rel="self"/>
+  
+  <link href="https://sunyunzeng.com/"/>
+  <updated>2022-11-05T02:54:34.946Z</updated>
+  <id>https://sunyunzeng.com/</id>
+  
+  <author>
+    <name>孙云增</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈蒙特卡罗算法</title>
+    <link href="https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/"/>
+    <id>https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/</id>
+    <published>2022-01-03T04:24:32.000Z</published>
+    <updated>2022-11-05T02:54:34.946Z</updated>
+    
+    
+    <summary type="html">蒙特卡罗算法，简单粗暴的数值分析法</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>再见2021，你好2022！</title>
+    <link href="https://sunyunzeng.com/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/"/>
+    <id>https://sunyunzeng.com/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/</id>
+    <published>2022-01-01T04:18:24.000Z</published>
+    <updated>2022-11-05T02:13:35.313Z</updated>
+    
+    
+    <summary type="html">这里有东西被加密了，需要输入密码查看哦</summary>
+    
+    
+    
+    <category term="杂记" scheme="https://sunyunzeng.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="总结" scheme="https://sunyunzeng.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迈向新阶段：学生时代的落幕</title>
+    <link href="https://sunyunzeng.com/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/"/>
+    <id>https://sunyunzeng.com/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/</id>
+    <published>2021-05-15T09:13:24.000Z</published>
+    <updated>2022-11-05T02:54:34.946Z</updated>
+    
+    
+    <summary type="html">这里有东西被加密了，需要输入密码查看哦。</summary>
+    
+    
+    
+    <category term="杂记" scheme="https://sunyunzeng.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="思考" scheme="https://sunyunzeng.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解最大似然估计与最大后验估计</title>
+    <link href="https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
+    <id>https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/</id>
+    <published>2021-04-01T03:25:32.000Z</published>
+    <updated>2022-11-05T02:54:34.946Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;最大似然估计&quot;&gt;&lt;a href=&quot;#最大似然估计&quot; class=&quot;headerlink&quot; title=&quot;最大似然估计&quot;&gt;&lt;/a&gt;最大似然估计&lt;/h1&gt;&lt;p&gt;最大似然估计（Maxiumum Likelihood Esimation,</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="机器学习" scheme="https://sunyunzeng.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解最小二乘法</title>
+    <link href="https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/"/>
+    <id>https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/</id>
+    <published>2021-03-30T08:58:27.000Z</published>
+    <updated>2022-11-05T02:13:35.365Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;何为最小二乘&quot;&gt;&lt;a href=&quot;#何为最小二乘&quot; class=&quot;headerlink&quot; title=&quot;何为最小二乘&quot;&gt;&lt;/a&gt;何为最小二乘&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;最小二乘法是十九世纪统计学的主题曲。&lt;br&gt;从许多方面来看, 它之于统计学就相当于十八世纪的微积分之于数学。&lt;br&gt;            ——史蒂芬·史蒂格勒的《The History of</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数学" scheme="https://sunyunzeng.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈区块链与比特币</title>
+    <link href="https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    <id>https://sunyunzeng.com/%E6%B5%85%E8%B0%88%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%AF%94%E7%89%B9%E5%B8%81/</id>
+    <published>2021-03-27T12:29:18.000Z</published>
+    <updated>2022-11-05T02:54:38.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是区块链和比特币？&quot;&gt;&lt;a href=&quot;#什么是区块链和比特币？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="科技" scheme="https://sunyunzeng.com/categories/%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="区块链" scheme="https://sunyunzeng.com/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm 常用命令集合</title>
+    <link href="https://sunyunzeng.com/npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/"/>
+    <id>https://sunyunzeng.com/npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/</id>
+    <published>2021-03-20T13:06:59.000Z</published>
+    <updated>2022-11-05T02:13:35.311Z</updated>
+    
+    
+    <summary type="html">对于 npm 的一些常用命令的汇总</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="语法" scheme="https://sunyunzeng.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="npm" scheme="https://sunyunzeng.com/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客中添加足迹地图</title>
+    <link href="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/"/>
+    <id>https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/</id>
+    <published>2021-03-16T04:33:56.000Z</published>
+    <updated>2022-11-05T02:54:34.947Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;足迹地图效果展示&quot;&gt;&lt;a href=&quot;#足迹地图效果展示&quot; class=&quot;headerlink&quot; title=&quot;足迹地图效果展示&quot;&gt;&lt;/a&gt;足迹地图效果展示&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录&lt;/strong&gt;，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：&lt;/p&gt;
+&lt;center&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="博客" scheme="https://sunyunzeng.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己第一篇SCI文章： LSI-LSTM——个体出行目的地预测模型</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/</id>
+    <published>2021-03-15T04:51:50.000Z</published>
+    <updated>2022-11-05T02:13:35.378Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;内容导读&quot;&gt;&lt;a href=&quot;#内容导读&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="深度学习" scheme="https://sunyunzeng.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>再见2020，你好2021！</title>
+    <link href="https://sunyunzeng.com/%E5%86%8D%E8%A7%812020%EF%BC%8C%E4%BD%A0%E5%A5%BD2021%EF%BC%81/"/>
+    <id>https://sunyunzeng.com/%E5%86%8D%E8%A7%812020%EF%BC%8C%E4%BD%A0%E5%A5%BD2021%EF%BC%81/</id>
+    <published>2021-01-01T10:18:31.000Z</published>
+    <updated>2022-11-05T02:59:19.833Z</updated>
+    
+    
+    <summary type="html">这里有东西被加密了，需要输入密码查看哦。</summary>
+    
+    
+    
+    <category term="杂记" scheme="https://sunyunzeng.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="总结" scheme="https://sunyunzeng.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卡尔曼滤波与粒子滤波</title>
+    <link href="https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/"/>
+    <id>https://sunyunzeng.com/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E4%B8%8E%E7%B2%92%E5%AD%90%E6%BB%A4%E6%B3%A2/</id>
+    <published>2020-12-16T01:55:02.000Z</published>
+    <updated>2022-11-05T02:32:21.903Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;卡尔曼滤波&quot;&gt;&lt;a href=&quot;#卡尔曼滤波&quot; class=&quot;headerlink&quot; title=&quot;卡尔曼滤波&quot;&gt;&lt;/a&gt;卡尔曼滤波&lt;/h1&gt;&lt;p&gt;卡尔曼滤波解决的是如何从多个不确定数据中提取相对精确的数据。&lt;/p&gt;
+&lt;p&gt;1) 实践前提是这些数据满足高斯分布。&lt;/p&gt;
+&lt;p&gt;2)</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="控制论" scheme="https://sunyunzeng.com/tags/%E6%8E%A7%E5%88%B6%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工作签约小记</title>
+    <link href="https://sunyunzeng.com/%E5%B7%A5%E4%BD%9C%E7%AD%BE%E7%BA%A6%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://sunyunzeng.com/%E5%B7%A5%E4%BD%9C%E7%AD%BE%E7%BA%A6%E5%B0%8F%E8%AE%B0/</id>
+    <published>2020-11-04T06:45:03.000Z</published>
+    <updated>2022-11-05T02:13:35.361Z</updated>
+    
+    
+    <summary type="html">这里有东西被加密了，需要输入密码查看哦。</summary>
+    
+    
+    
+    <category term="杂记" scheme="https://sunyunzeng.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="思考" scheme="https://sunyunzeng.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建博客带给我的思考</title>
+    <link href="https://sunyunzeng.com/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B8%A6%E7%BB%99%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <id>https://sunyunzeng.com/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B8%A6%E7%BB%99%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83/</id>
+    <published>2020-09-26T11:42:28.000Z</published>
+    <updated>2022-11-05T02:13:35.313Z</updated>
+    
+    
+    <summary type="html">这里有东西被加密了，需要输入密码查看哦。</summary>
+    
+    
+    
+    <category term="杂记" scheme="https://sunyunzeng.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="思考" scheme="https://sunyunzeng.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入了解JS基础</title>
+    <link href="https://sunyunzeng.com/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JS%E5%9F%BA%E7%A1%80/"/>
+    <id>https://sunyunzeng.com/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JS%E5%9F%BA%E7%A1%80/</id>
+    <published>2020-07-25T04:47:29.000Z</published>
+    <updated>2022-11-05T02:13:35.364Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JS-的-Number-类型精度问题&quot;&gt;&lt;a href=&quot;#JS-的-Number-类型精度问题&quot; class=&quot;headerlink&quot; title=&quot;JS 的 Number 类型精度问题&quot;&gt;&lt;/a&gt;JS 的 Number 类型精度问题&lt;/h1&gt;&lt;p&gt;我们知道，Java 语言中的长整型范围为 +2^63-1 ~ -2^63-1，而 JavaScript 的 Number</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://sunyunzeng.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS中的优化技巧</title>
+    <link href="https://sunyunzeng.com/JS%E4%B8%AD%E7%9A%84%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/"/>
+    <id>https://sunyunzeng.com/JS%E4%B8%AD%E7%9A%84%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/</id>
+    <published>2020-07-23T07:47:29.000Z</published>
+    <updated>2022-11-05T02:13:35.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用-Promise-all-同时触发多个不互相依赖的异步请求&quot;&gt;&lt;a href=&quot;#使用-Promise-all-同时触发多个不互相依赖的异步请求&quot; class=&quot;headerlink&quot; title=&quot;使用 Promise.all 同时触发多个不互相依赖的异步请求&quot;&gt;&lt;/a&gt;使用 Promise.all</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://sunyunzeng.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS中的设计模式（下）</title>
+    <link href="https://sunyunzeng.com/JS%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>https://sunyunzeng.com/JS%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%8B%EF%BC%89/</id>
+    <published>2020-06-10T04:57:36.000Z</published>
+    <updated>2022-11-05T02:13:35.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;命令模式&quot;&gt;&lt;a href=&quot;#命令模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="设计模式" scheme="https://sunyunzeng.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS中的设计模式（上）</title>
+    <link href="https://sunyunzeng.com/JS%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://sunyunzeng.com/JS%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-06-01T07:33:12.000Z</published>
+    <updated>2022-11-05T02:13:35.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h1&gt;&lt;p&gt;js 程序中很多情况下只需要创建一个对象，例如全局缓存、widows 对象、线程池、以及界面中具备唯一性的窗口，此时需要利用单例模式来保证对象的唯一性。&lt;/p&gt;
+&lt;p&gt;使用代理实现 &lt;strong&gt;单一职原则&lt;/strong&gt; ，将创建单例的</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="设计模式" scheme="https://sunyunzeng.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现 React-Redux (六)：去除 context 依赖，实现 provider</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E5%85%AD-%EF%BC%9A%E5%8E%BB%E9%99%A4-context-%E4%BE%9D%E8%B5%96%EF%BC%8C%E5%AE%9E%E7%8E%B0-provider/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E5%85%AD-%EF%BC%9A%E5%8E%BB%E9%99%A4-context-%E4%BE%9D%E8%B5%96%EF%BC%8C%E5%AE%9E%E7%8E%B0-provider/</id>
+    <published>2020-05-20T05:58:31.000Z</published>
+    <updated>2022-11-05T02:13:35.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Index-组件中的-context-依赖&quot;&gt;&lt;a href=&quot;#Index-组件中的-context-依赖&quot; class=&quot;headerlink&quot; title=&quot;Index 组件中的 context 依赖&quot;&gt;&lt;/a&gt;Index 组件中的 context 依赖&lt;/h1&gt;&lt;p&gt;Content 组件、Header 组件以及 ThemeSwitch 组件都是依赖于 Index 父组件的</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://sunyunzeng.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现 React-Redux (五)：实现 mapDispatch2Props</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%BA%94-%EF%BC%9A%E5%AE%9E%E7%8E%B0-mapDispatchToProps/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%BA%94-%EF%BC%9A%E5%AE%9E%E7%8E%B0-mapDispatchToProps/</id>
+    <published>2020-05-17T04:35:51.000Z</published>
+    <updated>2022-11-05T02:13:35.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;dispatch-的代理工作&quot;&gt;&lt;a href=&quot;#dispatch-的代理工作&quot; class=&quot;headerlink&quot; title=&quot;dispatch 的代理工作&quot;&gt;&lt;/a&gt;dispatch 的代理工作&lt;/h1&gt;&lt;p&gt;在 &lt;code&gt;src/ThemeSwitch.js&lt;/code&gt; 中，ThemeSwitch 组件通过 store 的 dispatch</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://sunyunzeng.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现 React-Redux (四)：connect 和 mapState2Props</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E5%9B%9B-%EF%BC%9Aconnect-%E5%92%8C-mapStateToProps/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E5%9B%9B-%EF%BC%9Aconnect-%E5%92%8C-mapStateToProps/</id>
+    <published>2020-05-17T02:24:05.000Z</published>
+    <updated>2022-11-05T02:13:35.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;子组件直接利用-context-的问题&quot;&gt;&lt;a href=&quot;#子组件直接利用-context-的问题&quot; class=&quot;headerlink&quot; title=&quot;子组件直接利用 context 的问题&quot;&gt;&lt;/a&gt;子组件直接利用 context 的问题&lt;/h1&gt;&lt;p&gt;第三节我们实现了子组件利用 context 属性，通过统一的修改方式对全局 state</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://sunyunzeng.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现 React-Redux (三)：结合 context 和 store</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%B8%89-%EF%BC%9A%E7%BB%93%E5%90%88-context-%E5%92%8C-store/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%B8%89-%EF%BC%9A%E7%BB%93%E5%90%88-context-%E5%92%8C-store/</id>
+    <published>2020-05-16T12:29:25.000Z</published>
+    <updated>2022-11-05T02:13:35.372Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;构建-createStore-函数实现-Redux-架构&quot;&gt;&lt;a href=&quot;#构建-createStore-函数实现-Redux-架构&quot; class=&quot;headerlink&quot; title=&quot;构建 createStore 函数实现 Redux 架构&quot;&gt;&lt;/a&gt;构建 createStore 函数实现 Redux 架构&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;:</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://sunyunzeng.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现 React-Redux (二)：初始化工程</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%BA%8C-%EF%BC%9A%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%BA%8C-%EF%BC%9A%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B/</id>
+    <published>2020-05-16T07:39:47.000Z</published>
+    <updated>2022-11-05T02:13:35.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;构建项目&quot;&gt;&lt;a href=&quot;#构建项目&quot; class=&quot;headerlink&quot; title=&quot;构建项目&quot;&gt;&lt;/a&gt;构建项目&lt;/h1&gt;&lt;p&gt;在命令行依次输入以下命令&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://sunyunzeng.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现 React-Redux (一)：React.js中的 context</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%B8%80-%EF%BC%9AReact-js%E4%B8%AD%E7%9A%84-context/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0-React-Redux-%E4%B8%80-%EF%BC%9AReact-js%E4%B8%AD%E7%9A%84-context/</id>
+    <published>2020-05-15T04:04:17.000Z</published>
+    <updated>2022-11-05T02:13:35.372Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redux架构&quot;&gt;&lt;a href=&quot;#Redux架构&quot; class=&quot;headerlink&quot; title=&quot;Redux架构&quot;&gt;&lt;/a&gt;Redux架构&lt;/h1&gt;&lt;p&gt;Redux是一种前端架构，是由 Facebook 的 &lt;a href=&quot;https://justgetflux.com/&quot;&gt;Flux&lt;/a&gt; 框架演变而来，但避开了 Flux 的复杂性。而 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://sunyunzeng.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用JS写算法</title>
+    <link href="https://sunyunzeng.com/%E7%94%A8JS%E5%86%99%E7%AE%97%E6%B3%95/"/>
+    <id>https://sunyunzeng.com/%E7%94%A8JS%E5%86%99%E7%AE%97%E6%B3%95/</id>
+    <published>2020-04-24T10:13:50.000Z</published>
+    <updated>2022-11-05T02:13:35.365Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;用JS去除字符串前后空格&quot;&gt;&lt;a href=&quot;#用JS去除字符串前后空格&quot; class=&quot;headerlink&quot; title=&quot;用JS去除字符串前后空格&quot;&gt;&lt;/a&gt;用JS去除字符串前后空格&lt;/h1&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://sunyunzeng.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己动手实现符合Promise/A+规范的Promise</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E7%AC%A6%E5%90%88Promise-A-%E8%A7%84%E8%8C%83%E7%9A%84Promise/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E7%AC%A6%E5%90%88Promise-A-%E8%A7%84%E8%8C%83%E7%9A%84Promise/</id>
+    <published>2020-04-14T04:06:19.000Z</published>
+    <updated>2022-11-05T02:13:35.371Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Promise异步实现&quot;&gt;&lt;a href=&quot;#Promise异步实现&quot; class=&quot;headerlink&quot; title=&quot;Promise异步实现&quot;&gt;&lt;/a&gt;Promise异步实现&lt;/h1&gt;&lt;p&gt;之前在&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://sunyunzeng.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>D3实现多对多关联关系弧线图</title>
+    <link href="https://sunyunzeng.com/D3%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%AF%B9%E5%A4%9A%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E5%BC%A7%E7%BA%BF%E5%9B%BE/"/>
+    <id>https://sunyunzeng.com/D3%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%AF%B9%E5%A4%9A%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E5%BC%A7%E7%BA%BF%E5%9B%BE/</id>
+    <published>2020-03-22T11:55:53.000Z</published>
+    <updated>2022-11-05T02:13:35.229Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;多对多关联关系&quot;&gt;&lt;a href=&quot;#多对多关联关系&quot; class=&quot;headerlink&quot; title=&quot;多对多关联关系&quot;&gt;&lt;/a&gt;多对多关联关系&lt;/h1&gt;&lt;p&gt;基于D3实现的多对多关联关系：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Web可视化" scheme="https://sunyunzeng.com/categories/Web%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    
+    <category term="D3" scheme="https://sunyunzeng.com/tags/D3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS实现图片的懒加载</title>
+    <link href="https://sunyunzeng.com/JS%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
+    <id>https://sunyunzeng.com/JS%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E6%87%92%E5%8A%A0%E8%BD%BD/</id>
+    <published>2020-03-16T13:37:26.000Z</published>
+    <updated>2022-11-05T02:13:35.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;场景需求&quot;&gt;&lt;a href=&quot;#场景需求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://sunyunzeng.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>背包问题</title>
+    <link href="https://sunyunzeng.com/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    <id>https://sunyunzeng.com/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</id>
+    <published>2020-03-13T10:39:29.000Z</published>
+    <updated>2022-11-05T02:13:35.370Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;01-背包&quot;&gt;&lt;a href=&quot;#01-背包&quot; class=&quot;headerlink&quot; title=&quot;01 背包&quot;&gt;&lt;/a&gt;01 背包&lt;/h1&gt;&lt;p&gt;有 N 件物品和一个容量是 V 的背包。每件物品只能使用一次。&lt;/p&gt;
+&lt;p&gt;第 i 件物品的体积是 $v_i$，价值是</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="LeetCode" scheme="https://sunyunzeng.com/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 布局知识</title>
+    <link href="https://sunyunzeng.com/CSS-%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://sunyunzeng.com/CSS-%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/</id>
+    <published>2020-02-22T03:30:51.000Z</published>
+    <updated>2022-11-05T02:13:35.217Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS实现垂直水平居中&quot;&gt;&lt;a href=&quot;#CSS实现垂直水平居中&quot; class=&quot;headerlink&quot; title=&quot;CSS实现垂直水平居中&quot;&gt;&lt;/a&gt;CSS实现垂直水平居中&lt;/h1&gt;&lt;p&gt;对于父元素 parent 与 子元素 child，如何实现子元素在父元素内部的水平垂直居中？&lt;/p&gt;
+&lt;p&gt;元素的 html 代码如下：&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CSS" scheme="https://sunyunzeng.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 知识要点</title>
+    <link href="https://sunyunzeng.com/CSS-%E7%9F%A5%E8%AF%86%E8%A6%81%E7%82%B9/"/>
+    <id>https://sunyunzeng.com/CSS-%E7%9F%A5%E8%AF%86%E8%A6%81%E7%82%B9/</id>
+    <published>2020-02-18T04:21:10.000Z</published>
+    <updated>2022-11-05T02:13:35.217Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;选择元素&quot;&gt;&lt;a href=&quot;#选择元素&quot; class=&quot;headerlink&quot; title=&quot;选择元素&quot;&gt;&lt;/a&gt;选择元素&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;基本元素选择&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CSS" scheme="https://sunyunzeng.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现简单版Vue--3. 实现数据的双向绑定和Proxy代理</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%89%88Vue-3-%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%92%8CProxy%E4%BB%A3%E7%90%86/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%89%88Vue-3-%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%92%8CProxy%E4%BB%A3%E7%90%86/</id>
+    <published>2020-02-01T10:49:53.000Z</published>
+    <updated>2022-11-05T02:13:35.378Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;数据的双向绑定&quot;&gt;&lt;a href=&quot;#数据的双向绑定&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现简单版Vue--2. 实现数据绑定视图</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%89%88Vue-2-%E5%AE%9A%E4%B9%89Observer%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8A%AB%E6%8C%81/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%89%88Vue-2-%E5%AE%9A%E4%B9%89Observer%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8A%AB%E6%8C%81/</id>
+    <published>2020-01-31T13:33:24.000Z</published>
+    <updated>2022-11-05T02:13:35.377Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;利用Object-defineProperty-方法实现数据的监听&quot;&gt;&lt;a href=&quot;#利用Object-defineProperty-方法实现数据的监听&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己实现简单版Vue--1. 编译初始Vue模版</title>
+    <link href="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%89%88Vue-1-%E7%BC%96%E8%AF%91%E5%88%9D%E5%A7%8BVue%E6%A8%A1%E7%89%88/"/>
+    <id>https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%89%88Vue-1-%E7%BC%96%E8%AF%91%E5%88%9D%E5%A7%8BVue%E6%A8%A1%E7%89%88/</id>
+    <published>2020-01-29T11:15:05.000Z</published>
+    <updated>2022-11-05T02:13:35.377Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Vue的双向绑定效果如下：&lt;/p&gt;
+&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS异步函数小结</title>
+    <link href="https://sunyunzeng.com/JS%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%B0%8F%E7%BB%93/"/>
+    <id>https://sunyunzeng.com/JS%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%B0%8F%E7%BB%93/</id>
+    <published>2020-01-04T07:49:12.000Z</published>
+    <updated>2022-11-05T02:13:35.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JS的异步&quot;&gt;&lt;a href=&quot;#JS的异步&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://sunyunzeng.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://sunyunzeng.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 72.编辑距离</title>
+    <link href="https://sunyunzeng.com/LeetCode-72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/"/>
+    <id>https://sunyunzeng.com/LeetCode-72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/</id>
+    <published>2020-01-02T02:02:16.000Z</published>
+    <updated>2022-11-05T02:13:35.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;编辑距离&quot;&gt;&lt;a href=&quot;#编辑距离&quot; class=&quot;headerlink&quot; title=&quot;编辑距离&quot;&gt;&lt;/a&gt;编辑距离&lt;/h1&gt;&lt;p&gt;给定两个单词 word1 和 word2，计算出将 word1 转换成 word2 所使用的最少操作数 。&lt;/p&gt;
+&lt;p&gt;你可以对一个单词进行如下三种操作：&lt;/p&gt;
+&lt;p&gt;插入一个字符&lt;br&gt;删除一个字符&lt;br&gt;替换一个字符&lt;br&gt;示例</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunyunzeng.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>再见2019，你好2020！</title>
+    <link href="https://sunyunzeng.com/%E5%86%8D%E8%A7%812019%EF%BC%8C%E4%BD%A0%E5%A5%BD2020%EF%BC%81/"/>
+    <id>https://sunyunzeng.com/%E5%86%8D%E8%A7%812019%EF%BC%8C%E4%BD%A0%E5%A5%BD2020%EF%BC%81/</id>
+    <published>2020-01-01T03:18:31.000Z</published>
+    <updated>2022-11-05T02:13:35.312Z</updated>
+    
+    
+    <summary type="html">这里有东西被加密了，需要输入密码查看哦。</summary>
+    
+    
+    
+    <category term="杂记" scheme="https://sunyunzeng.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="总结" scheme="https://sunyunzeng.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 474.一和零</title>
+    <link href="https://sunyunzeng.com/LeetCode-474-%E4%B8%80%E5%92%8C%E9%9B%B6/"/>
+    <id>https://sunyunzeng.com/LeetCode-474-%E4%B8%80%E5%92%8C%E9%9B%B6/</id>
+    <published>2019-12-28T03:24:01.000Z</published>
+    <updated>2022-11-05T02:13:35.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;p&gt;在计算机界中，我们总是追求用有限的资源获取最大的收益。&lt;/p&gt;
+&lt;p&gt;现在，假设你分别支配着 m 个 0 和 n 个 1。另外，还有一个仅包含 0 和 1 字符串的数组。&lt;/p&gt;
+&lt;p&gt;你的任务是使用给定的 m 个 0 和 n 个 1</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunyunzeng.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 1143.最长公共子序列</title>
+    <link href="https://sunyunzeng.com/LeetCode-1143-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/"/>
+    <id>https://sunyunzeng.com/LeetCode-1143-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/</id>
+    <published>2019-12-27T09:04:47.000Z</published>
+    <updated>2022-11-05T02:13:35.251Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;最长公共子序列&quot;&gt;&lt;a href=&quot;#最长公共子序列&quot; class=&quot;headerlink&quot; title=&quot;最长公共子序列&quot;&gt;&lt;/a&gt;最长公共子序列&lt;/h1&gt;&lt;p&gt;给定两个字符串 text1 和 text2，返回这两个字符串的最长公共子序列。&lt;/p&gt;
+&lt;p&gt;一个字符串的 子序列</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunyunzeng.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 300.最长上升子序列</title>
+    <link href="https://sunyunzeng.com/LeetCode-300-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/"/>
+    <id>https://sunyunzeng.com/LeetCode-300-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/</id>
+    <published>2019-12-26T02:04:32.000Z</published>
+    <updated>2022-11-05T02:13:35.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;最长上升子序列&quot;&gt;&lt;a href=&quot;#最长上升子序列&quot; class=&quot;headerlink&quot; title=&quot;最长上升子序列&quot;&gt;&lt;/a&gt;最长上升子序列&lt;/h1&gt;&lt;p&gt;给定一个无序的整数数组，找到其中最长上升子序列的长度。&lt;/p&gt;
+&lt;p&gt;示例:&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunyunzeng.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 413.等差数列划分</title>
+    <link href="https://sunyunzeng.com/Leetcode-413-%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/"/>
+    <id>https://sunyunzeng.com/Leetcode-413-%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</id>
+    <published>2019-12-25T03:21:09.000Z</published>
+    <updated>2022-11-05T02:13:35.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;等差数列划分&quot;&gt;&lt;a href=&quot;#等差数列划分&quot; class=&quot;headerlink&quot; title=&quot;等差数列划分&quot;&gt;&lt;/a&gt;等差数列划分&lt;/h1&gt;&lt;p&gt;如果一个数列至少有三个元素，并且任意两个相邻元素之差相同，则称该数列为等差数列。&lt;/p&gt;
+&lt;p&gt;例如，以下数列为等差数列:&lt;/p&gt;
+&lt;p&gt;1, 3, 5, 7, 9&lt;br&gt;7, 7, 7, 7&lt;br&gt;3, -1, -5,</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunyunzeng.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 打家劫舍 II</title>
+    <link href="https://sunyunzeng.com/LeetCode-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%20II%E4%B8%80/"/>
+    <id>https://sunyunzeng.com/LeetCode-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%20II%E4%B8%80/</id>
+    <published>2019-12-23T08:38:56.000Z</published>
+    <updated>2022-11-05T02:13:35.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunyunzeng.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue + Express + MySQL驾驶行为分析全栈项目(六): ECharts实现轨迹动态可视化</title>
+    <link href="https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%85%AD-ECharts%E5%AE%9E%E7%8E%B0%E8%BD%A8%E8%BF%B9%E5%8A%A8%E6%80%81%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%85%AD-ECharts%E5%AE%9E%E7%8E%B0%E8%BD%A8%E8%BF%B9%E5%8A%A8%E6%80%81%E5%8F%AF%E8%A7%86%E5%8C%96/</id>
+    <published>2019-12-23T05:46:46.000Z</published>
+    <updated>2022-11-05T02:13:35.310Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;自己做了一点点的小尝试：基于前馈神经网络 LSTM</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 524.通过删除字母匹配到字典里最长单词</title>
+    <link href="https://sunyunzeng.com/LeetCode-524-%E9%80%9A%E8%BF%87%E5%88%A0%E9%99%A4%E5%AD%97%E6%AF%8D%E5%8C%B9%E9%85%8D%E5%88%B0%E5%AD%97%E5%85%B8%E9%87%8C%E6%9C%80%E9%95%BF%E5%8D%95%E8%AF%8D/"/>
+    <id>https://sunyunzeng.com/LeetCode-524-%E9%80%9A%E8%BF%87%E5%88%A0%E9%99%A4%E5%AD%97%E6%AF%8D%E5%8C%B9%E9%85%8D%E5%88%B0%E5%AD%97%E5%85%B8%E9%87%8C%E6%9C%80%E9%95%BF%E5%8D%95%E8%AF%8D/</id>
+    <published>2019-12-21T03:49:45.000Z</published>
+    <updated>2022-11-05T02:13:35.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;p&gt;给定一个字符串和一个字符串字典，找到字典里面最长的字符串，该字符串可以通过删除给定字符串的某些字符来得到。如果答案不止一个，返回长度最长且字典顺序最小的字符串。如果答案不存在，则返回空字符串。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="LeetCode" scheme="https://sunyunzeng.com/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 763. 划分字母区间</title>
+    <link href="https://sunyunzeng.com/LeetCode-763-%E5%88%92%E5%88%86%E5%AD%97%E6%AF%8D%E5%8C%BA%E9%97%B4/"/>
+    <id>https://sunyunzeng.com/LeetCode-763-%E5%88%92%E5%88%86%E5%AD%97%E6%AF%8D%E5%8C%BA%E9%97%B4/</id>
+    <published>2019-12-20T11:56:57.000Z</published>
+    <updated>2022-11-05T02:13:35.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;p&gt;字符串 S 由小写字母组成。我们要把这个字符串划分为尽可能多的片段，同一个字母只会出现在其中的一个片段。返回一个表示每个字符串片段的长度的列表。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例1：&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="贪心法" scheme="https://sunyunzeng.com/tags/%E8%B4%AA%E5%BF%83%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue + Express + MySQL驾驶行为分析全栈项目(五): Leftlet热力图实现</title>
+    <link href="https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%BA%94-Leftlet%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%BA%94-Leftlet%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%AE%9E%E7%8E%B0/</id>
+    <published>2019-12-14T09:13:58.000Z</published>
+    <updated>2022-11-05T02:13:35.310Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;自己做了一点点的小尝试：基于前馈神经网络 LSTM</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能</title>
+    <link href="https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/"/>
+    <id>https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/</id>
+    <published>2019-12-14T08:45:07.000Z</published>
+    <updated>2022-11-05T02:13:35.311Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;自己做了一点点的小尝试：基于前馈神经网络 LSTM</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue + Express + MySQL驾驶行为分析全栈项目(三): 前端设计</title>
+    <link href="https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%B8%89-%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%B8%89-%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/</id>
+    <published>2019-12-12T05:51:15.000Z</published>
+    <updated>2022-11-05T02:13:35.308Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;自己做了一点点的小尝试：基于前馈神经网络 LSTM</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue + Express + MySQL驾驶行为分析全栈项目(二): 服务器搭建</title>
+    <link href="https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%BA%8C-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    <id>https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%BA%8C-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</id>
+    <published>2019-12-10T06:40:30.000Z</published>
+    <updated>2022-11-05T02:13:35.309Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;自己做了一点点的小尝试：基于前馈神经网络 LSTM</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue + Express + MySQL驾驶行为分析全栈项目(一): 项目初始化</title>
+    <link href="https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/"/>
+    <id>https://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/</id>
+    <published>2019-12-04T07:54:38.000Z</published>
+    <updated>2022-11-05T02:13:35.296Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;自己做了一点点的小尝试：基于前馈神经网络 LSTM</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://sunyunzeng.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Vue" scheme="https://sunyunzeng.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 75.颜色分类</title>
+    <link href="https://sunyunzeng.com/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/"/>
+    <id>https://sunyunzeng.com/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/</id>
+    <published>2019-11-26T11:34:45.000Z</published>
+    <updated>2022-11-05T02:13:35.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;p&gt;给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。&lt;/p&gt;
+&lt;p&gt;此题中，我们使用整数 0、 1 和 2</summary>
+        
+      
+    
+    
+    
+    <category term="算法题" scheme="https://sunyunzeng.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="LeetCode" scheme="https://sunyunzeng.com/tags/LeetCode/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>理解最大似然估计与最大后验估计 | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最大似然估计最大似然估计（Maxiumum Likelihood Esimation, MLE）是频率学派对概率模型的一种参数估计方法。 它要解决的问题是，针对一定数量的独立重采样得到的样本，如何找到模型的参数 $\theta$，使得样本采样结果出现的概率最大。 具体来说，假设我们知道人身高的分布是正态分布，及概率密度函数的形式为： f\left(x\right)&#x3D;\frac1{\sqrt{2\p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解最大似然估计与最大后验估计">
+<meta property="og:url" content="https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/index.html">
+<meta property="og:site_name" content="孙云增的博客">
+<meta property="og:description" content="最大似然估计最大似然估计（Maxiumum Likelihood Esimation, MLE）是频率学派对概率模型的一种参数估计方法。 它要解决的问题是，针对一定数量的独立重采样得到的样本，如何找到模型的参数 $\theta$，使得样本采样结果出现的概率最大。 具体来说，假设我们知道人身高的分布是正态分布，及概率密度函数的形式为： f\left(x\right)&#x3D;\frac1{\sqrt{2\p">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png">
+<meta property="article:published_time" content="2021-04-01T03:25:32.000Z">
+<meta property="article:modified_time" content="2022-11-05T02:54:34.946Z">
+<meta property="article:author" content="孙云增">
+<meta property="article:tag" content="机器学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '理解最大似然估计与最大后验估计',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-05 10:54:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">理解最大似然估计与最大后验估计</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-01T03:25:32.000Z" title="发表于 2021-04-01 11:25:32">2021-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-05T02:54:34.946Z" title="更新于 2022-11-05 10:54:34">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="理解最大似然估计与最大后验估计"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h1><p>最大似然估计（Maxiumum Likelihood Esimation, MLE）是<strong>频率学派</strong>对概率模型的一种参数估计方法。</p>
+<p>它要解决的问题是，针对一定数量的<strong>独立重采样</strong>得到的样本，如何找到模型的参数 $\theta$，使得样本采样结果出现的概率最大。</p>
+<p>具体来说，假设我们知道人身高的分布是正态分布，及概率密度函数的形式为：</p>
+<script type="math/tex; mode=display">f\left(x\right)=\frac1{\sqrt{2\pi}\sigma}exp\left(-\frac{\left(x-u\right)^2}{2\sigma^2}\right)</script><p>其中，人身高的采样是独立同分布的，也就是你的身高不与别人的身高有关，且你们的身高服从同样的分布，即正态分布。</p>
+<p>我们通过问卷调查，获得的一定数量人高的样本，然后估计身高分布模型的参数值方差　$\sigma$ 和均值　$\mu$。</p>
+<h2 id="似然函数"><a href="#似然函数" class="headerlink" title="似然函数"></a>似然函数</h2><p>数学上采用<strong>似然函数</strong>来解释样本已知，而模型参数未知的情况。</p>
+<p>似然函数　$f\left(x\left|\theta\right.\right)$ 指样本　$x$　已知，而模型参数　$\theta$ 未知的函数。</p>
+<p>假使模型的参数　$\theta$　已知，而样本　$x$　未知的函数　$f\left(\theta\left|x\right.\right)$ 为<strong>概率函数</strong>。</p>
+<p>这有点像”一菜两吃“的意思，比如数学函数　$f(x,y)=x^y$，如果参数　$x$　为定值，例如　$x=2$，则函数变为指数函数　$f(x,y)=2^y$；而如果　$y$　为定值，例如　$y=2$，则函数变为二次函数。</p>
+<p>因为似然函数的样本　$x$　服从独立同分布，因此似然函数 $\begin{array}{l}f(x_1,x_2,…,x_n\left|\theta\right.)\end{array}$　可以变为独立同分布的样本求联合概率：</p>
+<script type="math/tex; mode=display">\begin{array}{l}f(x_1,x_2,...,x_n\left|\theta\right.)\\=f(x_1\left|\theta\right.)f(x_2\left|\theta\right.)...f(x_n\left|\theta\right.)\\={\textstyle\prod_{i=1}^n}f(x_i\left|\theta\right.)\end{array}</script><h2 id="求模型参数"><a href="#求模型参数" class="headerlink" title="求模型参数"></a>求模型参数</h2><p><code>例子</code></p>
+<p>考虑这样一个例子，一个不透明的盒子里有黑白两种颜色的小球，有放回的进行100次抽取，记录下每次抽取小球的颜色，结果出现了80次黑色小球，20次白色小球，那么求盒子里的黑白两种颜色小球的分布情况？</p>
+<p>转化为似然函数的问题，合理里其实黑白两种小球的分布已知，也就是说盒子中黑白小球的分布构成了模型，模型的参数已知，如何根据黑白球的采样情况，求盒子黑白球分布的情况。</p>
+<p>我们假设黑球占比为　$p$，那么白球的占比就为　$1-p$，那么黑球每次被去取出的概率就等同于黑球的占比　$p$，因此，这次采样的似然函数为：</p>
+<script type="math/tex; mode=display">\begin{array}{l}f(x\left|\theta\right.)=p^{80}(1-p)^{20}\\\end{array}</script><p>那么，模型的参数可以说有无穷种情况，如何计算模型的参数　$p$　呢？</p>
+<blockquote>
+<p>极大似然估计的思想就是，使当前采样情况出行概率最大的模型参数，为求得的结果，即使似然函数取得极大值。</p>
+</blockquote>
+<p>因此要求得黑白球分布模型，即使似然函数取得极大值，也就是对似然函数求导，使导数为零，即为结果。很容易计算得到　$p＝0.8$。</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>其实我们日常生活中无意中就采用了极大似然估计的思想。</p>
+<p><code>例子1</code></p>
+<p>我们想进一步统计全国人民的身高分布的模型参数，虽然我们知道模型为某一种正态分布，但是我们无法对 14 多亿全国人民都逐一统计各自的身高。这时候，我们可以随机对各省的一部分人进行采样。因为这些省份各人间的身高为独立同分布的，所以可以基于这些样本，基于最大似然估计获得一个身高分布模型。该模型就可以近似的符合全国人民身高的分布模型。</p>
+<blockquote>
+<p>频率派认为全国人民身高模型是一定的，就像柏拉图的理想型。通过不断的扩大样本的数量，就可以逼近这个背后真正的模型。</p>
+<p>而贝叶斯派则认为模型本身也是不定的，这个模型初始有一个参数，可由先验知识获得，然后通过不断的采样修正我们的模型，使得最终的后验概率最大。</p>
+</blockquote>
+<h1 id="最大后验估计"><a href="#最大后验估计" class="headerlink" title="最大后验估计"></a>最大后验估计</h1><p>最大后验估计是贝叶斯派的法宝，代表了另外一种看待世界的角度。</p>
+<p>贝叶斯学派认为，对于要估计的模型人们会有一个预判，例如抛掷硬币正反硬币出现的次数应该五五开，这个预判就是先验函数 $p(\theta)$ 然后根据实际采样不断调整对这个模型参数进行调整，也就是说，这个模型参数本身是不能确定的，我们只能通过不断的实验逐渐获得最合理的模型参数，这一点就完全区别于频率学派的。</p>
+<h2 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h2><p>最大后验估计的核心就是贝叶斯公式：</p>
+<script type="math/tex; mode=display">\begin{array}{l}f(\theta\left|X\right.)=\frac{f(X\left|\theta\right.)\times p(\theta)}{p(X)}\\\end{array}</script><p>其中　$f(\theta\left|X\right.)$ 为后验概率，　$p(\theta)$　为先验估计，而　$f(X\left|\theta\right.)$ 为前面讲的似然函数，　$p(X)$ 为边缘概率，可以简单的理解为一个归一化常数。</p>
+<p>贝叶斯公式已经成为机器学习的核心算法之一，诸如拼写检查、语言翻译、海难搜救、生物医药、疾病诊断、邮件过滤、文本分类、侦破案件、工业生产等诸多方面都有很广泛的应用，它也是很多机器学习算法的基础。在这里，有必要了解一下贝叶斯公式。</p>
+<blockquote>
+<p>贝叶斯公式是以英国学者托马斯·贝叶斯(Thomas Bayes)命名的。1763年Richard Price整理发表了贝叶斯的成果《An Essay towards solving a Problem in the Doctrine of Chances》，这才使贝叶斯公式展现在世人的面前。</p>
+</blockquote>
+<p>贝叶斯公式是为了解决”逆概”;问题而提出的。正概问题很常见，比如不透明袋中有黑球M个,白球N个，随手抓起一个球，求是黑球的概率，大家心算一下就能知道是 $\frac{M}{M+N}$。当然，生活中有大量这样的例子，像人口流动统计、金融统计等等，这些统计的特征就是我们事先已经知道了所有样本的分布情况，在此基础上进行概率的计算，这就是“正概”问题。但是，如果我们不知道所有样本的信息（这样的例子比比皆是，例如物理学中我们不可能看到所有电子的运行状态，所以只能通过实验模拟观察大多数的情况去建立最合适的模型去解释），同时我们又想知道样本的概率怎么办呢？贝叶斯公式的作用就体现出来了。</p>
+<p>还是一个袋子中装着若干小球，里面有黑色跟白色，我们随机取出一些小球，然后根据小球的情况去计算袋中小球实际的分布情况。此时我们可能有很多种模型（猜测）去解释，随着取出小球数量的增加，我们的模型也越来越精确，越来越逼近实际的情况，然后我们从这些模型中找出最贴合实际的。<strong>总结来说：不同模型的求解就是计算不同的后验概率（事件已经发生，求某种因素导致该事件发生的概率），对于连续的猜测空间是计算概率密度函数；模型比较如果不考虑先验概率（根据以往的经验和分析获得的概率）则运用了最大似然估计。这就是贝叶斯思想的核心</strong>。</p>
+<p>下面我举一个<a target="_blank" rel="noopener" href="http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/">例子</a>：一所学校里面有 60% 的男生，40% 的女生。男生总是穿长裤，女生则一半穿长裤一半穿裙子。有了这些信息之后我们可以容易地计算“随机选取一个学生，他（她）穿长裤的概率和穿裙子的概率是多大”，这个就是前面说的“正向概率”的计算。然而，假设你走在校园中，迎面走来一个穿长裤的学生（很不幸的是你高度近似，你只看得见他（她）穿的是否长裤，而无法确定他（她）的性别），你能够推断出他（她）是男生的概率是多大吗？</p>
+<p>一些认知科学的研究表明（《决策与判断》以及<a target="_blank" rel="noopener" href="http://www.douban.com/subject/3199621/">《Rationality for Mortals》</a>第12章：小孩也可以解决贝叶斯问题），我们对形式化的贝叶斯问题不擅长，但对于以频率形式呈现的等价问题却很擅长。在这里，我们不妨把问题重新叙述成：你在校园里面随机游走，遇到了 N 个穿长裤的人（仍然假设你无法直接观察到他们的性别），问这 N 个人里面有多少个女生多少个男生。</p>
+<p>你说，这还不简单：算出学校里面有多少穿长裤的，然后在这些人里面再算出有多少女生，不就行了？</p>
+<p>我们假设全校总共有H个学生，其中男生（都穿长裤）占60%，只有50%女生穿长裤。我们首先计算穿长裤的人数：<code>H*P(Boy)*P(Pants|Boy)+H*P(Girl)*P(Pants|Girl)</code>，其中<code>P(Boy)</code>为男生比例，<code>P(Pants|Boy)</code>为男生中穿长裤的比率（此题中为100%），女生同理。其中创长裤的女生共有<code>H*P(Girl)*P(Pants|Girl)</code>个，两者一比，我们就得到：</p>
+<p><script type="math/tex">P(Girl|Pants)=\frac{P(Girl)*P(Pants|Girl)}{P(Boy)*P(Pants|Boy)+P(Girl)*P(Pants|Girl)}</script>       <strong>式1</strong></p>
+<p>而这里面男生女生可以泛指一切事物，所以通用公式为：</p>
+<p><script type="math/tex">P(B|A)=\frac{P(B)*P(A|B)}{P(B')*P(A|B')+P(B)*P(A|B)}</script>       —-（B’为B的互补，例如男生女生）       <strong>式2</strong></p>
+<p>其实分母就是指所有穿长裤的人的概率<code>P(Pants)</code>也就是<code>P(A)</code>，分子是女生中穿长裤与是女生同时发生的概率，也就是<code>P(Pants,Girl)</code>或者说<code>P(A,B)</code>,所以式2(全概率公式的一种特殊情况）又可以写为：</p>
+<p><script type="math/tex">P(B|A)=\frac{P(A,B)}{P(A)}</script>          <strong>式3</strong>            又可以写为</p>
+<p><script type="math/tex">P(B|A)*P(A)=P(A,B)</script>                <strong>式4</strong></p>
+<p>同理，我们可以得到<code>P(A|B)*P(B)=P(A,B)</code>，所以：</p>
+<p><code>P(A|B)*P(B) = P(B|A)*P(A)</code>，即：</p>
+<p><script type="math/tex">P(A|B)=\frac{P(A)*P(B|A)}{P(B)}</script>     <strong>式5</strong> </p>
+<p><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" alt="图１-１"></p>
+<p>式3或式4也就是贝叶斯公式。其实式2是一个问题共有两种分类时的情况，例如性别、掷硬币等只有两种情况，现实生活中很多是由多种情况构成，一件事情可能由多个原因影响，那么推广开来，就是贝叶斯公式的通式。如图1-1所示，一个事物有两个影响要素A和B，面积的大小对应发生的概率大小，C事件的发生受到A和B要素的影响。如果计算在C事件发生是受到A事件影响的概率<code>P(A|C)</code>，就是计算<code>A∩C</code>与<code>C</code>的面积之比，也就是<code>P(A∩C)/P(C),P(A∩C)</code>又可以写为<code>P(A,C)</code>，因为<code>P(C|A)</code>表示A条件下C事件发生的概率，<code>P(A)</code>表示A事件发生的概率，即A的面积，所以<code>P(A)*P(C|A)</code>即<code>A∩C</code>的面积，也就是即A和C同时发生的概率<code>P(A,C)</code>。就得到<code>P(A∩C)=P(A)*P(C|A)</code>, 同理：<code>P(B∩C)=P(B)*P(C|B)</code>,因为得到 <code>P(A|C)=P(A)*P(C|A)/(P(A)*P(C|A)+P(B)*P(C|B))</code>。这是一个事物的影响因素由两个组成的情况，我们把所有情况统一起来就是全概率公式:</p>
+<p><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_2.png" alt="式５"></p>
+<h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><h3 id="什么是贝叶斯推断"><a href="#什么是贝叶斯推断" class="headerlink" title="什么是贝叶斯推断"></a>什么是贝叶斯推断</h3><p>贝叶斯推断（BAYESIAN INFERENCE）是一种应用于不确定性条件下的决策的统计方法。贝叶斯推断的显著特征是，为了得到一个统计结论能够利用先验信息和样本信息。</p>
+<p>通俗来讲，我想知道A事件的发生，如果没有任何的先验知识，我只能做出它发生与不发生的概率各占50%的判断。但是，幸运的是我知道B事件发生了，根据两者的关联经验，我知道它对A事件的发生起到促进作用，所以我可以更加准确的判断A事件是大概率发生的（如80%），而不是起初的非零即一的50%。如果我有更多A的关联事件，那么我可以做出更加准确的判断，这就是贝叶斯推断。</p>
+<p>我们还是看式5：$P(B|A)=\frac{P(A)*P(B|A)}{P(B)}$，<code>P(A)</code>是我们的先验概率，(Prior probability)，即在B事件发生之前，我们对A事件概率的一个判断。<code>P(A|B)</code>称为”后验概率”（Posterior probability），即在B事件发生之后，我们对A事件概率的重新评估。$\frac{P(B|A)}{P(B)}$ 称为”可能性函数”（Likelyhood），这是一个调整因子，使得预估概率更接近真实概率。</p>
+<p>为了更直观的解释贝叶斯推断，这里举一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86">维基百科</a>的例子——吸毒监测：</p>
+<p>假设一个常规的检测结果的敏感度与可靠度均为99%，即吸毒者每次检测呈阳性（+）的概率为99%。而不吸毒者每次检测呈阴性（-）的概率为99%。从检测结果的概率来看，检测结果是比较准确的，但是贝叶斯定理却可以揭示一个潜在的问题。假设某公司对全体雇员进行吸毒检测，已知0.5%的雇员吸毒。请问每位检测结果呈阳性的雇员吸毒的概率有多高？</p>
+<p>令“D”为雇员吸毒事件，“N”为雇员不吸毒事件，“+”为检测呈阳性事件。可得</p>
+<ul>
+<li>P(D)代表雇员吸毒的概率，不考虑其他情况，该值为0.005。因为公司的预先统计表明该公司的雇员中有0.5%的人吸食毒品，所以这个值就是D的先验概率。</li>
+<li>P(N)代表雇员不吸毒的概率，显然，该值为0.995，也就是1-P(D)。</li>
+<li>P(+|D)代表吸毒者阳性检出率，这是一个条件概率，由于阳性检测准确性是99%，因此该值为0.99。</li>
+<li>P(+|N)代表不吸毒者阳性检出率，也就是出错检测的概率，该值为0.01，因为对于不吸毒者，其检测为阴性的概率为99%，因此，其被误检测成阳性的概率为1 - 0.99 = 0.01。</li>
+<li>P(+)代表不考虑其他因素的影响的阳性检出率。该值为0.0149或者1.49%。我们可以通过全概率公式计算得到：此概率 = 吸毒者阳性检出率（0.5% x 99% = 0.495%)+ 不吸毒者阳性检出率（99.5% x 1% = 0.995%)。P(+）=0.0149是检测呈阳性的先验概率。用数学公式描述为：</li>
+</ul>
+<p><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_3.png" alt="公式"></p>
+<p>据上述描述，我们可以计算某人检测呈阳性时确实吸毒的条件概率P(D|+)：</p>
+<p><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_4.svg" alt="公式"></p>
+<p>尽管吸毒检测的准确率高达99%，但贝叶斯定理告诉我们：如果某人检测呈阳性，其吸毒的概率只有大约33%，不吸毒的可能性比较大。假阳性高，则检测的结果不可靠。</p>
+<p>同时，我们可以计算一下假如一个人吸毒，但他误检测成阴性的概率P(D|-)：</p>
+<p>$P(D|-)=\frac{P(-|D)P(D)}{P(-|D)P(D)+P(-|N)P(N)}$</p>
+<p>=$\frac{0.01×0.005}{0.01×0.005+0.99×0.995}$</p>
+<p>≈0.0000507</p>
+<p><strong>可见，一个人吸毒但被误检测为阴性的概率只有0.005%，也就是说一个人如果检测为阴性，则基本可以判定他没有吸毒。但是一个人如果监测为阳性，则只有33%的概率确定他吸毒。这在跟很多医学监测当中的案例很相似，假阳性比假阴性更值得我们关注！</strong></p>
+<h3 id="贝叶斯推断与拼接纠正"><a href="#贝叶斯推断与拼接纠正" class="headerlink" title="贝叶斯推断与拼接纠正"></a>贝叶斯推断与拼接纠正</h3><p>贝叶斯推断其实有很多应用，例如语言翻译、中文分词、图像识别等，很多博客也以拼写纠正作为示例，这里我就详细讲一下拼写纠正的过程。</p>
+<p>经典著作《人工智能：现代方法》的作者之一 Peter Norvig 曾经写过一篇介绍如何写一个拼写检查/纠正器的文章，详情戳<a target="_blank" rel="noopener" href="http://norvig.com/spell-correct.html">这里</a>。</p>
+<p>用户在输入过程中，难免会遇到拼写错误的情况，我们要做的就是给出一个或几个纠正后的用户本来想要输入的单词推荐。这里的一个关键问题就是：用户到底想要输入什么单词？</p>
+<p>其实用数学的语言来描述，就是要求出P(我们猜测用户要输入的单词|用户实际输入的单词)的大小。</p>
+<p>用T表示我们猜测用户输入的单词，用S表示用户实际输入的单词，那么就是求<code>P(t|S)</code> = $\frac{P(S|t)×P(t)}{P(S)}$ 的大小。</p>
+<p>对于同一个单词，<code>P(S)</code>的概率是一样的，那么就等价于<code>P(t|S)∝ P(S|t)×P(t)</code>。  <code>∝</code>是正比于，不是无穷大</p>
+<p>那么要是的<code>P(t|S)</code>最大，就是使得<code>P(S|t)×P(t)</code>最大。</p>
+<p><code>P(S|t)</code>名义上是指我们猜测的单词t是用户真正想输入单词的概率，不同的单词概率不同，这就涉及到最大似然估计。例如用户输入的单词是thriw,这时throw跟thraw都有可能，但是你会想到，o跟i很接近，用户可能要输的单词是throw的可能性比thraw的可能性大得多，根据最大似然估计找出最可能的单词。但是，有时候光有最大似然并不能完美的解决问题，我们还需要利用先验概率<code>P(t)</code>。</p>
+<p><code>P(t)</code>使我们猜测的单词出现的概率，这些单词t1、t2、t3….理论上有无穷种，但它是一种先验概率，对于单词来说，可能有点抽象。这里举一个分词的例子：</p>
+<p>The girl saw the boy with a telescope.</p>
+<p>如果仅用最大似然估计方法的话，可能会给出两种结果：1 The girl saw | the boy with a telescope    2.The girl saw the boy | with a telescope</p>
+<p>但是根据我们的常识，一个女孩看着一个拿着望远镜的男孩？拿着望远镜有点莫名其妙，与“看”这个动作联系起来，那么最合适的解释恐怕是女孩拿着望远镜看那个男孩。那么得出这个结论，就是用到我们的先验知识，也就是<code>P(t)</code>。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26614750">一文搞懂极大似然估计</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/32480810">聊一聊机器学习的MLE和MAP：最大似然估计和最大后验估计</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/SUNYZBlog/p/9610378.html">机器学习核心算法之——贝叶斯方法</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/">数学之美番外篇：平凡而又神奇的贝叶斯方法</a></p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/">https://sunyunzeng.com/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunyunzeng.com" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></div><div class="post_share"><div class="social-share" data-image="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/"><img class="prev-cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/new_chapter.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">迈向新阶段：学生时代的落幕</div></div></a></div><div class="next-post pull-right"><a href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/"><img class="next-cover" src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">理解最小二乘法</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">179</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="toc-number">1.</span> <span class="toc-text">最大似然估计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">似然函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%82%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">求模型参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">应用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E4%BC%B0%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">最大后验估计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">贝叶斯公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E6%96%AD"><span class="toc-number">2.2.</span> <span class="toc-text">贝叶斯推断</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E6%96%AD"><span class="toc-number">2.2.1.</span> <span class="toc-text">什么是贝叶斯推断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E6%96%AD%E4%B8%8E%E6%8B%BC%E6%8E%A5%E7%BA%A0%E6%AD%A3"><span class="toc-number">2.2.2.</span> <span class="toc-text">贝叶斯推断与拼接纠正</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/new_chapter.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迈向新阶段：学生时代的落幕"/></a><div class="content"><a class="title" href="/%E8%BF%88%E5%90%91%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95/" title="迈向新阶段：学生时代的落幕">迈向新阶段：学生时代的落幕</a><time datetime="2021-05-15T09:13:24.000Z" title="发表于 2021-05-15 17:13:24">2021-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mle_pic_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最大似然估计与最大后验估计"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/" title="理解最大似然估计与最大后验估计">理解最大似然估计与最大后验估计</a><time datetime="2021-04-01T03:25:32.000Z" title="发表于 2021-04-01 11:25:32">2021-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法"><img src="https://pic2.zhimg.com/80/c93be818d85c341109372d4ce5367297_720w.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解最小二乘法"/></a><div class="content"><a class="title" href="/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="理解最小二乘法">理解最小二乘法</a><time datetime="2021-03-30T08:58:27.000Z" title="发表于 2021-03-30 16:58:27">2021-03-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://gcore.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e5bf4e3eb22e24c3a3aa',
+      clientSecret: '0de08288494c890ba3318af78919f8a1cc901e9a',
+      repo: 'SUNYunZeng.github.io',
+      owner: 'SUNYunZeng',
+      admin: [''],
+      id: '6e88100bdcf9620b61349a8d1bc36558',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
