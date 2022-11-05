@@ -991,7 +991,7 @@ pie
 {% endmermaid %}
 ```
 
-![mermaid绘图](https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-mermaid.png)
+![mermaid绘图](https://gcore.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-mermaid.png)
 
 ### Button
 
@@ -1107,4 +1107,4 @@ This is my website, click the button {% btn 'https://butterfly.js.org/',Butterfl
 我觉得很漂亮 {% inlineImg https://i.loli.net/2021/03/19/5M4jUB3ynq7ePgw.png 150px %}
 ```
 
-![图片示例](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-inlineimg.png)
+![图片示例](https://gcore.jsdelivr.net/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-inlineimg.png)

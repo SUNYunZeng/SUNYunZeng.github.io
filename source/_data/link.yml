@@ -8,7 +8,7 @@
 
     - name: 王锦添的博客
       link: https://wangjintian.com/
-      avatar: https://cdn.jsdelivr.net/gh/jtwang7/jtwang7.github.io@master/img/myblog_pic.jpg
+      avatar: https://gcore.jsdelivr.net/gh/jtwang7/jtwang7.github.io@master/img/myblog_pic.jpg
       descr: 同门优秀师弟1的博客分享
 
     - name: mathor的博客
@@ -73,7 +73,7 @@
     
     - name: Sanarous
       link: https://bestzuo.cn
-      avatar: https://cdn.jsdelivr.net/gh/Sanarous/files/images/avatar.jpeg
+      avatar: https://gcore.jsdelivr.net/gh/Sanarous/files/images/avatar.jpeg
       descr: Dream it possible, make it possible
 
     - name: Akilarの糖果屋
@@ -176,7 +176,7 @@
 
     - name: 中国色
       link: http://zhongguose.com/
-      avatar: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/cha_color_logo.png
+      avatar: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/cha_color_logo.png
       descr: 中国风颜色
     
     - name: 唐宋文学编年地图

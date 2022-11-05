@@ -4,7 +4,7 @@ description: 孙云增
 layout: about
 comments: false
 sidebar: custom
-top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/sun.png
+top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/sun.png
 ---
 
 # Who am I?

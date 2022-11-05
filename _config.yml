@@ -226,14 +226,14 @@ douban:
     quote: '读书破万卷，下笔如有神'
     meta: true
     comments: false
-    top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/book.png
+    top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/book.png
     aside: true
   movie:
     title: '看过的电影'
     quote: '电影人生'
     meta: true
     comments: false
-    top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/movie.png
+    top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/movie.png
     aside: true
   # game:
   #   title: 'This is my game title'

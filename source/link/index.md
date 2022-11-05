@@ -3,7 +3,7 @@ title: 友情链接
 date: 2018-06-07 22:17:49
 type: "link"
 comments: true
-top_img: https://cdn.jsdelivr.net/gh/SUNYunZeng/sources/img/wallhaven.png
+top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/wallhaven.png
 ---
 
 ## 友链添加指南
