@@ -19,3 +19,5 @@ http://sunyunzeng.com
 5. `hexo s` -- 启动 hexo 博客
 
 6. `hexo deploy` -- 部署 hexo 博客
+
+7. `hexo n 文件名` -- 新建 hexo 博客文章
