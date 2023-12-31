@@ -1,121 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="93daccd3-7c08-4897-8fa6-d2af41e6816e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/themes/pure/source/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/pure/source/images/my.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/pure/source/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/_source/404/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/404/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_source/_data/links.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/_source/books/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/layout/_search/insight.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/_search/insight.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/layout/books.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/books.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/source/images/donate/alipayimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/images/donate/alipayimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pure/source/images/donate/wechatpayimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/images/donate/wechatpayimg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/再见2022，你好2023！.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/再见2022，你好2023！.md" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-334665216">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="ejs" value="24" />
-          <entry key="html" value="10" />
-          <entry key="jpg" value="1" />
-          <entry key="js" value="5" />
-          <entry key="md" value="27" />
-          <entry key="png" value="11" />
-          <entry key="psd" value="1" />
-          <entry key="ts" value="2" />
-          <entry key="yml" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="EJS" value="24" />
-          <entry key="HTML" value="10" />
-          <entry key="Image" value="13" />
-          <entry key="JavaScript" value="5" />
-          <entry key="Markdown" value="25" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TypeScript" value="2" />
-          <entry key="YAML" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="ejs" value="6" />
-          <entry key="html" value="6" />
-          <entry key="js" value="1" />
-          <entry key="md" value="3411" />
-          <entry key="yml" value="612" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="EJS" value="6" />
-          <entry key="HTML" value="6" />
-          <entry key="JavaScript" value="1" />
-          <entry key="Markdown" value="3411" />
-          <entry key="YAML" value="612" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-231848372">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.18" value="2" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="md" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Markdown" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="md" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Markdown" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Hexo" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -184,6 +85,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
@@ -195,12 +99,17 @@
       <path value="$PROJECT_DIR$/themes/yilia/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
   <component name="ProjectFrameBounds">
     <option name="x" value="47" />
     <option name="y" value="36" />
     <option name="width" value="1195" />
     <option name="height" value="890" />
   </component>
+  <component name="ProjectId" id="2aJaSfsAXdWGmgH5FoQH39pa4EY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -232,15 +141,24 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Hexo/node_modules/hexo-baidu-url-submit/lib/generator.js" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/webpower" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "hexo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Hexo\source\_posts\博客搭建教程" />
@@ -253,18 +171,7 @@
       <recent name="D:\Hexo\source" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -283,6 +190,7 @@
       <workItem from="1556456234053" duration="678000" />
       <workItem from="1558243214491" duration="1227000" />
       <workItem from="1559374844982" duration="281000" />
+      <workItem from="1704039139878" duration="547000" />
     </task>
     <servers />
   </component>
@@ -321,10 +229,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="version" value="3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/themes/pure/_source/links/index.md">

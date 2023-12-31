@@ -3,19 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "5.4.0"
+    "version": "6.0.0"
   },
   "dependencies": {
     "acorn": "^8.2.4",
     "braces": ">=3.0.2",
-    "hexo": "^5.4.0",
+    "hexo": "6.0.0",
     "hexo-algoliasearch": "^1.0.0",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
     "hexo-autonofollow": "^1.0.1",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-blog-encrypt": "^3.1.6",
     "hexo-butterfly-artitalk": "^1.0.4",
-    "hexo-butterfly-douban": "^1.1.4",
+    "hexo-butterfly-douban": "^1.2.5",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",

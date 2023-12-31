@@ -12,7 +12,7 @@ http://sunyunzeng.com
 
 2. `hexo algolia` -- 生成 algolia 搜索索引
 
-3. `hexo douban -b -m` -- 生成豆瓣电影及书单
+3. `hexo douban -b -m` -- 生成豆瓣电影及书单 (需要 node 14 版本)
 
 4. `hexo g` -- 生成博客文件
 

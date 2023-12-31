@@ -72,7 +72,7 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+## Themes: https://hexo.io/themes/2019 - 2023 
 theme: butterfly
 
 # Deployment
@@ -228,13 +228,13 @@ douban:
     comments: false
     top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/book.png
     aside: true
-  movie:
-    title: '看过的电影'
-    quote: '电影人生'
-    meta: true
-    comments: false
-    top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/movie.png
-    aside: true
+  # movie:
+  #   title: '看过的电影'
+  #   quote: '电影人生'
+  #   meta: true
+  #   comments: false
+  #   top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/movie.png
+  #   aside: true
   # game:
   #   title: 'This is my game title'
   #   quote: 'This is my game quote'
