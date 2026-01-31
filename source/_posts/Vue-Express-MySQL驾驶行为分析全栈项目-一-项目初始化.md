@@ -15,7 +15,7 @@ tags: Vue
 
 **[项目地址](https://github.com/SUNYunZeng/AIforDriving)**
 
-**[可视化效果](http://geoai.sunyunzeng.com/)**
+**[可视化效果](http://geoai.sunyunzeng.cn/)**
 
 {% asset_img dy-pre.jpg %}
 {% asset_img pre.gif %}

@@ -15,7 +15,7 @@ tags: Vue
 
 **[项目地址](https://github.com/SUNYunZeng/AIforDriving)**
 
-**[可视化效果](http://geoai.sunyunzeng.com/)**
+**[可视化效果](http://geoai.sunyunzeng.cn/)**
 
 # 准备工作
 
@@ -284,4 +284,4 @@ const store = new Vuex.Store({
 export default store;
 ```
 
-然后基于Leftlet的图层切换与返回指定位置功能就实现啦，预览：http://geoai.sunyunzeng.com/#/home
+然后基于Leftlet的图层切换与返回指定位置功能就实现啦，预览：http://geoai.sunyunzeng.cn/#/home

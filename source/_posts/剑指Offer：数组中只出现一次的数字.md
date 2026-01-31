@@ -43,7 +43,7 @@ public class Solution {
 
 ## 思路2
 
-与题目[只出现一次的数字](http://sunyunzeng.com/%E7%AE%97%E6%B3%95%E9%A2%98-%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3/)类似，利用**异或**的知识。
+与题目[只出现一次的数字](http://sunyunzeng.cn/%E7%AE%97%E6%B3%95%E9%A2%98-%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3/)类似，利用**异或**的知识。
 
 唯一不同是这次是找出两个只出现一次的数字，所以需要找到这两个不同数字的区别，然后分别异或。
 
@@ -68,4 +68,4 @@ public class Solution {
 }
 ```
 
-[类似题目](http://sunyunzeng.com/%E5%89%91%E6%8C%87Offer%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/)
+[类似题目](http://sunyunzeng.cn/%E5%89%91%E6%8C%87Offer%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/)

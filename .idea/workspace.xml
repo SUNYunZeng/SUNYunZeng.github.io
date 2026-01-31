@@ -5,13 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93daccd3-7c08-4897-8fa6-d2af41e6816e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.butterfly.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.butterfly.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/再见2022，你好2023！.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/再见2022，你好2023！.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/source/CNAME" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/D3实现多对多关联关系弧线图.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/D3实现多对多关联关系弧线图.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/JS中的优化技巧.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/JS中的优化技巧.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/LeetCode-23-合并K个排序链表.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/LeetCode-23-合并K个排序链表.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/LeetCode-543-二叉树的直径.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/LeetCode-543-二叉树的直径.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Servlet技术.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Servlet技术.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-一-项目初始化.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-一-项目初始化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-三-前端设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-三-前端设计.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-二-服务器搭建.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-二-服务器搭建.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-五-Leftlet热力图实现.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-五-Leftlet热力图实现.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-六-ECharts实现轨迹动态可视化.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-六-ECharts实现轨迹动态可视化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-四-Leftlet组件与图层加载功能.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Vue-Express-MySQL驾驶行为分析全栈项目-四-Leftlet组件与图层加载功能.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/再见2019，你好2020！.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/再见2019，你好2020！.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/创建博客带给我的思考.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/创建博客带给我的思考.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer-从上往下打印二叉树.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer-从上往下打印二叉树.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer：二叉搜索树与双向链表.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer：二叉搜索树与双向链表.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer：二叉搜索树的第k个结点.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer：二叉搜索树的第k个结点.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer：按之字形顺序打印二叉树.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer：按之字形顺序打印二叉树.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer：数组中只出现一次的数字.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer：数组中只出现一次的数字.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer：最小的K个数.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer：最小的K个数.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/剑指Offer：机器人的运动范围.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/剑指Offer：机器人的运动范围.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/博客中添加足迹地图.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/博客中添加足迹地图.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/卡尔曼滤波与粒子滤波.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/卡尔曼滤波与粒子滤波.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/矩阵中的路径.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/矩阵中的路径.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/自己动手实现符合Promise-A-规范的Promise.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/自己动手实现符合Promise-A-规范的Promise.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/自己实现简单版Vue-2-定义Observer实现对象属性劫持.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/自己实现简单版Vue-2-定义Observer实现对象属性劫持.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/自己第一篇SCI文章-LSI-LSTM-个体出行目的地预测模型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/自己第一篇SCI文章-LSI-LSTM-个体出行目的地预测模型.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/about/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/link/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/link/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +125,9 @@
       <path value="$PROJECT_DIR$/themes/yilia/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": -1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectFrameBounds">
     <option name="x" value="47" />
     <option name="y" value="36" />
@@ -110,7 +135,6 @@
     <option name="height" value="890" />
   </component>
   <component name="ProjectId" id="2aJaSfsAXdWGmgH5FoQH39pa4EY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -145,20 +169,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "hexo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hexo&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Hexo\source\_posts\博客搭建教程" />
@@ -170,6 +195,13 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Hexo\source" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -191,6 +223,9 @@
       <workItem from="1558243214491" duration="1227000" />
       <workItem from="1559374844982" duration="281000" />
       <workItem from="1704039139878" duration="547000" />
+      <workItem from="1704456481891" duration="45000" />
+      <workItem from="1705738855755" duration="36000" />
+      <workItem from="1769848482681" duration="8317000" />
     </task>
     <servers />
   </component>

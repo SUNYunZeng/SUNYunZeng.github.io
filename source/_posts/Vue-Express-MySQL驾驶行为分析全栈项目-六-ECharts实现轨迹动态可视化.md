@@ -15,7 +15,7 @@ tags: Vue
 
 **[项目地址](https://github.com/SUNYunZeng/AIforDriving)**
 
-**[可视化效果](http://geoai.sunyunzeng.com/)**
+**[可视化效果](http://geoai.sunyunzeng.cn/)**
 
 轨迹的动态可视化预期效果可以参考: https://www.echartsjs.com/examples/zh/editor.html?c=lines-bmap-effect
 

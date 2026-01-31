@@ -15,7 +15,7 @@ tags: 剑指Offer
 
 二叉树的层次遍历，用队列保存同一层次的树节点，然后依次遍历。
 
-类似题目<u>http://sunyunzeng.com/Leetcode-102-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/</u>
+类似题目<u>http://sunyunzeng.cn/Leetcode-102-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/</u>
 
 ```java
 import java.util.*;

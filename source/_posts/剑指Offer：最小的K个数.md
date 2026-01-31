@@ -15,7 +15,7 @@ tags: 剑指Offer
 
 维护一个最小堆，该最小堆即为所求。
 
-类似<u>[题目](http://sunyunzeng.com/Leetcode-347-%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0/)</u>
+类似<u>[题目](http://sunyunzeng.cn/Leetcode-347-%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0/)</u>
 
 ```java
 import java.util.*;
@@ -69,7 +69,7 @@ public class Solution {
 
 **## 快速排序**
 
-<font color=#f07c82>[快排](http://sunyunzeng.com/Algorithm-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/)</font>关键在于<font color=#f07c82>基准</font>的选择，大于基准的数放于一边，小于基准的数放在另一边。
+<font color=#f07c82>[快排](http://sunyunzeng.cn/Algorithm-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/)</font>关键在于<font color=#f07c82>基准</font>的选择，大于基准的数放于一边，小于基准的数放在另一边。
 
 我们的标准是划分的位置刚好是在第**k**个位置，这样 k 位置之前的数组都为排序好的。
 

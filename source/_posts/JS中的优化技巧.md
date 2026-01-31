@@ -55,4 +55,4 @@ oneByOneAsyncFunc() // 执行时间为 30 秒
 
 ```
 
-[Promise 的一些知识](http://sunyunzeng.com/JS%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%B0%8F%E7%BB%93/)
+[Promise 的一些知识](http://sunyunzeng.cn/JS%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%B0%8F%E7%BB%93/)

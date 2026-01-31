@@ -9,7 +9,7 @@ tags: JavaScript
 
 # Promise异步实现
 
-之前在[JS异步函数小结](http://sunyunzeng.com/JS%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%B0%8F%E7%BB%93/)里面初步介绍了JS里面的一些异步操作与 Promise 的使用方法，我们要知其然也要知其所以然，所以让我们看一下如何动手实现自己的 MyPromise。
+之前在[JS异步函数小结](http://sunyunzeng.cn/JS%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%B0%8F%E7%BB%93/)里面初步介绍了JS里面的一些异步操作与 Promise 的使用方法，我们要知其然也要知其所以然，所以让我们看一下如何动手实现自己的 MyPromise。
 
 ## Promise/A+协议
 

@@ -15,12 +15,12 @@ tags: Vue
 
 **[项目地址](https://github.com/SUNYunZeng/AIforDriving)**
 
-**[可视化效果](http://geoai.sunyunzeng.com/)**
+**[可视化效果](http://geoai.sunyunzeng.cn/)**
 
 
 # Leftlet底图模块构建
 
-需要安装的依赖库与样式查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能](http://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/)。
+需要安装的依赖库与样式查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能](http://sunyunzeng.cn/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/)。
 
 在 src/components/common 文件夹下添加 LeftletMap.vue文件，作为Leftlet地图的基础模块。
 
@@ -75,7 +75,7 @@ tags: Vue
 </style>
 ```
 
-其中 this.state 是用Vuex插件定义的全局状态变量，其本身是 src/store/index.js文件中定义的一个对象，在其中我们定义了各种地图的配置选项。具体内容可查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能](http://sunyunzeng.com/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/)。
+其中 this.state 是用Vuex插件定义的全局状态变量，其本身是 src/store/index.js文件中定义的一个对象，在其中我们定义了各种地图的配置选项。具体内容可查看[Vue + Express + MySQL驾驶行为分析全栈项目(四): Leftlet组件与图层加载功能](http://sunyunzeng.cn/Vue-Express-MySQL%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E5%9B%9B-Leftlet%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%9B%BE%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD/)。
 
 # 热力图实现
 
@@ -203,4 +203,4 @@ npm i leaflet-heatmap --save
   ;
 ```
 
-最后，预览效果：http://geoai.sunyunzeng.com/#/od
+最后，预览效果：http://geoai.sunyunzeng.cn/#/od

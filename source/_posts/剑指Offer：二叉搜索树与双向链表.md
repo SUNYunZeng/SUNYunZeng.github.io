@@ -15,7 +15,7 @@ tags:
 
 # 思路 + 代码
 
-二叉搜索树的<u>[中序遍历](http://sunyunzeng.com/Leetcode-94-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/)</u>即为一个排序的顺序，按照该顺序依次构建双向链表即可。
+二叉搜索树的<u>[中序遍历](http://sunyunzeng.cn/Leetcode-94-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/)</u>即为一个排序的顺序，按照该顺序依次构建双向链表即可。
 
 ```java
 /**

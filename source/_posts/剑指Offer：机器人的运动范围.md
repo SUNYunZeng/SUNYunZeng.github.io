@@ -15,7 +15,7 @@ tags:
 
 # 思路 + 代码
 
-**回溯方法**，类似[题目1](http://sunyunzeng.com/%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/)、[题目2](http://sunyunzeng.com/Leetcode-%E5%B2%9B%E5%B1%BF%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%A2%E7%A7%AF/)
+**回溯方法**，类似[题目1](http://sunyunzeng.cn/%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/)、[题目2](http://sunyunzeng.cn/Leetcode-%E5%B2%9B%E5%B1%BF%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%A2%E7%A7%AF/)
 
 ```java
 public class Solution {

@@ -29,8 +29,8 @@ top_img: https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/wallhaven.png
 **然后按照以下格式在本站留言区留言，待博主为您添上友链**
 
 名称：孙云增的博客
-头像链接：https://sunyunzeng.com/img/avatar.jpg
-主页链接：https://sunyunzeng.com/
+头像链接：https://sunyunzeng.cn/img/avatar.jpg
+主页链接：https://sunyunzeng.cn/
 说明信息：极简生活，极致内涵
 {% endnote %}
 

@@ -17,7 +17,7 @@ Servlet (Server Applet)，从字面上看，就是<font color=#f07c82>Java</font
 
 于是，他们设计了<font color=#f07c82>Servlet规范</font>，用来处理网络的各种请求。
 
-具体网络的请求呢，无非就是<font color=#f07c82>get、post等等</font>，这在[HTTP规范系列](http://sunyunzeng.com/categories/HTTP/)里面有讲到。
+具体网络的请求呢，无非就是<font color=#f07c82>get、post等等</font>，这在[HTTP规范系列](http://sunyunzeng.cn/categories/HTTP/)里面有讲到。
 
 Servlet规范也没有想象中的那么高大上，其实它就是一个**Java接口**，里面一共就定义了五个方法，如图：
 

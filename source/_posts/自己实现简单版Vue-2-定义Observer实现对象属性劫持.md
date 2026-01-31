@@ -9,7 +9,7 @@ tags: Vue
 
 # 利用`Object.defineProperty()`方法实现数据的监听
 
-Object.defineProperty()方法可以具体参考链接：http://sunyunzeng.com/JavaScript%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1/#%E8%AE%BF%E9%97%AE%E5%99%A8%E5%B1%9E%E6%80%A7
+Object.defineProperty()方法可以具体参考链接：http://sunyunzeng.cn/JavaScript%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1/#%E8%AE%BF%E9%97%AE%E5%99%A8%E5%B1%9E%E6%80%A7
 
 该方法可以定义对象数据在访问操作时的一些约定。
 
