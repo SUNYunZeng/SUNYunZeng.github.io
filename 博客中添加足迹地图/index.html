@@ -1,158 +1,175 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>博客中添加足迹地图 | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="足迹地图效果展示足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：   其中每个足迹图标都可以点击，点击会弹出左边的介绍栏及对应的介绍文字与图片。图片点击可以放大显示，如下图所示：   足迹地图使用方式克隆足迹地图项目首先，将足迹地图克隆到本地。 1git clone https:&#x2F;&#x2F;github.c">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>博客中添加足迹地图 | 孙云增的博客</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="足迹地图效果展示足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：   其中每个足迹图标都可以点击，点击会弹出左边的介绍栏及对应的介绍文字与图片。图片点击可以放大显示，如下图所示：   足迹地图使用方式克隆足迹地图项目首先，将足迹地图克隆到本地。 1git clone https:&#x2F;&#x2F;github.com&#x2F;SUNYunZ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客中添加足迹地图">
-<meta property="og:url" content="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/index.html">
+<meta property="og:url" content="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/index.html">
 <meta property="og:site_name" content="孙云增的博客">
-<meta property="og:description" content="足迹地图效果展示足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：   其中每个足迹图标都可以点击，点击会弹出左边的介绍栏及对应的介绍文字与图片。图片点击可以放大显示，如下图所示：   足迹地图使用方式克隆足迹地图项目首先，将足迹地图克隆到本地。 1git clone https:&#x2F;&#x2F;github.c">
+<meta property="og:description" content="足迹地图效果展示足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：   其中每个足迹图标都可以点击，点击会弹出左边的介绍栏及对应的介绍文字与图片。图片点击可以放大显示，如下图所示：   足迹地图使用方式克隆足迹地图项目首先，将足迹地图克隆到本地。 1git clone https:&#x2F;&#x2F;github.com&#x2F;SUNYunZ">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png">
+<meta property="og:image" content="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png">
 <meta property="article:published_time" content="2021-03-16T04:33:56.000Z">
-<meta property="article:modified_time" content="2022-11-05T02:54:34.947Z">
+<meta property="article:modified_time" content="2026-01-29T14:35:00.016Z">
 <meta property="article:author" content="孙云增">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "博客中添加足迹地图",
+  "url": "https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/",
+  "image": "https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png",
+  "datePublished": "2021-03-16T04:33:56.000Z",
+  "dateModified": "2026-01-29T14:35:00.016Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "孙云增",
+      "url": "https://sunyunzeng.cn"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
-  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  algolia: undefined,
   localSearch: undefined,
   translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
     day: '天前',
     month: '个月前'
   },
-  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  lightbox: 'fancybox',
+  copyright: {"limitCount":150,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '博客中添加足迹地图',
-  isPost: true,
-  isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-11-05 10:54:34'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">182</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">博客中添加足迹地图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-16T04:33:56.000Z" title="发表于 2021-03-16 12:33:56">2021-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-05T02:54:34.947Z" title="更新于 2022-11-05 10:54:34">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">806</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="博客中添加足迹地图"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="足迹地图效果展示"><a href="#足迹地图效果展示" class="headerlink" title="足迹地图效果展示"></a>足迹地图效果展示</h1><p><strong>足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录</strong>，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：</p>
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-image: url(/url(https:/gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodi.png));"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">184</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">孙云增的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">博客中添加足迹地图</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">博客中添加足迹地图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-16T04:33:56.000Z" title="发表于 2021-03-16 12:33:56">2021-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-29T14:35:00.016Z" title="更新于 2026-01-29 22:35:00">2026-01-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">802</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="足迹地图效果展示"><a href="#足迹地图效果展示" class="headerlink" title="足迹地图效果展示"></a>足迹地图效果展示</h1><p><strong>足迹地图可以展示你过去到访过的地方，以及到访地点的介绍与图片记录</strong>，同时不同地标的半径大小表示了访问该地点的频率高低，如下图所示：</p>
 <center><img src="/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png" class></center>
 
 <p>其中每个足迹图标都可以点击，点击会弹出左边的介绍栏及对应的介绍文字与图片。<strong>图片点击可以放大显示</strong>，如下图所示：</p>
 <center><img src="/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE2.png" class></center>
 
 <h1 id="足迹地图使用方式"><a href="#足迹地图使用方式" class="headerlink" title="足迹地图使用方式"></a>足迹地图使用方式</h1><h2 id="克隆足迹地图项目"><a href="#克隆足迹地图项目" class="headerlink" title="克隆足迹地图项目"></a>克隆足迹地图项目</h2><p><strong>首先，将足迹地图克隆到本地。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;SUNYunZeng&#x2F;FootprintMap.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/SUNYunZeng/FootprintMap.git</span><br></pre></td></tr></table></figure>
 <p>会得到如下所示的目录结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">FootprintMap</span><br><span class="line">├─ CNAME</span><br><span class="line">├─ css</span><br><span class="line">│  ├─ index.css</span><br><span class="line">│  └─ jquery-jvectormap-2.0.5.css</span><br><span class="line">├─ data</span><br><span class="line">│  └─ config.json</span><br><span class="line">├─ index.html</span><br><span class="line">├─ js</span><br><span class="line">│  ├─ index.js</span><br><span class="line">│  ├─ jquery-1.9.1.min.js</span><br><span class="line">│  ├─ jquery-jvectormap-2.0.5.min.js</span><br><span class="line">│  └─ jquery-jvectormap-cn-merc-en.js</span><br><span class="line">└─ README.md</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">FootprintMap</span><br><span class="line">├─ CNAME</span><br><span class="line">├─ css</span><br><span class="line">│  ├─ index.css</span><br><span class="line">│  └─ jquery-jvectormap-2.0.5.css</span><br><span class="line">├─ data</span><br><span class="line">│  └─ config.json</span><br><span class="line">├─ index.html</span><br><span class="line">├─ js</span><br><span class="line">│  ├─ index.js</span><br><span class="line">│  ├─ jquery-1.9.1.min.js</span><br><span class="line">│  ├─ jquery-jvectormap-2.0.5.min.js</span><br><span class="line">│  └─ jquery-jvectormap-cn-merc-en.js</span><br><span class="line">└─ README.md</span><br></pre></td></tr></table></figure>
 <h2 id="配置你的足迹数据"><a href="#配置你的足迹数据" class="headerlink" title="配置你的足迹数据"></a>配置你的足迹数据</h2><p><strong>其中 /data/config.json 为配置数据，在里面可以配置你的足迹数据</strong>，结构如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;latLng&quot;</span>: [<span class="number">36.44852263442782</span>, <span class="number">118.73921200195313</span>],</span><br><span class="line">        <span class="string">&quot;name&quot;</span>: <span class="string">&quot;青州&quot;</span>,</span><br><span class="line">        <span class="string">&quot;desc&quot;</span>: <span class="string">&quot;我的家乡，山东东方——青州，国家著名旅游城市。\n旅游景点包括云门山、仰天山、驼山、范公亭、青州博物馆、宋城、古街等等。\n著名美食包括弥河银瓜、老槐树煎包、柿饼、马蹄子烧饼等等。&quot;</span>,</span><br><span class="line">        <span class="string">&quot;photos&quot;</span>:[</span><br><span class="line">            <span class="string">&quot;http://m.qpic.cn/psc?/V115oyNl11FAq7/ETWql2gUF22pNmiMBc.OAZ37OxTay*sinik.eOjVri2aewXK1ZXizNGpMabk*In6gs0SEGmIh82UkaewyV8YgWsu29ZdAYjwW0wjuMdOkzw!/b&amp;bo=VQOAAgAAAAAFF.A!&amp;rf=viewer_4&quot;</span>,</span><br><span class="line">            <span class="string">&quot;http://m.qpic.cn/psc?/V115oyNl11FAq7/ETWql2gUF22pNmiMBc.OAQ0A4hJ0OmPEDYmJjUFJKI2t*ynCY41qGPAI.NMZlbUTh6NeqmgL7UuGmHcPH33ZKUpdGUvyUtlsxeRoKQRaaRk!/b&amp;bo=ngL3AQAAAAAFF14!&amp;rf=viewer_4&quot;</span>,</span><br><span class="line">            <span class="string">&quot;http://m.qpic.cn/psc?/V115oyNl11FAq7/ETWql2gUF22pNmiMBc.OARYef.ZynHj7VLc8N**aHzaQkp4U5oJI4Saa3W68M7O8ynmpV.j*l1JOYoOcYI*WO7r7NotbsyncY3NuLst7vwM!/b&amp;bo=ngL2AQAAAAAFF18!&amp;rf=viewer_4&quot;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&quot;freq&quot;</span>: <span class="number">10</span></span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <ul>
@@ -174,72 +191,68 @@
 <center><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/footMapDemo.png"> </center>
 
 <h1 id="续"><a href="#续" class="headerlink" title="续"></a>续</h1><ul>
-<li><p>文章首发 <a href="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/">https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/</a></p>
+<li><p>文章首发 <a href="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/">https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/</a></p>
 </li>
 <li><p>项目地址 <a target="_blank" rel="noopener" href="https://github.com/SUNYunZeng/FootprintMap">https://github.com/SUNYunZeng/FootprintMap</a></p>
 </li>
 <li><p>参考 <a target="_blank" rel="noopener" href="http://www.wujiayi.vip/index.php/archives/52/">http://www.wujiayi.vip/index.php/archives/52/</a></p>
 </li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/">https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sunyunzeng.com" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div><div class="post_share"><div class="social-share" data-image="https://sunyunzeng.com/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/"><img class="prev-cover" src="https://w.wallhaven.cc/full/4y/wallhaven-4yqm8x.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">npm 常用命令集合</div></div></a></div><div class="next-post pull-right"><a href="/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/"><img class="next-cover" src="https://sunyunzeng.com/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/%E5%9B%BE3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">自己第一篇SCI文章： LSI-LSTM——个体出行目的地预测模型</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/Markdown%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0UML%E5%9B%BE/" title="Markdown文件中添加UML图"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-04</div><div class="title">Markdown文件中添加UML图</div></div></a></div><div><a href="/markdown%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/" title="Markdown简单教程"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-26</div><div class="title">Markdown简单教程</div></div></a></div><div><a href="/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="Windows环境下Hexo+Github搭建个人博客教程"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-23</div><div class="title">Windows环境下Hexo+Github搭建个人博客教程</div></div></a></div><div><a href="/%E5%9C%A8Linux%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%90%8C%E6%AD%A5%E6%9B%B4%E6%96%B0%E6%88%91%E4%BB%AC%E7%9A%84Github%E5%8D%9A%E5%AE%A2/" title="在Linux系统中同步更新我们的Github博客"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-28</div><div class="title">在Linux系统中同步更新我们的Github博客</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">182</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">足迹地图效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">足迹地图使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.1.</span> <span class="toc-text">克隆足迹地图项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%A0%E7%9A%84%E8%B6%B3%E8%BF%B9%E6%95%B0%E6%8D%AE"><span class="toc-number">2.2.</span> <span class="toc-text">配置你的足迹数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">2.3.</span> <span class="toc-text">将足迹地图部署到你的博客</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4"><span class="toc-number">3.</span> <span class="toc-text">进一步的样式调整</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%AD"><span class="toc-number">4.</span> <span class="toc-text">续</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2023，你好2024！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！">再见2023，你好2024！</a><time datetime="2024-01-01T15:10:42.000Z" title="发表于 2024-01-01 23:10:42">2024-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/peopele_20230108204323.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于中国人口的一点思考"/></a><div class="content"><a class="title" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考">关于中国人口的一点思考</a><time datetime="2023-01-08T12:35:30.000Z" title="发表于 2023-01-08 20:35:30">2023-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2022，你好2023！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！">再见2022，你好2023！</a><time datetime="2023-01-01T04:18:24.000Z" title="发表于 2023-01-01 12:18:24">2023-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sunyunzeng.cn">孙云增</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/">https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sunyunzeng.cn" target="_blank">孙云增的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div><div class="post-share"><div class="social-share" data-image="https://sunyunzeng.cn/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE/%E5%9B%BE1.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://gcore.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/donate/wechatpayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/wechatpayimg.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/donate/alipayimg.png" target="_blank"><img class="post-qr-code-img" src="/img/donate/alipayimg.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/" title="npm 常用命令集合"><img class="cover" src="https://w.wallhaven.cc/full/4y/wallhaven-4yqm8x.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">npm 常用命令集合</div></div><div class="info-2"><div class="info-item-1">对于 npm 的一些常用命令的汇总</div></div></div></a><a class="pagination-related" href="/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/" title="自己第一篇SCI文章： LSI-LSTM——个体出行目的地预测模型"><img class="cover" src="https://sunyunzeng.cn/%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E7%AF%87SCI%E6%96%87%E7%AB%A0-LSI-LSTM-%E4%B8%AA%E4%BD%93%E5%87%BA%E8%A1%8C%E7%9B%AE%E7%9A%84%E5%9C%B0%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B/%E5%9B%BE3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">自己第一篇SCI文章： LSI-LSTM——个体出行目的地预测模型</div></div><div class="info-2"><div class="info-item-1">内容导读个体驾驶目的地预测对于个性化服务推荐、出行导航、交通调度等基于位置的服务具有重要的参考意义。然而，个体出行不仅具有长时间依赖性，而且受到出行空间上下文的影响，使得精准实时的驾驶目的地预测面临较大挑战。目前，长时间依赖关系建模已存在一定的技术手段，但空间因素对出行过程的影响仍然较少被考虑到。事实上，出发地与沿途的城市功能区、路网关键节点均一定程度反映并影响着司机的出行意图。为此，本文提出一种基于注意力机制和长短期记忆（LSTM）的个体驾驶目的地实时预测模型LSI-LSTM。该模型在兼顾个体出行长时间依赖性学习的同时，从轨迹点的位置语义、轨迹点与目的地间的空间关联关系两个维度建模空间上下文。具体来说，使用高德POI和TF-IDF算法建立轨迹语义提取方法t-LSE，以获得轨迹点所在区域的城市功能区类型；基于转向角、速度、已行驶距离三类驾驶状态评价轨迹点的位置重要性，并利用轨迹空间注意力机制t-SAM进一步捕获与潜在目的地有强空间关联的轨迹点。基于上述城市功能区类型和位置重要性，LSI-LSTM对轨迹点的空间上下文进行建模，在不需要外部路网数据的情况下实现细粒度空间出行特征的学习...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/Markdown%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0UML%E5%9B%BE/" title="Markdown文件中添加UML图"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-04</div><div class="info-item-2">Markdown文件中添加UML图</div></div><div class="info-2"><div class="info-item-1">UML图简介UML(Unified Modeling Language)是统一建模语言的简写。 它可分为用例视图、设计视图、进程视图、实现视图和拓扑视图，又可以静动分为静态视图和动态视图。静态图分为：用例图，类图，对象图，包图，构件图，部署图。动态图分为：状态图，活动图，协作图，序列图。 其中类图 (Class Diagrams)是用来表示类的内部结构和类与类之间的关系的一种UML。常见的关系有：泛化 (Generalization)，实现 (Realization)，组合 (Composition)，聚合 (Aggregation)，关联 (Association)，依赖 (Dependency)。 各种关系的强弱顺序： 泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖 参考教程 UML类图的绘制及插入我们利用在线的开源工具plantUML实现UML图绘制。 具体的绘制方法可以参考官网plantUML。 然后将网址中生成的UML图片地址插入到Markdown文件中。  参考教程 </div></div></div></a><a class="pagination-related" href="/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="Windows环境下Hexo+Github搭建个人博客教程"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-23</div><div class="info-item-2">Windows环境下Hexo+Github搭建个人博客教程</div></div><div class="info-2"><div class="info-item-1">前言你是否也想拥有属于自己的博客？是否也想拥有跟我一样的博客空间？如果心动了，就赶紧往下看吧！  教程炒鸡简单，炒鸡详细，而且博客搭建完全是Free of Charge! 原理Github PagesGithub不仅可以让我们把代码托管在平台上，而且允许我们利用Github的服务器部署自定义网页对我们的项目作简介。这个网页就被称为Github Pages。这是我们可以利用Github搭建免费博客的基础啦~ HexoHexo是一款轻量但高逼格的搭建博客快速工具，它是基于Node.js开发的。而Node.js…好了，扯远了…有兴趣的童鞋可以出门左转自己百度…  准备知道了大致的原理，我们首先需要准备搭建博客的材料。如下： 1. 一台windows系统的电脑2. 一个Github账号3. 安装Node.js4. 安装Git5. 安装Hexo 开始申请Github账号，建立一个仓库，并为此创建一个说明网页(Github Pages)假设我们都有了Github账号，这是首先在右上角点击“+”号，选择New repository 注意  仓库名一定是”你的Github用户名”+github....</div></div></div></a><a class="pagination-related" href="/%E5%9C%A8Linux%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%90%8C%E6%AD%A5%E6%9B%B4%E6%96%B0%E6%88%91%E4%BB%AC%E7%9A%84Github%E5%8D%9A%E5%AE%A2/" title="在Linux系统中同步更新我们的Github博客"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-28</div><div class="info-item-2">在Linux系统中同步更新我们的Github博客</div></div><div class="info-2"><div class="info-item-1">原理介绍类似于版本管理，我们把hexo博客文件系统在Github上建立一个分支，通过管理分支提交最新的博客文件系统，保证我们博客框架的更新。然后我们基于最新的博客框架，撰写文章，进行Github Pages网页的更新，即我们博客内容的更新。 创建两个分支，一个用于存放博客静态资源，一个用于备份博客的部署文件。 参考资料 前期准备  一台Linux系统的电脑（我的linux系统是Ubuntu 18.04.2 LTS） 安装node.js 及 npm 安装 ssh 安装 git 按照我们前面教程搭建好的博客   创建Github 博客仓库分支首先在我们搭建Hexo博客的电脑上，创建我们博客仓库在Github上的分支。  打开我们的博客仓库，选择setting：    选择Branches,创建博客仓库的Hexo分支，并将其设置为默认分支。    将该仓库克融到本地，并把本地博客的(所有Hexo目录下文件)全部拷贝进username.github.io文件目录中去。    然后把更新后的博客部署文件提交到Github的hexo分支中。   依次执行123git add .git com...</div></div></div></a><a class="pagination-related" href="/markdown%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/" title="Markdown简单教程"><img class="cover" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-26</div><div class="info-item-2">Markdown简单教程</div></div><div class="info-2"><div class="info-item-1">Markdown语言简介Markdown是一种轻量级的「标记语言」，语法简单易于上手，2004年由John Gruber创建。Markdown通过纯文本编写的方式实现文章的撰写与排版，然后被转化为html或者pdf，可以轻松地将文章分享。相较于文本编辑器word的文章排版的方式，Markdown通过固定的文本格式实现了绝大多数的排版场景，让创作者可以专心于文章的构思于撰写，而从繁琐的排版工作中解脱出来。 Markdown书写工具Markdown也得到了广泛的支持，例如简书、github、知乎、博客园等等都支持直接上传Markdown文档，同时一些桌面程序也支持利用Markdown语法记录文章。推荐的Markdown文档工具如下：  Mac系统：Mou Windows系统：MarkPad Linux系统：retext 网页版：简书，可支持在线预览Markdown文档的功能  一些在线的Markdown工具：  MaHua在线编辑器，无须测试  Cmd Markdown客户端编译器  Markdown语法很多博客的文章也是用Markdown写成的，因此花几分钟学习Markdown的语...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">孙云增</div><div class="author-info-description">极简生活，极致内涵</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">184</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/SUNYunZeng"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.cn/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">足迹地图效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">足迹地图使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.1.</span> <span class="toc-text">克隆足迹地图项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%A0%E7%9A%84%E8%B6%B3%E8%BF%B9%E6%95%B0%E6%8D%AE"><span class="toc-number">2.2.</span> <span class="toc-text">配置你的足迹数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E8%B6%B3%E8%BF%B9%E5%9C%B0%E5%9B%BE%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">2.3.</span> <span class="toc-text">将足迹地图部署到你的博客</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4"><span class="toc-number">3.</span> <span class="toc-text">进一步的样式调整</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%AD"><span class="toc-number">4.</span> <span class="toc-text">续</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025%E5%A4%A7%E4%BA%8B%E8%AE%B0/" title="2025大事记"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025大事记"/></a><div class="content"><a class="title" href="/2025%E5%A4%A7%E4%BA%8B%E8%AE%B0/" title="2025大事记">2025大事记</a><time datetime="2026-01-31T10:23:42.000Z" title="发表于 2026-01-31 18:23:42">2026-01-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812024%EF%BC%8C%E4%BD%A0%E5%A5%BD2025%EF%BC%81/" title="再见2024，你好2025！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2024，你好2025！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812024%EF%BC%8C%E4%BD%A0%E5%A5%BD2025%EF%BC%81/" title="再见2024，你好2025！">再见2024，你好2025！</a><time datetime="2025-01-01T09:10:42.000Z" title="发表于 2025-01-01 17:10:42">2025-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2023，你好2024！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！">再见2023，你好2024！</a><time datetime="2024-01-01T15:10:42.000Z" title="发表于 2024-01-01 23:10:42">2024-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/peopele_20230108204323.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于中国人口的一点思考"/></a><div class="content"><a class="title" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考">关于中国人口的一点思考</a><time datetime="2023-01-08T12:35:30.000Z" title="发表于 2023-01-08 20:35:30">2023-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2022，你好2023！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！">再见2022，你好2023！</a><time datetime="2023-01-01T04:18:24.000Z" title="发表于 2023-01-01 12:18:24">2023-01-01</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By 孙云增</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 6.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
   }
-}
 
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
+  const initGitalk = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGitalk = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function addGitalkSource () {
-  const ele = document.createElement('link')
-  ele.rel = 'stylesheet'
-  ele.href= 'https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
-  document.getElementsByTagName('head')[0].appendChild(ele)
-}
-
-function loadGitalk () {
-  function initGitalk () {
-    var gitalk = new Gitalk(Object.assign({
+    const gitalk = new Gitalk({
       clientID: 'e5bf4e3eb22e24c3a3aa',
       clientSecret: '0de08288494c890ba3318af78919f8a1cc901e9a',
       repo: 'SUNYunZeng.github.io',
       owner: 'SUNYunZeng',
       admin: [''],
-      id: '441db6a62e115db5361b406be11e0159',
-      updateCountCallback: commentCount
-    },null))
+      updateCountCallback: commentCount,
+      ...option,
+      id: isShuoshuo ? path : (option && option.id) || '441db6a62e115db5361b406be11e0159'
+    })
 
     gitalk.render('gitalk-container')
   }
 
-  if (typeof Gitalk === 'function') initGitalk()
-  else {
-    addGitalkSource()
-    getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  const loadGitalk = async(el, path) => {
+    if (typeof Gitalk === 'function') initGitalk(el, path)
+    else {
+      await btf.getCSS('https://gcore.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+      await btf.getScript('https://gcore.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js')
+      initGitalk(el, path)
+    }
   }
-}
 
-function commentCount(n){
-  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
-  if (isCommentCount) {
-    isCommentCount.innerHTML= n
+  if (isShuoshuo) {
+    'Gitalk' === 'Gitalk'
+      ? window.shuoshuoComment = { loadComment: loadGitalk }
+      : window.loadOtherComment = loadGitalk
+    return
   }
-}
 
-if ('Gitalk' === 'Gitalk' || !true) {
-  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
-  else loadGitalk()
-} else {
-  function loadOtherComment () {
-    loadGitalk()
+  if ('Gitalk' === 'Gitalk' || !true) {
+    if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
   }
-}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,299 +1,285 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>孙云增的博客 - 极简生活，极致内涵</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="极简生活，极致内涵">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>孙云增的博客 - 极简生活，极致内涵</title><meta name="author" content="孙云增"><meta name="copyright" content="孙云增"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="极简生活，极致内涵">
 <meta property="og:type" content="website">
 <meta property="og:title" content="孙云增的博客">
-<meta property="og:url" content="https://sunyunzeng.com/page/13/index.html">
+<meta property="og:url" content="https://sunyunzeng.cn/page/13/index.html">
 <meta property="og:site_name" content="孙云增的博客">
 <meta property="og:description" content="极简生活，极致内涵">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sunyunzeng.com/img/avatar.jpg">
+<meta property="og:image" content="https://sunyunzeng.cn/img/avatar.jpg">
 <meta property="article:author" content="孙云增">
 <meta property="article:tag" content="博客 孙云增">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sunyunzeng.com/img/avatar.jpg"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.com/page/13/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://sunyunzeng.cn/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://sunyunzeng.cn/page/13/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
-  algolia: {"appId":"9ZTBGDFSAP","apiKey":"a7c43d4d2107e77dafed3ed5e01c6d5f","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  algolia: undefined,
   localSearch: undefined,
   translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
     day: '天前',
     month: '个月前'
   },
-  copyright: {"limitCount":50,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  lightbox: 'fancybox',
+  copyright: {"limitCount":150,"languages":{"author":"作者: 孙云增","link":"链接: ","source":"来源: 孙云增的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '孙云增的博客',
-  isPost: false,
-  isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-01-01 00:39:05'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-image: url(/url(https:/gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodi.png));"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">184</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/blog_home_picture.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">孙云增的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">孙云增的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.cn/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9AJava%E6%96%B9%E6%B3%95/" title="设计模式：Java方法"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式：Java方法"></a></div><div class="recent-post-info"><a class="article-title" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9AJava%E6%96%B9%E6%B3%95/" title="设计模式：Java方法">设计模式：Java方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-22T13:14:07.000Z" title="发表于 2019-09-22 21:14:07">2019-09-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">使用 try-with-resources调用用完需关闭的方法。实现了 AutoCloseable接口（由一个返回为 void的close组成）的资源可以使用try-with-resources方法。 AutoCloseable接口在Java的类库和第三方类库中许多类和接口都有实现或继承，例如 BufferedReader、InputStream、OutputStream 等。 123456789101112// examplestatic void copy(String src, String dst) throws IOException &#123;    try(InputStream in = new FileInputStream(src);        OutputStream out = new FileOutputStream(dst))&#123;            byte[] buf = new byte[BUFFER_SIZE];            int n;            while((n = in.read(buf)) &gt;...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Java%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式：Java创建对象"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式：Java创建对象"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式：Java创建对象">设计模式：Java创建对象</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-20T13:20:39.000Z" title="发表于 2019-09-20 21:20:39">2019-09-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">使用静态工厂方法代替构造方法静态工厂方法是一个静态方法，用来生成实例。例如： 12345678910111213// 单例模式public class Dog&#123;    // 私有方法防止在外调用创建实例    private Dog()&#123;    &#125;    private static class Inner()&#123;        private static final Dog dog = new Dog();    &#125;    public static getInstance()&#123;        return Inner.dog;    &#125;&#125; 因为构造方法每次调用都需要新建一个对象，有些情况下不能满我们的要求。 而静态工厂方法生成对象有以下几个好处： 1. 名字更有意义。  from —— 类型转换方法，它接受单个参数并返回此类型的相应实例，例如：Date d = Date.from(instant); of —— 聚合方法，接受多个参数并返回该类型的实例，并把他们合并在一起，例如：Set faceC...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Leetcode%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" title="Leetcode 33.搜索旋转排序数组"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 33.搜索旋转排序数组"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" title="Leetcode 33.搜索旋转排序数组">Leetcode 33.搜索旋转排序数组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-15T12:50:03.000Z" title="发表于 2019-09-15 20:50:03">2019-09-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。 你可以假设数组中不存在重复的元素。 你的算法时间复杂度必须是 O(log n) 级别。 示例1:12输入: nums = [4,5,6,7,0,1,2], target = 0输出: 4 示例2:12输入: nums = [4,5,6,7,0,1,2], target = 3输出: -1 思路+代码时间复杂度要求是O(log n)，也就是二分法。于是我写了一个最基础的二分法…还是用递归.. 1234567891011121314151617181920212223242526272829class Solution &#123;    public int search(int[] nums, int target) &#123;        if(nums.length==0 || nums==null)            return...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Servlet%E6%8A%80%E6%9C%AF/" title="Servlet技术"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Servlet技术"></a></div><div class="recent-post-info"><a class="article-title" href="/Servlet%E6%8A%80%E6%9C%AF/" title="Servlet技术">Servlet技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-11T10:56:49.000Z" title="发表于 2019-09-11 18:56:49">2019-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">什么是Servet?Servlet (Server Applet)，从字面上看，就是Java服务器小程序的意思。它确实就像字面意思一样，是在服务中用于处理网络请求的小程序。 在Web的世界中，客户端会提交各种请求到服务端，服务端如何处理客户端的请求呢？ 常规的Java编程方法，好像很难完成这项任务，但是没有事情是难倒程序猿的。 于是，他们设计了Servlet规范，用来处理网络的各种请求。 具体网络的请求呢，无非就是get、post等等，这在HTTP规范系列里面有讲到。 Servlet规范也没有想象中的那么高大上，其实它就是一个Java接口，里面一共就定义了五个方法，如图：  其中：   init() 规定了Servet如何初始化。 getServletConfig() 获取Sevvlet的配置。 service(ServletRequest, ServletResponse) 接收到请求怎么处理。 getServletInfo() 提供有关servlet的信息，如作者、版本、版权等。 destroy() 销毁Servlet。   Servlet的运行任何合理实现了Servlet接...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git 常用命令"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git 常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git 常用命令">Git 常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-11T04:31:05.000Z" title="发表于 2019-09-11 12:31:05">2019-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span></div><div class="content">Git简介Git是世界上最先进的分布式版本控制系统。 当时是为了帮助管理 linux 内核开发而开发的一个开源码版本控制系统。   Workspace：工作区  Index / Stage：暂存区  Repository：仓库区（或本地仓库） Remote：远程仓库  Git 是分布式版本控制系统，每个人的电脑上都有完整的版本库。 常用命令列表常用1234567891011121314151617181920$ git remote add origin git@github.com:yeszao/dofiler.git         # 配置远程git版本库$ git pull origin master                                          # 下载代码及快速合并 $ git add .                       # 跟踪所有改动过的文件$ git add &lt;file&gt;                  # 跟踪指定的文件$ git commit -m “commit message”  # 提交所有...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/TCP-IP%E5%8D%8F%E8%AE%AE/" title="TCP/IP协议"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCP/IP协议"></a></div><div class="recent-post-info"><a class="article-title" href="/TCP-IP%E5%8D%8F%E8%AE%AE/" title="TCP/IP协议">TCP/IP协议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-10T00:41:44.000Z" title="发表于 2019-09-10 08:41:44">2019-09-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a></span></div><div class="content">起源HTTP的来历CERN(欧洲核子研究组织)的蒂姆 • 伯纳斯 - 李(Tim BernersLee)博士提出了一种能让远隔两地的研究者们共享知识的设想。 最初的设想是通过超文本(HyperText)标记,各地互联连接成可相互参阅的WWW(World Wide Web, 万维网)。 目前WWW构建的关键技术为：  基于SGML(Standard Generalized Markup Language,标准通用标记语言)的HTML （HyperText Markup Language, 超文本标记语言）。  指定文档所在的地址URL (Uniform Resource Locator, 统一资源定位符) 。   各个Web服务器通过万维网互相连接，以 HTML 标准编辑网页（存储信息），用 URL 实现信息的查找，最后通过Web浏览器实现界面的渲染。 如何控制信息的传输？然而，Web服务器有各种各样的类型及硬件接口，显示平台也有各种各样的类型，如何实现平台之间信息的互相交流呢？ —— 统一协议控制。答案是通过统一的协议 (Protocol)。 　TCP/TP 协议簇TCP/IP　...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Leetcode-%E5%B2%9B%E5%B1%BF%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%A2%E7%A7%AF/" title="Leetcode 岛屿最大的面积"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 岛屿最大的面积"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E5%B2%9B%E5%B1%BF%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%A2%E7%A7%AF/" title="Leetcode 岛屿最大的面积">Leetcode 岛屿最大的面积</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-07T01:46:27.000Z" title="发表于 2019-09-07 09:46:27">2019-09-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。 找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。) 示例1:12345678[[0,0,1,0,0,0,0,1,0,0,0,0,0], [0,0,0,0,0,0,0,1,1,1,0,0,0], [0,1,1,0,1,0,0,0,0,0,0,0,0], [0,1,0,0,1,1,0,0,1,0,1,0,0], [0,1,0,0,1,1,0,0,1,1,1,0,0], [0,0,0,0,0,0,0,0,0,0,1,0,0], [0,0,0,0,0,0,0,1,1,1,0,0,0], [0,0,0,0,0,0,0,1,1,0,0,0,0]] 对于上面这个给定矩阵应返回 6。注意答案不应该是11，因为岛屿只能包含水平或垂直的四个方向的‘1’。 示例2:1[[0,0,0,0,0,0,0,0]] 对于上面这个给定的矩阵, 返回 0。 注意: 给定的矩阵grid 的长度和宽度都不超过 50。 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Markdown%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0UML%E5%9B%BE/" title="Markdown文件中添加UML图"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown文件中添加UML图"></a></div><div class="recent-post-info"><a class="article-title" href="/Markdown%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0UML%E5%9B%BE/" title="Markdown文件中添加UML图">Markdown文件中添加UML图</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-04T02:23:38.000Z" title="发表于 2019-09-04 10:23:38">2019-09-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">UML图简介UML(Unified Modeling Language)是统一建模语言的简写。 它可分为用例视图、设计视图、进程视图、实现视图和拓扑视图，又可以静动分为静态视图和动态视图。静态图分为：用例图，类图，对象图，包图，构件图，部署图。动态图分为：状态图，活动图，协作图，序列图。 其中类图 (Class Diagrams)是用来表示类的内部结构和类与类之间的关系的一种UML。常见的关系有：泛化 (Generalization)，实现 (Realization)，组合 (Composition)，聚合 (Aggregation)，关联 (Association)，依赖 (Dependency)。 各种关系的强弱顺序： 泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖 参考教程 UML类图的绘制及插入我们利用在线的开源工具plantUML实现UML图绘制。 具体的绘制方法可以参考官网plantUML。 然后将网址中生成的UML图片地址插入到Markdown文件中。  参考教程 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Leetcode-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97-String-%E7%BB%83%E4%B9%A0-03/" title="Leetcode 字符串的排列 (String 练习 03)"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 字符串的排列 (String 练习 03)"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97-String-%E7%BB%83%E4%B9%A0-03/" title="Leetcode 字符串的排列 (String 练习 03)">Leetcode 字符串的排列 (String 练习 03)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-01T04:30:02.000Z" title="发表于 2019-09-01 12:30:02">2019-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。 换句话说，第一个字符串的排列之一是第二个字符串的子串。 示例1:123输入: s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;输出: True解释: s2 包含 s1 的排列之一 (&quot;ba&quot;). 示例2:12输入: s1= &quot;ab&quot; s2 = &quot;eidboaoo&quot;输出: False 注意:121. 输入的字符串只包含小写字母2. 两个字符串的长度都在 [1, 10,000] 之间 思路 1暴力法，滑动窗口依次判定。 但是超出时间限制！ 1234567891011121314151617181920212223class Solution &#123;    public boolean checkInclusion(String s1, String s2) &#123;        int len1 = s1.length();        int len2 = s2.length(); ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Leetcode-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/" title="Leetcode 最长公共前缀 (String 练习 01)"><img class="post-bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 最长公共前缀 (String 练习 01)"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/" title="Leetcode 最长公共前缀 (String 练习 01)">Leetcode 最长公共前缀 (String 练习 01)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-08-31T09:03:25.000Z" title="发表于 2019-08-31 17:03:25">2019-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 “”。 示例1:12输入: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]输出: &quot;fl&quot; 示例2:123输入: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]输出: &quot;&quot;解释: 输入不存在公共前缀。 说明:1所有输入只包含小写字母 a-z 。 思路1暴力法，时间复杂度O(n^3)。 123456789101112131415161718192021class Solution &#123;    public String longestCommonPrefix(String[] strs) &#123;        String ans = &quot;&quot;;        if(strs.length==0) return ans;        lable:&#123;            for(int j=0...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/12/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#content-inner">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/14/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">孙云增</div><div class="author-info-description">极简生活，极致内涵</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">184</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/SUNYunZeng"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.cn/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025%E5%A4%A7%E4%BA%8B%E8%AE%B0/" title="2025大事记"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025大事记"/></a><div class="content"><a class="title" href="/2025%E5%A4%A7%E4%BA%8B%E8%AE%B0/" title="2025大事记">2025大事记</a><time datetime="2026-01-31T10:23:42.000Z" title="发表于 2026-01-31 18:23:42">2026-01-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812024%EF%BC%8C%E4%BD%A0%E5%A5%BD2025%EF%BC%81/" title="再见2024，你好2025！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2024，你好2025！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812024%EF%BC%8C%E4%BD%A0%E5%A5%BD2025%EF%BC%81/" title="再见2024，你好2025！">再见2024，你好2025！</a><time datetime="2025-01-01T09:10:42.000Z" title="发表于 2025-01-01 17:10:42">2025-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2023，你好2024！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！">再见2023，你好2024！</a><time datetime="2024-01-01T15:10:42.000Z" title="发表于 2024-01-01 23:10:42">2024-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/peopele_20230108204323.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于中国人口的一点思考"/></a><div class="content"><a class="title" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考">关于中国人口的一点思考</a><time datetime="2023-01-08T12:35:30.000Z" title="发表于 2023-01-08 20:35:30">2023-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2022，你好2023！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！">再见2022，你好2023！</a><time datetime="2023-01-01T04:18:24.000Z" title="发表于 2023-01-01 12:18:24">2023-01-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Git/"><span class="card-category-list-name">Git</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL/"><span class="card-category-list-name">MySQL</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">Web前端</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web%E5%8F%AF%E8%A7%86%E5%8C%96/"><span class="card-category-list-name">Web可视化</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%AE%B0/"><span class="card-category-list-name">杂记</span><span class="card-category-list-count">12</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/JVM/" style="font-size: 1.16em; color: #999b9f">JVM</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">深度学习</a> <a href="/tags/JavaScript/" style="font-size: 1.38em; color: #99a4b3">JavaScript</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.44em; color: #99a7b9">动态规划</a> <a href="/tags/TCP-IP/" style="font-size: 1.1em; color: #999">TCP/IP</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.41em; color: #99a5b6">二叉树</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.1em; color: #999">数学</a> <a href="/tags/npm/" style="font-size: 1.1em; color: #999">npm</a> <a href="/tags/CSS/" style="font-size: 1.13em; color: #999a9c">CSS</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.28em; color: #99a0ab">设计模式</a> <a href="/tags/%E6%8E%A7%E5%88%B6%E8%AE%BA/" style="font-size: 1.1em; color: #999">控制论</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 1.32em; color: #99a2ad">总结</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 1.1em; color: #999">区块链</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 1.13em; color: #999a9c">排序算法</a> <a href="/tags/D3/" style="font-size: 1.1em; color: #999">D3</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 1.32em; color: #99a2ad">语法</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">机器学习</a> <a href="/tags/%E5%9B%9E%E6%BA%AF%E6%B3%95/" style="font-size: 1.22em; color: #999ea5">回溯法</a> <a href="/tags/Servlet/" style="font-size: 1.1em; color: #999">Servlet</a> <a href="/tags/http/" style="font-size: 1.1em; color: #999">http</a> <a href="/tags/%E6%80%9D%E8%80%83/" style="font-size: 1.19em; color: #999da2">思考</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.22em; color: #999ea5">博客</a> <a href="/tags/Vue/" style="font-size: 1.35em; color: #99a3b0">Vue</a> <a href="/tags/%E8%B4%AA%E5%BF%83%E6%B3%95/" style="font-size: 1.16em; color: #999b9f">贪心法</a> <a href="/tags/%E5%89%91%E6%8C%87Offer/" style="font-size: 1.47em; color: #99a8bc">剑指Offer</a> <a href="/tags/React/" style="font-size: 1.25em; color: #999fa8">React</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="孙云增的博客" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">182</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/blog_home_picture.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孙云增的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-lemon"></i><span> 文艺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-leaf"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">孙云增的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/Leetcode%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" title="Leetcode 33.搜索旋转排序数组"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 33.搜索旋转排序数组"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" title="Leetcode 33.搜索旋转排序数组">Leetcode 33.搜索旋转排序数组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-15T12:50:03.000Z" title="发表于 2019-09-15 20:50:03">2019-09-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目假设按照升序排序的数组在预先未知的某个点上进行了旋转。
-( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。
-搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
-你可以假设数组中不存在重复的元素。
-你的算法时间复杂度必须是 O(log n) 级别。
-示例1:12输入: nums = [4,5,6,7,0,1,2], target = 0输出: 4
-示例2:12输入: nums = [4,5,6,7,0,1,2], target = 3输出: -1
-思路+代码时间复杂度要求是O(log n)，也就是二分法。于是我写了一个最基础的二分法…还是用递归..
-1234567891011121314151617181920212223242526272829class Solution &#123;    public int search(int[] nums, int target) &#123;        if(nums.length==0 || nums==null)            return -1 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Servlet%E6%8A%80%E6%9C%AF/" title="Servlet技术"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Servlet技术"></a></div><div class="recent-post-info"><a class="article-title" href="/Servlet%E6%8A%80%E6%9C%AF/" title="Servlet技术">Servlet技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-11T10:56:49.000Z" title="发表于 2019-09-11 18:56:49">2019-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">什么是Servet?Servlet (Server Applet)，从字面上看，就是Java服务器小程序的意思。它确实就像字面意思一样，是在服务中用于处理网络请求的小程序。
-在Web的世界中，客户端会提交各种请求到服务端，服务端如何处理客户端的请求呢？
-常规的Java编程方法，好像很难完成这项任务，但是没有事情是难倒程序猿的。
-于是，他们设计了Servlet规范，用来处理网络的各种请求。
-具体网络的请求呢，无非就是get、post等等，这在HTTP规范系列里面有讲到。
-Servlet规范也没有想象中的那么高大上，其实它就是一个Java接口，里面一共就定义了五个方法，如图：
-
-其中：
-
-
-init() 规定了Servet如何初始化。
-getServletConfig() 获取Sevvlet的配置。
-service(ServletRequest, ServletResponse) 接收到请求怎么处理。
-getServletInfo() 提供有关servlet的信息，如作者、版本、版权等。
-destroy() 销毁Servlet。
-
-
-Servlet的运行任何合理实现了Servlet接口的类 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git 常用命令"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git 常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git 常用命令">Git 常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-11T04:31:05.000Z" title="发表于 2019-09-11 12:31:05">2019-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span></div><div class="content">Git简介Git是世界上最先进的分布式版本控制系统。
-当时是为了帮助管理 linux 内核开发而开发的一个开源码版本控制系统。
-
-
-Workspace：工作区
-
-Index / Stage：暂存区
-
-Repository：仓库区（或本地仓库）
-Remote：远程仓库
-
-Git 是分布式版本控制系统，每个人的电脑上都有完整的版本库。
-常用命令列表常用1234567891011121314151617181920$ git remote add origin git@github.com:yeszao&#x2F;dofiler.git         # 配置远程git版本库$ git pull origin master                                          # 下载代码及快速合并 $ git add .                       # 跟踪所有改动过的文件$ git add &lt;file&gt;                  # 跟踪指定的文件$ git commit -m “commit message”  # 提交 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/TCP-IP%E5%8D%8F%E8%AE%AE/" title="TCP/IP协议"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCP/IP协议"></a></div><div class="recent-post-info"><a class="article-title" href="/TCP-IP%E5%8D%8F%E8%AE%AE/" title="TCP/IP协议">TCP/IP协议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-10T00:41:44.000Z" title="发表于 2019-09-10 08:41:44">2019-09-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a></span></div><div class="content">起源HTTP的来历CERN(欧洲核子研究组织)的蒂姆 • 伯纳斯 - 李(Tim BernersLee)博士提出了一种能让远隔两地的研究者们共享知识的设想。
-最初的设想是通过超文本(HyperText)标记,各地互联连接成可相互参阅的WWW(World Wide Web, 万维网)。
-目前WWW构建的关键技术为：
-
-基于SGML(Standard Generalized Markup Language,标准通用标记语言)的HTML （HyperText Markup Language, 超文本标记语言）。
-
-指定文档所在的地址URL (Uniform Resource Locator, 统一资源定位符) 。
-
-
-各个Web服务器通过万维网互相连接，以 HTML 标准编辑网页（存储信息），用 URL 实现信息的查找，最后通过Web浏览器实现界面的渲染。
-如何控制信息的传输？然而，Web服务器有各种各样的类型及硬件接口，显示平台也有各种各样的类型，如何实现平台之间信息的互相交流呢？ —— 统一协议控制。答案是通过统一的协议 (Protocol)。
-　TCP/TP 协议簇TCP/IP　有说法 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Leetcode-%E5%B2%9B%E5%B1%BF%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%A2%E7%A7%AF/" title="Leetcode 岛屿最大的面积"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 岛屿最大的面积"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E5%B2%9B%E5%B1%BF%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%A2%E7%A7%AF/" title="Leetcode 岛屿最大的面积">Leetcode 岛屿最大的面积</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-07T01:46:27.000Z" title="发表于 2019-09-07 09:46:27">2019-09-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
-找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
-示例1:12345678[[0,0,1,0,0,0,0,1,0,0,0,0,0], [0,0,0,0,0,0,0,1,1,1,0,0,0], [0,1,1,0,1,0,0,0,0,0,0,0,0], [0,1,0,0,1,1,0,0,1,0,1,0,0], [0,1,0,0,1,1,0,0,1,1,1,0,0], [0,0,0,0,0,0,0,0,0,0,1,0,0], [0,0,0,0,0,0,0,1,1,1,0,0,0], [0,0,0,0,0,0,0,1,1,0,0,0,0]]
-对于上面这个给定矩阵应返回 6。注意答案不应该是11，因为岛屿只能包含水平或垂直的四个方向的‘1’。
-示例2:1[[0,0,0,0,0,0,0,0]]
-对于上面这个给定的矩阵, 返回 0。
-注意: 给定的矩阵grid 的长度和宽度都不超过 50。
-思路+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Markdown%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0UML%E5%9B%BE/" title="Markdown文件中添加UML图"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown文件中添加UML图"></a></div><div class="recent-post-info"><a class="article-title" href="/Markdown%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0UML%E5%9B%BE/" title="Markdown文件中添加UML图">Markdown文件中添加UML图</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-04T02:23:38.000Z" title="发表于 2019-09-04 10:23:38">2019-09-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">UML图简介UML(Unified Modeling Language)是统一建模语言的简写。
-它可分为用例视图、设计视图、进程视图、实现视图和拓扑视图，又可以静动分为静态视图和动态视图。静态图分为：用例图，类图，对象图，包图，构件图，部署图。动态图分为：状态图，活动图，协作图，序列图。
-其中类图 (Class Diagrams)是用来表示类的内部结构和类与类之间的关系的一种UML。常见的关系有：泛化 (Generalization)，实现 (Realization)，组合 (Composition)，聚合 (Aggregation)，关联 (Association)，依赖 (Dependency)。
-各种关系的强弱顺序： 泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖
-参考教程
-UML类图的绘制及插入我们利用在线的开源工具plantUML实现UML图绘制。
-具体的绘制方法可以参考官网plantUML。
-然后将网址中生成的UML图片地址插入到Markdown文件中。
-
-参考教程
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Leetcode-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97-String-%E7%BB%83%E4%B9%A0-03/" title="Leetcode 字符串的排列 (String 练习 03)"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 字符串的排列 (String 练习 03)"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97-String-%E7%BB%83%E4%B9%A0-03/" title="Leetcode 字符串的排列 (String 练习 03)">Leetcode 字符串的排列 (String 练习 03)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-01T04:30:02.000Z" title="发表于 2019-09-01 12:30:02">2019-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。
-换句话说，第一个字符串的排列之一是第二个字符串的子串。
-示例1:123输入: s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;输出: True解释: s2 包含 s1 的排列之一 (&quot;ba&quot;).
-示例2:12输入: s1= &quot;ab&quot; s2 = &quot;eidboaoo&quot;输出: False
-注意:121. 输入的字符串只包含小写字母2. 两个字符串的长度都在 [1, 10,000] 之间
-思路 1暴力法，滑动窗口依次判定。
-但是超出时间限制！
-1234567891011121314151617181920212223class Solution &#123;    public boolean checkInclusion(String s1, String s2) &#123;        int len1 = s1.length();        int len2 = s2.length();     ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Leetcode-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/" title="Leetcode 最长公共前缀 (String 练习 01)"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 最长公共前缀 (String 练习 01)"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/" title="Leetcode 最长公共前缀 (String 练习 01)">Leetcode 最长公共前缀 (String 练习 01)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-08-31T09:03:25.000Z" title="发表于 2019-08-31 17:03:25">2019-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目编写一个函数来查找字符串数组中的最长公共前缀。
-如果不存在公共前缀，返回空字符串 “”。
-示例1:12输入: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]输出: &quot;fl&quot;
-示例2:123输入: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]输出: &quot;&quot;解释: 输入不存在公共前缀。
-说明:1所有输入只包含小写字母 a-z 。
-思路1暴力法，时间复杂度O(n^3)。
-123456789101112131415161718192021class Solution &#123;    public String longestCommonPrefix(String[] strs) &#123;        String ans = &quot;&quot;;        if(strs.length==0) return ans;        lable:&#123;            for(int j=0; j ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Java-Set-API/" title="Java: Set API"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java: Set API"></a></div><div class="recent-post-info"><a class="article-title" href="/Java-Set-API/" title="Java: Set API">Java: Set API</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-08-31T01:12:40.000Z" title="发表于 2019-08-31 09:12:40">2019-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">Java Set概述Set 继承自集合（Collection），该集合不能包含相同的元素。
-Set 里面进行元素是否相同的判定是通过 Object 类自带的equals()实现。
-Set 最多可存储一个 null 元素。
-Set 只是一个抽象的接口，具体的使用还要用具体的实现，如HashSet、TreeSet等。
-常用方法因为 Set 继承自集合 Collection，所以具有集合的方法。
-
-
-
-
-方法
-描述
-
-
-
-
-int size()
-返回Set里面存储的元素个数。
-
-
-boolean isEmpty()
-如果没有元素，返回true。
-
-
-boolean add(E e)
-如果Set里面没有包含元素e，就将其加入。
-
-
-boolean addAll(Collection&lt;? extends E&gt;c)
-如果指定集合中的元素不存在Set中，就将其加入Set。如果该Collection也是一个Set，相当于对这两个Set取并集。
-
-
-boolean contains(Object o)
-是否包含特定的元素 o。即对Set里面的任意元素e执行判定(o==null?e==null ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Leetcode-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/" title="Leetcode 无重复字符的最长子串（String 练习 02）"><img class="post_bg" src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 无重复字符的最长子串（String 练习 02）"></a></div><div class="recent-post-info"><a class="article-title" href="/Leetcode-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/" title="Leetcode 无重复字符的最长子串（String 练习 02）">Leetcode 无重复字符的最长子串（String 练习 02）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-08-30T13:23:46.000Z" title="发表于 2019-08-30 21:23:46">2019-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></span></div><div class="content">题目给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
-示例1:123输入: &quot;abcabcbb&quot;输出: 3 解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。
-示例2:123输入: &quot;bbbbb&quot;输出: 1解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。
-示例3:1234输入: &quot;pwwkew&quot;输出: 3解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。
-思路 1暴力法，用Set记录检查的无重复的最长子串。
-123456789101112131415161718192021class Solution &#123;    public int lengthOfLongestSubstring(String s) &#123;        char[] chars = s.toCharArray();  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/12/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#content-inner">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/14/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">孙云增</div><div class="author-info__description">极简生活，极致内涵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">182</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SUNYunZeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:syzsmail@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/sunyunzeng" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://weibo.com/sunyunzeng" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://sunyunzeng.com/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问孙云增的博客，这里有干货，有知识，也期待大家的分享~~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2023，你好2024！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812023%EF%BC%8C%E4%BD%A0%E5%A5%BD2024%EF%BC%81/" title="再见2023，你好2024！">再见2023，你好2024！</a><time datetime="2024-01-01T15:10:42.000Z" title="发表于 2024-01-01 23:10:42">2024-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/peopele_20230108204323.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于中国人口的一点思考"/></a><div class="content"><a class="title" href="/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%8F%A3%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" title="关于中国人口的一点思考">关于中国人口的一点思考</a><time datetime="2023-01-08T12:35:30.000Z" title="发表于 2023-01-08 20:35:30">2023-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2022，你好2023！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812022%EF%BC%8C%E4%BD%A0%E5%A5%BD2023%EF%BC%81/" title="再见2022，你好2023！">再见2022，你好2023！</a><time datetime="2023-01-01T04:18:24.000Z" title="发表于 2023-01-01 12:18:24">2023-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/mt-0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈蒙特卡罗算法"/></a><div class="content"><a class="title" href="/%E6%B5%85%E8%B0%88%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E7%AE%97%E6%B3%95/" title="浅谈蒙特卡罗算法">浅谈蒙特卡罗算法</a><time datetime="2022-01-03T04:24:32.000Z" title="发表于 2022-01-03 12:24:32">2022-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！"><img src="https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/astronaut1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="再见2021，你好2022！"/></a><div class="content"><a class="title" href="/%E5%86%8D%E8%A7%812021%EF%BC%8C%E4%BD%A0%E5%A5%BD2022%EF%BC%81/" title="再见2021，你好2022！">再见2021，你好2022！</a><time datetime="2022-01-01T04:18:24.000Z" title="发表于 2022-01-01 12:18:24">2022-01-01</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.39em; color: rgb(101, 48, 181)">动态规划</a><a href="/tags/LeetCode/" style="font-size: 1.45em; color: rgb(31, 159, 22)">LeetCode</a><a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 1.18em; color: rgb(27, 131, 124)">排序算法</a><a href="/tags/CSS/" style="font-size: 1.18em; color: rgb(63, 120, 36)">CSS</a><a href="/tags/JVM/" style="font-size: 1.21em; color: rgb(61, 168, 42)">JVM</a><a href="/tags/D3/" style="font-size: 1.15em; color: rgb(133, 109, 36)">D3</a><a href="/tags/Git/" style="font-size: 1.15em; color: rgb(160, 86, 161)">Git</a><a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 1.3em; color: rgb(17, 29, 137)">语法</a><a href="/tags/JavaScript/" style="font-size: 1.33em; color: rgb(187, 195, 8)">JavaScript</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.27em; color: rgb(31, 132, 182)">设计模式</a><a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.36em; color: rgb(57, 145, 50)">二叉树</a><a href="/tags/%E5%89%91%E6%8C%87Offer/" style="font-size: 1.42em; color: rgb(149, 3, 75)">剑指Offer</a><a href="/tags/%E8%B4%AA%E5%BF%83%E6%B3%95/" style="font-size: 1.21em; color: rgb(22, 178, 78)">贪心法</a><a href="/tags/%E5%9B%9E%E6%BA%AF%E6%B3%95/" style="font-size: 1.24em; color: rgb(35, 79, 53)">回溯法</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.24em; color: rgb(57, 92, 7)">博客</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">182</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2017-12-31T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">153.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-31T16:39:04.616Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gcore.jsdelivr.net/gh/SUNYunZeng/sources/img/caodiifooter.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 孙云增</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://gcore.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
-
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["你好。 - 在吗？ - 祝，好","你好。在吗？祝，好"],
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/01/">
+            <span class="card-archive-list-date">
+              一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/01/">
+            <span class="card-archive-list-date">
+              一月 2022
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/05/">
+            <span class="card-archive-list-date">
+              五月 2021
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/04/">
+            <span class="card-archive-list-date">
+              四月 2021
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/03/">
+            <span class="card-archive-list-date">
+              三月 2021
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">184</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">153.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-31T10:27:05.084Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By 孙云增</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 6.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
       startDelay: 300,
       typeSpeed: 150,
       loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '你好。 - 在吗？ - 祝，好'
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://gcore.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["你好。在吗？祝，好"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
   }
 }
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://gcore.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["你好。在吗？祝，好"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
